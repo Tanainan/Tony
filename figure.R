@@ -68,7 +68,7 @@ ggplot(dt, aes(x,y)) +
   geom_segment(y = 2, yend = 2, x = 0, xend = 8) + 
   geom_segment(y = 8, yend = 8, x = 0, xend = 2) + 
   geom_segment(y = 0, yend = 2, x = 8, xend = 8) +
-  geom_text(x=4, y=4, label="X", size = 6) +
-  geom_text(x=8.5, y=0.5, label="Y", size = 6)
-  
+  #geom_text(x=8.5, y=0.5, label="Y", size = 6)
+  geom_rect(xmin = 2, xmax = 8, ymin = 0, ymax = 2, fill = "gray", alpha = 0.2) +
+  geom_text(x=5, y=1, label="X", size = 6) 
 
