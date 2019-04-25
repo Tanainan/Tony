@@ -73,3 +73,9 @@ mean(oe$pmov66s_1, na.rm = T)
 mean(oe$pmov66s_2, na.rm = T)
 mean(oe$pmov33s_1, na.rm = T)
 mean(oe$pmov33s_2, na.rm = T)
+
+# demographic
+prop.table(table(oe$gender))
+prop.table(table(oe$age))
+
+           
