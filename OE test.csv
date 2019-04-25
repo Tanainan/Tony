@@ -1,0 +1,1281 @@
+StartDate,EndDate,Status,IPAddress,Progress,Duration (in seconds),Finished,RecordedDate,ResponseId,RecipientLastName,RecipientFirstName,RecipientEmail,ExternalReference,LocationLatitude,LocationLongitude,DistributionChannel,UserLanguage,Q30,lot50s,lot60s,can66s,can33s,res30o,res10o,mov66o,mov33o,res30s,res10s,can66o,can33o,mov33s,mov66s,lot50o,lot60o,pmov66o_1,pmov66o_2,Q108,pmov33o_1,pmov33o_2,Q105,pres10o_1,pres10o_2,Q82,plot50s_1,plot50s_2,Q66,pres30o_1,pres30o_2,Q79,plot50o_1,plot50o_2,Q72,pcan33o_1,pcan33o_2,Q92,pmov66s_1,pmov66s_2,Q102,pmov33s_1,pmov33s_2,Q99,pres10s_1,pres10s_2,Q76,pres30s_1,pres30s_2,Q61,pcan33s_1,pcan33s_2,Q86,pcan66s_1,pcan66s_2,Q60,plot60o_1,plot60o_2,Q69,plot60s_1,plot60s_2,Q62,pcan66o_1,pcan66o_2,Q89,Q125,Q127,Q128,Q131,Q132,Q133,Q134,Q135,Q130,Q136,Q137,Q138,Q139,Q140,Q141,Q142,Q143,Q144,Q146,Q145,Q147,Q148,Q149,Q150,Q151,Q152,Q153,Q154_1,Q154_2,Q154_3,Q154_4,Q154_5,Q154_6,Q154_7,Q154_8,Q32,Q33
+Start Date,End Date,Response Type,IP Address,Progress,Duration (in seconds),Finished,Recorded Date,Response ID,Recipient Last Name,Recipient First Name,Recipient Email,External Data Reference,Location Latitude,Location Longitude,Distribution Channel,User Language,"By clicking below you indicate that you have read and understood the information provided above, that you willingly agree to participate, that you may withdraw your consent at any time and discontinue participation, and that you are not waiving any legal claims, rights, or remedies.","Imagine you are taking a gamble to win a money prize and nothing otherwise. There are 3 options of gamble to choose from. Please choose one gamble option that you think is the best. Note that when you multiply the percent chance of winning by the amount of winning (i.e., the expected outcome), each gamble would result roughly around $100.
+
+
+
+
+Gamble
+
+
+% Chance of winning
+
+
+Amount of winning
+
+
+
+
+A
+
+
+50%
+
+
+$200
+
+
+
+
+B
+
+
+60%
+
+
+$167
+
+
+
+
+C
+
+
+59.75%
+
+
+$167","Imagine you are taking a gamble to win a money prize and nothing otherwise. There are 3 options of gamble to choose from. Please choose one gamble option that you think is the best. Note that when you multiply the percent chance of winning by the amount of winning (i.e., the expected outcome), each gamble would result roughly around $100.
+
+
+
+
+Gamble
+
+
+% Chance of winning
+
+
+Amount of winning
+
+
+
+
+A
+
+
+60%
+
+
+$167
+
+
+
+
+B
+
+
+50%
+
+
+$200
+
+
+
+
+C
+
+
+50.25%
+
+
+$199","A company is hiring a new employee for a position involving a leadership role. Assume you have to select between three candidates. The candidates were interviewed and rated by the HR on two attributes -- cognitive intelligence (IQ) and emotional intelligence (EQ) -- on a scale from 1 (very weak) too 100 (very strong). Both attributes are equally important for the position. Based on the scores displayed below, which candidate would you select?
+
+
+
+
+Candidate
+
+
+Cognitive Intelligence (IQ)
+
+
+Emotional Intelligence (EQ)
+
+
+
+
+A
+
+
+66
+
+
+33
+
+
+
+
+B
+
+
+33
+
+
+66
+
+
+
+
+C
+
+
+33.5
+
+
+65.5","A company is hiring a new employee for a position involving a leadership role. Assume you have to select between three candidates. The candidates were interviewed and rated by the HR on two attributes -- cognitive intelligence (IQ) and emotional intelligence (EQ) -- on a scale from 1 (very weak) too 100 (very strong). Both attributes are equally important for the position. Based on the scores displayed below, which candidate would you select?
+
+
+
+
+Candidate
+
+
+Cognitive Intelligence (IQ)
+
+
+Emotional Intelligence (EQ) 
+
+
+
+
+A
+
+
+33
+
+
+66
+
+
+
+
+B
+
+
+66
+
+
+33
+
+
+
+
+C
+
+
+65.5
+
+
+33.5","You plan to go out to have a dinner. There are eight restaurant choices to choose from. You have never been to any of these restaurants before, so you decide to read reviews on a website. According to the reviews, the food quality is rated on a scale from 0 (very bad) to 100 (very good). You also consider a driving time to each restaurant. The restaurant information is displayed below. Please choose one restaurant that you think is the best option.
+
+
+
+
+Restaurant
+
+
+Driving Time
+
+
+Food Quality
+
+
+
+
+A
+
+
+40 mins
+
+
+80
+
+
+
+
+B
+
+
+10 mins
+
+
+60
+
+
+
+
+C
+
+
+10.5 mins
+
+
+60.3
+
+
+
+
+D
+
+
+11 mins
+
+
+60.6
+
+
+
+
+E
+
+
+11.5 mins
+
+
+61
+
+
+
+
+F
+
+
+12 mins
+
+
+61.3
+
+
+
+
+G
+
+
+12.5 mins
+
+
+61.6
+
+
+
+
+H
+
+
+13 mins
+
+
+62","You plan to go out to have a dinner. There are eight restaurant choices to choose from. You have never been to any of these restaurants before, so you decide to read reviews on a website. According to the reviews, the food quality is rated on a scale from 0 (very bad) to 100 (very good). You also consider a driving time to each restaurant. The restaurant information is displayed below. Please choose one restaurant that you think is the best option.
+
+
+
+
+Restaurant
+
+
+Driving Time
+
+
+Food Quality
+
+
+
+
+A
+
+
+10 mins
+
+
+60
+
+
+
+
+B
+
+
+40 mins
+
+
+80
+
+
+
+
+C
+
+
+39.5 mins
+
+
+79.6
+
+
+
+
+D
+
+
+39 mins
+
+
+79.3
+
+
+
+
+E
+
+
+38.5 mins
+
+
+79
+
+
+
+
+F
+
+
+38 mins
+
+
+78.6
+
+
+
+
+G
+
+
+37.5 mins
+
+
+78.3
+
+
+
+
+H
+
+
+37 mins
+
+
+78","You are planning to watch a movie this weekend. However, you are not sure which movie to watch since there are eight options to choose from and they all seem equally interesting to you. You also read reviews online for each movie. Two critics rated each movie based on a scale from 0 (very boring) to 100 (very entertaining). The ratings are displayed below. If you can choose to watch only one movie, which movie would you choose?
+
+
+
+
+Movie
+
+
+Critic I’s rating
+
+
+Critic II’s rating
+
+
+
+
+A
+
+
+66
+
+
+33
+
+
+
+
+B
+
+
+33
+
+
+66
+
+
+
+
+C
+
+
+34
+
+
+65
+
+
+
+
+D
+
+
+35
+
+
+64
+
+
+
+
+E
+
+
+36
+
+
+63
+
+
+
+
+F
+
+
+37
+
+
+62
+
+
+
+
+G
+
+
+38
+
+
+61
+
+
+
+
+H
+
+
+39
+
+
+60","You are planning to watch a movie this weekend. However, you are not sure which movie to watch since there are eight options to choose from and they all seem equally interesting to you. You also read reviews online for each movie. Two critics rated each movie based on a scale from 0 (very boring) to 100 (very entertaining). The ratings are displayed below. If you can choose to watch only one movie, which movie would you choose?
+
+
+
+
+Movie
+
+
+Critic I’s rating
+
+
+Critic II’s rating
+
+
+
+
+A
+
+
+33
+
+
+66
+
+
+
+
+B
+
+
+66
+
+
+33
+
+
+
+
+C
+
+
+65
+
+
+34
+
+
+
+
+D
+
+
+64
+
+
+35
+
+
+
+
+E
+
+
+63
+
+
+36
+
+
+
+
+F
+
+
+62
+
+
+37
+
+
+
+
+G
+
+
+61
+
+
+38
+
+
+
+
+H
+
+
+60
+
+
+39","You plan to go out to have a dinner. There are three restaurant choices to choose from. You have never been to any of these restaurants before, so you decide to read reviews on a website. According to the reviews, the food quality is rated on a scale from 0 (very bad) to 100 (very good). You also consider a driving time to each restaurant. The restaurant information is displayed below. Please choose one restaurant that you think is the best option.
+
+
+
+
+Restaurant
+
+
+Driving Time
+
+
+Food Quality
+
+
+
+
+A
+
+
+40 mins
+
+
+80
+
+
+
+
+B
+
+
+10 mins
+
+
+60
+
+
+
+
+C
+
+
+10.5 mins
+
+
+60.3","You plan to go out to have a dinner. There are three restaurant choices to choose from. You have never been to any of these restaurants before, so you decide to read reviews on a website. According to the reviews, the food quality is rated on a scale from 0 (very bad) to 100 (very good). You also consider a driving time to each restaurant. The restaurant information is displayed below. Please choose one restaurant that you think is the best option.
+
+
+
+
+Restaurant
+
+
+Driving Time
+
+
+Food Quality
+
+
+
+
+A
+
+
+10 mins
+
+
+60
+
+
+
+
+B
+
+
+40 mins
+
+
+80
+
+
+
+
+C
+
+
+39.5 mins
+
+
+79.6","A company is hiring a new employee for a position that involves a leadership role. Assume you have to select between eight candidates. The candidates were interviewed and rated by the HR on two attributes -- cognitive intelligence (IQ) and emotional intelligence (EQ) -- on a scale from 1 (very weak) too 100 (very strong). Both attributes are equally important for the position. Based on the scores displayed below, which candidate would you select?
+CandidateCognitive Intelligence (IQ)Emotional Intelligence (EQ)A6633B3366C33.565.5D3465E34.564.5F3564G35.563.5H3663","A company is hiring a new employee for a position involves a leadership role. Assume you have to select between eight candidates. The candidates were interviewed and rated by the HR on two attributes -- intelligence and motivation -- on a scale from 1 (very weak) too 100 (very strong). Both attributes are equally important for the position. Based on the scores displayed below, which candidate would you select?
+
+
+
+
+Candidate
+
+
+Intelligence
+
+
+Motivation
+
+
+
+
+A
+
+
+33
+
+
+66
+
+
+
+
+B
+
+
+66
+
+
+33
+
+
+
+
+C
+
+
+65.5
+
+
+33.5
+
+
+
+
+D
+
+
+6534
+
+
+
+E
+
+
+64.5
+
+
+34.5
+
+
+
+
+F
+
+
+64
+
+
+35
+
+
+
+
+G
+
+
+63.5
+
+
+35.5
+
+
+
+
+H
+
+
+63
+
+
+36","You are planning to watch a movie this weekend. However, you are not sure which movie to watch since there are three options to choose from and they all seem equally interesting to you. You also read reviews online for each movie. Two critics rated each movie based on a scale from 0 (very boring) to 100 (very entertaining). The ratings are displayed below. If you can choose to watch only one movie, which movie would you choose?
+
+
+
+
+Movie
+
+
+Critic I's rating
+
+
+Critic II's rating
+
+
+
+
+A
+
+
+33
+
+
+66
+
+
+
+
+B
+
+
+66
+
+
+33
+
+
+
+
+C
+
+
+65
+
+
+34","You are planning to watch a movie this weekend. However, you are not sure which movie to watch since there are three options to choose from and they all seem equally interesting to you. You also read reviews online for each movie. Two critics rated each movie based on a scale from 0 (very boring) to 100 (very entertaining). The ratings are displayed below. If you can choose to watch only one movie, which movie would you choose?
+
+
+
+
+Movie
+
+
+Critic I's rating
+
+
+Critic II's rating
+
+
+
+
+A
+
+
+66
+
+
+33
+
+
+
+
+B
+
+
+33
+
+
+66
+
+
+
+
+C
+
+
+34
+
+
+65","Imagine you are taking a gamble to win a money prize and nothing otherwise. There are 8 options of gamble to choose from. Please choose one gamble option that you think is the best. Note that when you multiply the percent chance of winning by the amount of winning (i.e., the expected outcome), each gamble would result roughly around $100.
+
+
+
+
+
+
+Gamble
+
+
+% Chance of winning
+
+
+Amount of winning
+
+
+
+
+A
+
+
+50%
+
+
+$200
+
+
+
+
+B
+
+
+60%
+
+
+$167
+
+
+
+
+C
+
+
+59.75%
+
+
+$167
+
+
+
+
+D
+
+
+59.50%
+
+
+$168
+
+
+
+
+E
+
+
+59.25%
+
+
+$169
+
+
+
+
+F
+
+
+59%
+
+
+$169
+
+
+
+
+G
+
+
+58.75%
+
+
+$170
+
+
+
+
+H
+
+
+58.50%
+
+
+$171","Imagine you are taking a gamble to win a money prize and nothing otherwise. There are 8 options of gamble to choose from. Please choose one gamble option that you think is the best. Note that when you multiply the percent chance of winning by the amount of winning (i.e., the expected outcome), each gamble would result roughly around $100.
+
+
+
+
+
+
+Gamble
+
+
+% Chance of winning
+
+
+Amount of winning
+
+
+
+
+A
+
+
+60%
+
+
+$167
+
+
+
+
+B
+
+
+50%
+
+
+$200
+
+
+
+
+C
+
+
+50.25%
+
+
+$199
+
+
+
+
+D
+
+
+50.50%
+
+
+$198
+
+
+
+
+E
+
+
+50.75%
+
+
+$197
+
+
+
+
+F
+
+
+51%
+
+
+$196
+
+
+
+
+G
+
+
+51.25%
+
+
+$195
+
+
+
+
+H
+
+
+51.50%
+
+
+$194","Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each critic was to you when making a decision? - Critic I's ratings","Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each critic was to you when making a decision? - Critic II's ratings",Are there any other reasons for your decision?,"Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each critic was to you when making a decision? - Critic I's ratings","Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each critic was to you when making a decision? - Critic II's ratings",Are there any other reasons for your decision?,"Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each attribute was to you when making a decision? - Driving time","Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each attribute was to you when making a decision? - Food quality",Are there any other reasons for your decision?,"Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each attribute was to you when making a decision? - Probability of winning","Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each attribute was to you when making a decision? - Amount of winning",Are there any other reasons for your decision?,"Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each attribute was to you when making a decision? - Driving time","Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each attribute was to you when making a decision? - Food quality",Are there any other reasons for your decision?,"Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each attribute was to you when making a decision? - Probability of winning","Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each attribute was to you when making a decision? - Amount of winning",Are there any other reasons for your decision?,"Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each attribute was to you when making a decision? - Cognitive Intelligence (IQ)","Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each attribute was to you when making a decision? - Emotional Intelligence (EQ)",Are there any other reasons for your decision?,"Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each critic was to you when making a decision? - Critic I's ratings","Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each critic was to you when making a decision? - Critic II's ratings",Are there any other reasons for your decision?,"Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each critic was to you when making a decision? - Critic I's ratings","Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each critic was to you when making a decision? - Critic II's ratings",Are there any other reasons for your decision?,"Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each attribute was to you when making a decision? - Driving time","Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each attribute was to you when making a decision? - Food quality",Are there any other reasons for your decision?,"Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each attribute was to you when making a decision? - Driving time","Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each attribute was to you when making a decision? - Food quality",Are there any other reasons for your decision?,"Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each attribute was to you when making a decision? - Cognitive Intelligence (IQ)","Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each attribute was to you when making a decision? - Emotional Intelligence (EQ)",Are there any other reasons for your decision?,"Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each attribute was to you when making a decision? - Cognitive Intelligence (IQ)","Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each attribute was to you when making a decision? - Emotional Intelligence (EQ)",Are there any other reasons for your decision?,"Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each attribute was to you when making a decision? - Probability of winning","Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each attribute was to you when making a decision? - Amount of winning",Are there any other reasons for your decision?,"Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each attribute was to you when making a decision? - Probability of winning","Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each attribute was to you when making a decision? - Amount of winning",Are there any other reasons for your decision?,"Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each attribute was to you when making a decision? - Cognitive Intelligence (IQ)","Please recall, as accurate as possible, how you derived your decision. 
+Please rate how important each attribute was to you when making a decision? - Emotional Intelligence (EQ)",Are there any other reasons for your decision?,Alex had a car accident and now is in a coma. Alex will have a surgery tomorrow. There’s a 50% chance that Alex will survive and a 50% chance that Alex will die. Which outcome would you predict for Alex?,Ari engages in unprotected sex. There’s a 50% chance that Ari will get a sexual transmitted disease (STD) infection and a 50% chance that Ari will not. Which outcome would you predict for Ari?,Brook walks home alone at night in an unsafe area of town for the first time. There is a 50% chance that a robber is around at that night. Which outcome would you predict for Brook?,Brook walks home alone at night in an unsafe area of town for the first time. There is a 50% chance that a gangster is around at that night. Which outcome would you predict for Brook?,Kaden plays a poker game with another friend. Kaden and a friend put down the same amount of money each. There’s a 50% chance that each outcome to occur. Which outcome would you predict for Kaden?,"Jesse spends her/his last budget on a stock. Jesse plans to sell the stock on the next day, hoping to make more money. There’s a 50% chance that each outcome would occur. Which outcome would you predict for Jesse?","Julian applies for a HR position at a local company. There’s another candidate who is equally competitive to Julian, which gives Julian a 50% chance of getting this position.This position offers a fair amount of salary. Which outcome would you predict for Julian?","Julian applies for a HR position at a local company. There’s another candidate who is equally competitive to Julian, which gives Julian a 50% chance of getting this position.This position is a dream job for Julian. Which outcome would you predict for Julian?","Max’s company is reducing an amount of its employees. Either Max or another coworker who is equally competitive to Max will get fired, which gives Max a 50% chance. Max’s position offers a fair amount of salary. Which outcome would you predict for Max?","Max’s company is reducing an amount of its employees. Either Max or another coworker who is equally competitive to Max will get fired, which gives Max a 50% chance. This position is a dream job for Max. Which outcome would you predict for Max?","Kelly is taking an intermediate level course at a university. Last year, only 50% of the students passed the course. Kelly needs to pass this course to qualify a scholarship for next year’s tuition fee (which the fee is expensive). Which outcome would you predict for Kelly?","Kelly is taking an intermediate level course at a university. Last year, only 50% of the students passed the course. This course will fulfill the major requirement. Which outcome would you predict for Kelly?",Sam believes that she/he is not a good looking person. Sam had plastic surgery on her/his face. Sam paid some amount of money for this transformation. There’s a 50% chance that each outcome would occur. Which outcome would you predict for Sam?,Sam believes that she/he is not a good looking person. Sam had plastic surgery on her/his face. Sam had a high expectation on this transformation. There’s a 50% chance that each outcome would occur. Which outcome would you predict for Sam?,Eli is having a baby. Eli wants the baby to be a girl. There’s a 50% chance that each outcome would occur. Which outcome would you predict for Eli?,Pat plays the Beanboozled Challenge where the same color of Jelly Belly bean can be a good flavor and a bad flavor. Pat picks a brown colored bean. The bad flavor of this color is canned dog food with a 50% chance and the good flavor is chocolate pudding with a 50% chance. Which outcome would you predict for Pat?,"Taylor is riding a motorcycle without a helmet. If get caught, Taylor will have to pay a fine. There’s a 50% chance that the police is around at that time. Which outcome would you predict for Taylor?",Chris adopts a dog from a shelter. Chris paid some amount of money for this dog. There’s a 50% chance that each outcome would occur. Which outcome would you predict for Chris?,Chris adopts a dog from a shelter. It’s Chris's first dog ever. Chris has a high expectation on it.  There’s a 50% chance that each outcome would occur. Which outcome would you predict for Chris?,"Morgan takes some questionable deductions on your income tax return. There’s a 50% chance that the tax authority would notice this. If get caught, Morgan needs to pay fine. Which outcome would you predict for Morgan?","Morgan takes some questionable deductions on your income tax return. There’s a 50% chance that the tax authority would notice this. If get caught, Morgan will lose the reputation. Which outcome would you predict for Morgan?",Jordan saw a person breaking a car’s window. Jordan decided to call the police. There’s a 50% chance that each outcome would occur. Which outcome would you predict for Jordan?,"Harper is cheating on her/his partner. If get caught, Harper’s partner will breakup with Harper. There’s a 50% chance that Harper’s wrongdoing will be exposed. Which outcome would you predict for Harper.","Ash passes off somebody else’s work as her/his own. If get caught, Ash will be fired from her/his high salary position. There’s a 50% chance that Ash’s act will be exposed. Which outcome would you predict for Ash?","Ash passes off somebody else’s work as her/his own. If get caught, Ash will lose the good reputation. There’s a 50% chance that Ash’s act will be exposed. Which outcome would you predict for Ash?","Clay reveals a friend’s secret to someone else. If get caught, Clay will lose the good reputation. There’s a 50% chance that Clay’s act will be exposed. Which outcome would you predict for Clay?",​This glass of water is...,"Please answer questions below - In uncertain times, I usually expect the best.","Please answer questions below - If something can go wrong for me, it will.",Please answer questions below - I always look on the bright side of things.,Please answer questions below - I'm always optimistic about my future.,Please answer questions below - I hardly ever expect things to go my way.,Please answer questions below - Things never work out the way I want them to.,"Please answer questions below - I'm a believer in the idea that ""every cloud has a silver lining""",Please answer questions below - I rarely count on good things happening to me.,What is your gender?,What is your age (in years)?
+"{""ImportId"":""startDate"",""timeZone"":""Europe/Berlin""}","{""ImportId"":""endDate"",""timeZone"":""Europe/Berlin""}","{""ImportId"":""status""}","{""ImportId"":""ipAddress""}","{""ImportId"":""progress""}","{""ImportId"":""duration""}","{""ImportId"":""finished""}","{""ImportId"":""recordedDate"",""timeZone"":""Europe/Berlin""}","{""ImportId"":""_recordId""}","{""ImportId"":""recipientLastName""}","{""ImportId"":""recipientFirstName""}","{""ImportId"":""recipientEmail""}","{""ImportId"":""externalDataReference""}","{""ImportId"":""locationLatitude""}","{""ImportId"":""locationLongitude""}","{""ImportId"":""distributionChannel""}","{""ImportId"":""userLanguage""}","{""ImportId"":""QID30""}","{""ImportId"":""QID10""}","{""ImportId"":""QID11""}","{""ImportId"":""QID52""}","{""ImportId"":""QID53""}","{""ImportId"":""QID58""}","{""ImportId"":""QID59""}","{""ImportId"":""QID95""}","{""ImportId"":""QID94""}","{""ImportId"":""QID56""}","{""ImportId"":""QID57""}","{""ImportId"":""QID54""}","{""ImportId"":""QID55""}","{""ImportId"":""QID93""}","{""ImportId"":""QID96""}","{""ImportId"":""QID27""}","{""ImportId"":""QID23""}","{""ImportId"":""QID107_1""}","{""ImportId"":""QID107_2""}","{""ImportId"":""QID108_TEXT""}","{""ImportId"":""QID109_1""}","{""ImportId"":""QID109_2""}","{""ImportId"":""QID105_TEXT""}","{""ImportId"":""QID116_1""}","{""ImportId"":""QID116_2""}","{""ImportId"":""QID82_TEXT""}","{""ImportId"":""QID122_1""}","{""ImportId"":""QID122_2""}","{""ImportId"":""QID66_TEXT""}","{""ImportId"":""QID117_1""}","{""ImportId"":""QID117_2""}","{""ImportId"":""QID79_TEXT""}","{""ImportId"":""QID120_1""}","{""ImportId"":""QID120_2""}","{""ImportId"":""QID72_TEXT""}","{""ImportId"":""QID112_1""}","{""ImportId"":""QID112_2""}","{""ImportId"":""QID92_TEXT""}","{""ImportId"":""QID110_1""}","{""ImportId"":""QID110_2""}","{""ImportId"":""QID102_TEXT""}","{""ImportId"":""QID111_1""}","{""ImportId"":""QID111_2""}","{""ImportId"":""QID99_TEXT""}","{""ImportId"":""QID118_1""}","{""ImportId"":""QID118_2""}","{""ImportId"":""QID76_TEXT""}","{""ImportId"":""QID119_1""}","{""ImportId"":""QID119_2""}","{""ImportId"":""QID61_TEXT""}","{""ImportId"":""QID114_1""}","{""ImportId"":""QID114_2""}","{""ImportId"":""QID86_TEXT""}","{""ImportId"":""QID115_1""}","{""ImportId"":""QID115_2""}","{""ImportId"":""QID60_TEXT""}","{""ImportId"":""QID121_1""}","{""ImportId"":""QID121_2""}","{""ImportId"":""QID69_TEXT""}","{""ImportId"":""QID123_1""}","{""ImportId"":""QID123_2""}","{""ImportId"":""QID62_TEXT""}","{""ImportId"":""QID113_1""}","{""ImportId"":""QID113_2""}","{""ImportId"":""QID89_TEXT""}","{""ImportId"":""QID125""}","{""ImportId"":""QID127""}","{""ImportId"":""QID128""}","{""ImportId"":""QID131""}","{""ImportId"":""QID132""}","{""ImportId"":""QID133""}","{""ImportId"":""QID134""}","{""ImportId"":""QID135""}","{""ImportId"":""QID130""}","{""ImportId"":""QID136""}","{""ImportId"":""QID137""}","{""ImportId"":""QID138""}","{""ImportId"":""QID139""}","{""ImportId"":""QID140""}","{""ImportId"":""QID141""}","{""ImportId"":""QID142""}","{""ImportId"":""QID143""}","{""ImportId"":""QID144""}","{""ImportId"":""QID146""}","{""ImportId"":""QID145""}","{""ImportId"":""QID147""}","{""ImportId"":""QID148""}","{""ImportId"":""QID149""}","{""ImportId"":""QID150""}","{""ImportId"":""QID151""}","{""ImportId"":""QID152""}","{""ImportId"":""QID153""}","{""ImportId"":""QID154_10""}","{""ImportId"":""QID154_11""}","{""ImportId"":""QID154_12""}","{""ImportId"":""QID154_13""}","{""ImportId"":""QID154_14""}","{""ImportId"":""QID154_15""}","{""ImportId"":""QID154_16""}","{""ImportId"":""QID154_17""}","{""ImportId"":""QID32""}","{""ImportId"":""QID33_TEXT""}"
+2019-04-25 19:37:30,2019-04-25 19:37:31,2,,100,1,1,2019-04-25 19:37:31,R_bNQjluWkAmIqj5j,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,2,5,,,,,,,,,2,4,,,,,,,,,,,,,,40,36,Ante interdum rhoncus. Fringilla. Est rutrum posuere. Accusamus! Fusce faucibus urna vestibulum ligula volutpat.,99,5,Nibh blandit quis felis morbi atque dictumst aliquet etiam suspendisse.,,,,13,33,Ullamcorper dignissim. Ac consequat amet urna ultrices sed nunc accusamus dapibus laoreet.,,,,,,,,,,19,13,Dolor. Euismod. Malesuada natoque eleifend? Rutrum porttitor! Primis natoque ultricies dignissim porta leo.,,,,,,,,,,,,,,,,1,,1,,1,,,,,,,,,,,,,,,,,,,2,19,19,15,15,15,18,17,19,2,97
+2019-04-25 19:37:31,2019-04-25 19:37:31,2,,100,0,1,2019-04-25 19:37:31,R_5ziOELo5XAQmkFT,,,,,51.571197509765625,5.0543975830078125,test,,1,3,,,,2,,,,,,,4,2,,,,,,,,,,,,,61,80,Venenatis aliquam! Sagittis pede primis. Duis morbi turpis massa amet nulla dapibus natoque sodales etiam.,61,77,Morbi auctor? Lectus urna. Nullam montes maecenas luctus? Facilisi facilisis. Culpa at.,,,,89,92,Eget orci ut! Integer! Sed magna ante faucibus erat posuere.,,,,86,21,Venenatis viverra. Scelerisque diam eu natoque. Dolorem sollicitudin nunc! Ultrices? Sem gravida sem.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2,,,,2,1,,,,1,16,16,17,18,18,18,17,15,3,32
+2019-04-25 19:37:32,2019-04-25 19:37:32,2,,100,0,1,2019-04-25 19:37:32,R_1zBqx9kX6edhVCB,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:32,2019-04-25 19:37:33,2,,100,1,1,2019-04-25 19:37:33,R_dcAzqc5IbKxxK8l,,,,,51.571197509765625,5.0543975830078125,test,,1,,,1,,,,,7,2,,,,,,3,,,,,14,3,Neque! Magnis viverra enim elit ante leo sodales orci euismod orci? Sagittis molestie. Rutrum vestibulum.,,,,,,,,,,17,15,"Imperdiet luctus, elementum pellentesque nullam. Molestie metus vel ante non porta, rutrum et consequat luctus.",,,,,,,,,,,,,91,71,"Quis. A tincidunt, dictumst convallis ligula! Ultricies curabitur dolor ullamcorper pharetra in tincidunt.",,,,78,40,"Mattis dapibus ipsum tempus enim dapibus donec faucibus euismod porta aenean etiam, laoreet.",,,,,,,,,,1,,,,1,,,,,,,,,1,,,,,,,,,,,,,1,16,19,16,19,15,15,17,19,2,93
+2019-04-25 19:37:33,2019-04-25 19:37:33,2,,100,0,1,2019-04-25 19:37:33,R_3eEAN2vNns0EsAt,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,,,,,,1,,,2,2,,2,,,,,,,,,,,,,,,,,32,42,Ac cursus volutpat natoque ligula risus duis nibh! Sem rhoncus. Consequat eleifend consectetuer.,36,18,"Proin sagittis, aenean malesuada culpa suscipit. Dictumst! Accumsan orci, erat.",,,,72,27,Accumsan non rhoncus primis? Id porttitor tempor nonummy nullam ridiculus.,,,,56,85,Porttitor magnis facilisi rhoncus molestie donec commodo elementum felis mauris? Iaculis.,,,,,,,,,,,,,,,,,,,,,,,,2,,,,,,,,2,,,,,,,,,2,2,18,15,15,19,15,19,19,16,3,72
+2019-04-25 19:37:33,2019-04-25 19:37:33,2,,100,0,1,2019-04-25 19:37:33,R_1FYIIMALsANk6SF,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:34,2019-04-25 19:37:34,2,,100,0,1,2019-04-25 19:37:34,R_5uNCjmiyKPVVef3,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:34,2019-04-25 19:37:35,2,,100,1,1,2019-04-25 19:37:35,R_d6vSu8zmLpqHXAV,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,1,6,,,,,,,,1,,,5,,,,,,,,,,,,,62,48,Velit non fermentum placerat. Fermentum nulla. Massa rhoncus metus ante.,,,,,,,,,,71,15,Felis dapibus luctus ante dolorem purus mi consectetuer. Velit aliquet lectus.,,,,,,,65,83,"Sapien porta placerat! Luctus massa velit, sit. Cras non! Tempus vivamus tellus. Imperdiet neque. Donec.",,,,79,78,Egestas et. Nunc fermentum! Consequat dolor integer per urna duis. Sollicitudin! Tellus rutrum maecenas.,,,,,,,,,,,,,,,,,1,,,,1,,,,,,,,,,1,,2,19,15,19,18,19,15,16,18,1,91
+2019-04-25 19:37:35,2019-04-25 19:37:35,2,,100,0,1,2019-04-25 19:37:35,R_1MtwMpD9W6Po5Bb,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:35,2019-04-25 19:37:35,2,,100,0,1,2019-04-25 19:37:36,R_bPMMphqWhhBqUu1,,,,,51.571197509765625,5.0543975830078125,test,,1,3,,,,7,,,,,,2,,3,,,,,,,,,,,,,4,76,Fusce elit. Dolor integer wisi tincidunt consectetuer tellus turpis ultrices.,31,58,"Id augue porta metus, mauris arcu aliquet posuere magna laoreet! Risus per nibh proin praesent.",,,,,,,,,,34,96,Pretium. Malesuada aenean viverra et! Natoque. Pharetra dignissim? Porta posuere. Elit porta.,,,,,,,,,,,,,,,,,,,54,16,"Quam viverra risus curabitur nulla interdum duis vulputate, wisi porta pellentesque nulla nulla wisi est.",,1,,,,,,,,,,,,,,1,,,,2,,,,,,,2,16,19,17,15,15,17,16,17,1,25
+2019-04-25 19:37:36,2019-04-25 19:37:36,2,,100,0,1,2019-04-25 19:37:37,R_0BeN6U37IAiSCIl,,,,,51.571197509765625,5.0543975830078125,test,,1,,1,,,,,2,,,2,,3,,,,,100,12,Montes? Rhoncus integer quam magna in culpa. Ultrices ultricies arcu mattis.,,,,,,,,,,,,,,,,85,98,Suspendisse interdum pede auctor vivamus. Nibh volutpat ut dolorem nullam sit elit.,,,,,,,18,18,At molestie gravida. Ullamcorper. Turpis pede aliquam magna justo. Atque? Tincidunt! Lacus phasellus consequat lorem.,,,,,,,,,,,,,90,36,"Dignissim, porttitor. Ut eget. Leo sit ridiculus? Dignissim culpa vehicula fermentum consectetuer.",,,,,,,,,,,,,,,,,,,,2,,,,,1,1,,,,2,16,18,18,15,17,15,16,19,1,44
+2019-04-25 19:37:37,2019-04-25 19:37:37,2,,100,0,1,2019-04-25 19:37:37,R_5BX3eSEKQgWj9DD,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:37,2019-04-25 19:37:37,2,,100,0,1,2019-04-25 19:37:37,R_diDcwKhxK1yeZCd,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,2,,,4,,,3,,,,,,8,32,95,Malesuada elementum diam tempora! Ipsum per morbi? Sit potenti cras atque.,,,,,,,,,,,,,,,,,,,,,,,,,50,40,Enim accusamus praesent potenti blandit enim porta aliquet. Sem velit imperdiet. Volutpat nullam.,,,,7,17,"Vestibulum. Eget maecenas, dignissim ligula porttitor vitae volutpat. Duis! Per eleifend pretium.",,,,12,60,Sit laoreet quam integer sem blandit suspendisse gravida ab dui. Tempor.,,,,,,,,,,,,,,,,,,2,,,,,,,2,,1,,,,,,1,18,17,16,19,18,18,18,15,1,0
+2019-04-25 19:37:38,2019-04-25 19:37:38,2,,100,0,1,2019-04-25 19:37:38,R_57Me7YKZQCK3yYJ,,,,,51.571197509765625,5.0543975830078125,test,,1,,,2,,,,3,,,2,,,,,,6,61,57,Praesent ac et eget blandit vitae augue duis sodales? Aliquam elementum duis orci augue.,,,,,,,,,,,,,,,,,,,,,,,,,92,98,Porta turpis. Mattis vivamus. Ac? Massa mattis. Bibendum quam! Eget.,,,,,,,75,74,Magna accumsan. Volutpat odio justo vivamus ultricies donec! Non! Etiam.,52,15,Donec sit erat nibh suspendisse justo luctus ligula dolorem culpa cursus suscipit.,,,,,,,,2,,,,,,,,,,,,,,2,,,,,,,,,1,,2,16,16,19,19,19,17,17,17,1,20
+2019-04-25 19:37:38,2019-04-25 19:37:38,2,,100,0,1,2019-04-25 19:37:39,R_d57ywKi0ZeusdBr,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:39,2019-04-25 19:37:39,2,,100,0,1,2019-04-25 19:37:39,R_e9FxCEoA93GiFBX,,,,,51.571197509765625,5.0543975830078125,test,,1,,1,,,,,,7,,3,4,,,,,,,,,17,56,Suscipit est donec vel dignissim rutrum proin est pharetra orci fermentum.,,,,,,,,,,,,,,,,,,,,,,86,87,Sem. Nonummy mattis? Porta nullam? Phasellus lacus facilisi urna nulla? Augue.,,,,,,,,,,,,,5,43,"Sit blandit vestibulum, bibendum fusce non ac bibendum vehicula mattis molestie! Gravida eu? Platea ab.",49,51,"Culpa! Et elementum luctus at! Elit lectus non, dignissim ipsum. Accusamus amet risus ipsum.",,,,,1,,,2,,,,,,,2,,,,,,,,,,,,2,15,18,18,18,15,16,18,18,3,51
+2019-04-25 19:37:39,2019-04-25 19:37:39,2,,100,0,1,2019-04-25 19:37:39,R_7ZMjqJv7mnuxV3L,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:40,2019-04-25 19:37:40,2,,100,0,1,2019-04-25 19:37:40,R_00uLV5XuWxoKhtb,,,,,51.571197509765625,5.0543975830078125,test,,1,,3,2,,,5,4,,,,,,,,,,64,43,"Montes tempus, tincidunt proin nibh sem. Mattis! Lacus sit culpa.",,,,82,55,"Pede convallis pretium nonummy atque interdum? Euismod? Nulla, rutrum nullam ipsum amet viverra eu ullamcorper.",,,,,,,,,,,,,,,,,,,,,,,,,,,,44,54,Eros elementum! Blandit ac phasellus arcu mauris id maecenas volutpat natoque.,,,,46,30,"Ultricies! Aliquam facilisis, accusamus quis porttitor facilisi phasellus lorem sagittis nec? Dictumst? Temporibus.",,,,,,,,,,,,,1,,,,1,,,,,,,,,,,,1,2,18,17,19,15,19,16,19,15,3,95
+2019-04-25 19:37:40,2019-04-25 19:37:41,2,,100,1,1,2019-04-25 19:37:41,R_894331hVBXZpsVv,,,,,51.571197509765625,5.0543975830078125,test,,1,,,3,,,,,5,1,,,,,,7,,,,,86,18,Volutpat tempus magnis commodo eget in ullamcorper integer posuere? Cras? Dolor lacus.,,,,,,,,,,10,54,Fusce duis wisi praesent phasellus nibh nunc nec dignissim scelerisque lorem eget egestas magna. Lacus.,,,,,,,,,,,,,17,29,Venenatis. Fermentum. Ac est ab id nec facilisi placerat nibh placerat nullam! Pellentesque velit.,,,,74,82,Lacus blandit dignissim etiam natoque pellentesque tempora? Consequat scelerisque urna mi neque fermentum tempus.,,,,,,,,,,1,,1,,,1,,,,,,,,,,,,,,,,,,,,,2,18,16,18,15,16,18,17,16,1,94
+2019-04-25 19:37:41,2019-04-25 19:37:41,2,,100,0,1,2019-04-25 19:37:41,R_7NzFeZCYzjSPHNj,,,,,51.571197509765625,5.0543975830078125,test,,1,,3,,,,,,6,3,,3,,,,,,,,,73,32,"Pretium dictumst pede lectus. Augue pharetra? Cursus! Vehicula turpis, diam laoreet dignissim vivamus dui facilisi.",,,,,,,,,,,,,,,,,,,,,,,,,40,71,Montes justo imperdiet lorem fringilla consectetuer nulla nonummy risus maecenas cras suscipit mattis. Leo aenean.,,,,,,,,,,23,94,Interdum culpa at rhoncus aenean nibh rhoncus tortor? Lacus rutrum culpa.,48,61,"Pretium diam, metus elementum sapien? Orci magnis dolorem nonummy. Dolor placerat montes lorem.",,1,,,,,,,2,,,,,,,,,,,2,,,,,,,2,16,19,15,16,18,18,19,16,3,22
+2019-04-25 19:37:42,2019-04-25 19:37:42,2,,100,0,1,2019-04-25 19:37:42,R_5jX7NH5u0j4Cgo5,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:42,2019-04-25 19:37:42,2,,100,0,1,2019-04-25 19:37:42,R_5teQrwpC7Z1ol8h,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:42,2019-04-25 19:37:43,2,,100,1,1,2019-04-25 19:37:43,R_2gJyxxzQpoanhGJ,,,,,51.571197509765625,5.0543975830078125,test,,1,,,1,,7,,,,,,,,2,,5,,,,,,,,,,,,,,9,100,Aliquam curabitur donec mattis posuere suspendisse nonummy urna! Augue pede metus magna.,36,71,"Sodales! Magnis dignissim, phasellus magnis non mattis interdum neque nunc maecenas.",,,,,,,34,35,"Auctor vulputate suscipit quam sollicitudin sem? Purus interdum porta ac vitae sapien, pretium consequat.",,,,,,,,,,90,87,"Turpis phasellus blandit per etiam metus integer, a dignissim enim urna, sodales sollicitudin volutpat.",,,,,,,,,,,,,,,,,,,,,,,1,2,,1,,,,,,,,,,1,17,18,19,17,19,19,17,19,1,52
+2019-04-25 19:37:43,2019-04-25 19:37:43,2,,100,0,1,2019-04-25 19:37:43,R_01ER7ghbp5RAyZD,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:43,2019-04-25 19:37:43,2,,100,0,1,2019-04-25 19:37:43,R_dnlPkwCSn3nOKwd,,,,,51.571197509765625,5.0543975830078125,test,,1,2,,,,,,4,,3,,8,,,,,,60,55,"Tortor ligula curabitur neque a viverra interdum, magna culpa. Pretium, gravida euismod.",,,,,,,19,3,Donec? Commodo maecenas neque. Morbi fermentum faucibus magnis placerat pede phasellus turpis! Atque tempus sem.,,,,,,,,,,,,,,,,,,,55,91,"Lacus vehicula pellentesque suspendisse urna montes vulputate, posuere orci. Viverra. Suspendisse.",,,,,,,,,,,,,30,49,Accumsan luctus dignissim rutrum erat luctus aliquet! Elit dolor pretium malesuada ligula? Morbi.,,,,,2,,,,,,,,,,,2,,,,,,,,,,2,2,18,15,18,17,19,19,16,18,1,49
+2019-04-25 19:37:44,2019-04-25 19:37:44,2,,100,0,1,2019-04-25 19:37:44,R_aVPnvSnCBRQ8VtX,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:44,2019-04-25 19:37:44,2,,100,0,1,2019-04-25 19:37:44,R_cYcBIJyMjvjmZCZ,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:44,2019-04-25 19:37:45,2,,100,1,1,2019-04-25 19:37:45,R_0pPwZAI9D2sNzsV,,,,,51.571197509765625,5.0543975830078125,test,,1,,3,,,1,,,,,,6,,2,,,,,,,,,,,,,,,,80,55,"Sollicitudin porttitor, ipsum, bibendum erat. Dolorem a. Tortor magnis ultricies. Nec quam commodo tellus blandit.",,,,,,,,,,14,70,"Vestibulum. Placerat! Facilisis viverra elit faucibus pellentesque, accumsan accusamus commodo.",,,,,,,,,,,,,,,,73,44,Sagittis lacus primis ac nonummy metus curabitur velit porttitor. Etiam nonummy quis mauris.,95,88,Tellus. Vulputate ridiculus in eget et vehicula. Aliquam ullamcorper placerat.,2,,,,,2,2,,,,,,,,,,,,,,,,,,,,2,16,18,15,17,18,16,17,19,1,72
+2019-04-25 19:37:45,2019-04-25 19:37:45,2,,100,0,1,2019-04-25 19:37:45,R_5iq4Goj5qA4W2wd,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:45,2019-04-25 19:37:45,2,,100,0,1,2019-04-25 19:37:45,R_cOY70Ck7YqVUU7z,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:46,2019-04-25 19:37:46,2,,100,0,1,2019-04-25 19:37:46,R_9WV0nM2qVXB9kvb,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:46,2019-04-25 19:37:46,2,,100,0,1,2019-04-25 19:37:46,R_dgmGQ3YUFtcLGlv,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,2,,,,6,2,,,,,,1,,,,,72,21,"Consectetuer tempus porttitor, atque! Urna dictumst ligula mi interdum consequat erat iaculis.",,,,,,,,,,100,9,"Platea fringilla! Temporibus, vel. Massa dictumst tellus bibendum pharetra massa integer, eros placerat aliquam curabitur.",,,,,,,,,,,,,4,100,"Id? Tempor diam placerat egestas malesuada? Ut purus egestas metus, pellentesque porta ultrices mattis enim.",26,1,Tortor enim ridiculus? Phasellus? Molestie placerat sem porta vulputate leo.,,,,,,,,,,,,,,,2,,,,,,,,,2,,,,,,,,,,,2,,,,1,16,19,17,15,15,15,16,18,2,24
+2019-04-25 19:37:47,2019-04-25 19:37:47,2,,100,0,1,2019-04-25 19:37:47,R_8qBMjG47UpcdZFH,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:47,2019-04-25 19:37:47,2,,100,0,1,2019-04-25 19:37:47,R_3wSz0gsVVkOnls1,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:47,2019-04-25 19:37:48,2,,100,1,1,2019-04-25 19:37:48,R_8q1TLiMkBMqjNE9,,,,,51.571197509765625,5.0543975830078125,test,,1,,3,,,,,,6,1,,1,,,,,,,,,11,3,Imperdiet nullam mi erat rutrum placerat phasellus fusce nunc etiam dui.,,,,,,,,,,,,,,,,,,,,,,,,,16,99,Posuere lectus dolorem cras volutpat nullam dignissim cursus dolor ultrices.,,,,,,,,,,23,46,"Tellus proin sem! Nullam tellus, eu. Arcu urna sem ipsum velit ac, eget.",61,23,Proin? Duis molestie. Vivamus curabitur tempora maecenas arcu proin gravida urna bibendum? Faucibus felis eleifend.,,,,,,,,,,,,,,,,,,,2,,,2,,,1,,1,15,17,19,17,15,19,16,18,2,86
+2019-04-25 19:37:48,2019-04-25 19:37:48,2,,100,0,1,2019-04-25 19:37:48,R_eA900Z5R2N8aAcZ,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:48,2019-04-25 19:37:48,2,,100,0,1,2019-04-25 19:37:49,R_8jGE2S5W2d0pB0p,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,3,,,,3,,3,,,,,3,,,,,90,32,Vitae? Faucibus eros purus tempora sem lacus sed dolorem tincidunt.,,,,,,,,,,70,86,Lorem duis ab. Suscipit suscipit est tincidunt placerat ante suscipit pharetra sodales.,,,,,,,,,,64,83,Suspendisse eget! Porta id nec dapibus integer. Quis! Volutpat montes tellus! Donec.,,,,19,40,"Imperdiet integer, ultricies lectus venenatis sit eget dignissim leo pharetra nec.",,,,,,,,,,,,,,2,,,,2,,,,,,,,,1,,,,,,,,,,,,2,19,17,18,16,18,19,16,19,2,2
+2019-04-25 19:37:49,2019-04-25 19:37:49,2,,100,0,1,2019-04-25 19:37:49,R_es5ynHUl5fcvAiN,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:49,2019-04-25 19:37:49,2,,100,0,1,2019-04-25 19:37:49,R_0H7pD2AlwE6ku8t,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:50,2019-04-25 19:37:50,2,,100,0,1,2019-04-25 19:37:50,R_8GNZUsS1WjDA0EB,,,,,51.571197509765625,5.0543975830078125,test,,1,,2,,2,,5,,6,,,,,,,,,,,,22,41,Phasellus dui lectus dignissim mattis morbi facilisi. Volutpat mi vestibulum ut magna tempus aliquam eu.,27,62,Augue nonummy ultricies ut sed at culpa sem est luctus.,,,,,,,,,,,,,,,,,,,,,,,,,32,69,Urna nibh sit fusce aenean wisi. Venenatis vivamus a per! Mi sollicitudin? Metus.,,,,,,,55,15,Mi phasellus ac! Ultricies sed facilisis suspendisse a tempus massa facilisi. Justo pretium.,,,,,,,,,,,,,,,,,,,1,,,,,,,1,,,1,2,19,17,17,18,16,18,15,18,3,51
+2019-04-25 19:37:51,2019-04-25 19:37:51,2,,100,0,1,2019-04-25 19:37:51,R_0SqiaFIQ5BGBt0V,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:51,2019-04-25 19:37:51,2,,100,0,1,2019-04-25 19:37:51,R_5bsg7j3g8PRYLkx,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:52,2019-04-25 19:37:52,2,,100,0,1,2019-04-25 19:37:53,R_78puDFzP89tBpm5,,,,,51.571197509765625,5.0543975830078125,test,,1,3,,,,,6,,,,,,6,,3,,,,,,,,,2,62,Non rhoncus iaculis pellentesque erat lorem eu eu posuere felis? Commodo accusamus tempor.,11,37,Aenean porta laoreet accumsan culpa laoreet pretium. Sed amet nibh dolorem dolor.,,,,,,,58,47,"Mi tincidunt! Lacus est volutpat. Iaculis. Metus, tincidunt id scelerisque ac. Ultricies primis augue.",67,77,Proin. Nunc id. Orci tempor? Est enim euismod aliquet id sapien ultricies.,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,3,,,1,,,,,,,,,,,,,,,,,,,1,17,19,18,18,16,19,17,18,1,34
+2019-04-25 19:37:53,2019-04-25 19:37:53,2,,100,0,1,2019-04-25 19:37:53,R_5myGrRchtvveJ2R,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:53,2019-04-25 19:37:54,2,,100,1,1,2019-04-25 19:37:54,R_808z6i4B8PKsTw9,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,3,,7,,,,,,,2,,4,,,,,,,,22,20,"At. Faucibus lacus fermentum accusamus rutrum mattis diam imperdiet massa montes lorem, ut imperdiet laoreet.",,,,,,,38,37,Porta? Pharetra. Sit luctus vehicula euismod! Dapibus vivamus suspendisse cras suspendisse.,,,,,,,9,96,"Culpa mauris, urna velit ultrices vestibulum? Duis tincidunt tempor fringilla magna.",,,,,,,66,42,Lorem tincidunt. Orci primis purus eget gravida suspendisse sem faucibus phasellus consectetuer.,,,,,,,,,,,,,1,,,,,,,,,1,,,,,,,2,,,,,,,,,,2,15,19,16,18,17,19,16,15,2,60
+2019-04-25 19:37:54,2019-04-25 19:37:54,2,,100,0,1,2019-04-25 19:37:54,R_2gCasuqZbxwtkpL,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:54,2019-04-25 19:37:54,2,,100,0,1,2019-04-25 19:37:54,R_b1wv9iXbMWBYefX,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:54,2019-04-25 19:37:55,2,,100,1,1,2019-04-25 19:37:55,R_1LX2GJxvcgk3rQp,,,,,51.571197509765625,5.0543975830078125,test,,1,,3,,,,5,,,,,8,,,2,,,,,,,,,38,69,Egestas est aliquet accumsan massa justo consequat! Sapien bibendum sapien iaculis purus vestibulum magnis vitae.,,,,,,,,,,,,,37,20,At donec ut leo. Bibendum per tellus ante auctor? Viverra. Pede augue etiam dictumst felis.,,,,,,,,,,,,,,,,,,,17,50,Per. Potenti accumsan! Blandit scelerisque. Eleifend? Ullamcorper ante. Euismod donec.,16,30,Vestibulum diam aenean! Quam vel lorem malesuada massa tempus fringilla augue blandit! Felis dolor.,,,,,,,,,,,,,3,,,,,1,,,2,,,,,,2,15,19,17,19,15,17,16,17,3,36
+2019-04-25 19:37:55,2019-04-25 19:37:55,2,,100,0,1,2019-04-25 19:37:55,R_3FeF023FWt8p7vf,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:55,2019-04-25 19:37:56,2,,100,1,1,2019-04-25 19:37:56,R_089Jd5fTUVELvRb,,,,,51.571197509765625,5.0543975830078125,test,,1,1,,,,,2,,,,,7,,,1,,,,,,,,,56,20,Molestie eu turpis atque vitae pretium turpis. Viverra metus felis ullamcorper suspendisse consectetuer lacus sem.,90,2,Potenti phasellus potenti bibendum accusamus mi? Rutrum vulputate facilisi venenatis. Suspendisse diam at primis.,,,,,,,,,,52,89,Lacus. Eros diam porta turpis. Vehicula proin primis diam montes. Quam magnis sagittis fermentum.,,,,,,,,,,,,,,,,,,,,,,79,7,"Tellus consectetuer temporibus placerat. Vitae primis ipsum montes, nulla, maecenas urna, dui auctor.",,,,,,,,,,,1,,,,,,,,,,,1,,2,,,1,16,19,16,15,18,16,19,19,3,82
+2019-04-25 19:37:56,2019-04-25 19:37:56,2,,100,0,1,2019-04-25 19:37:56,R_a5fp0H9VFlJyzm5,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:56,2019-04-25 19:37:56,2,,100,0,1,2019-04-25 19:37:56,R_5pv66UlAFIC4sGF,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:56,2019-04-25 19:37:57,2,,100,1,1,2019-04-25 19:37:57,R_0Hv3FpShBj4D0Xj,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,,,,,,2,,5,,1,,,5,,,,,,,,,,,,,,,,,,,,,,,,,82,45,"Arcu est vivamus, culpa venenatis pretium luctus natoque nec. Tellus ab.",,,,4,64,Fringilla vitae fermentum! Curabitur dui massa? Ultrices sodales commodo tempus vivamus mi euismod temporibus sem.,,,,,,,0,74,Ab eget dolorem. Rutrum tincidunt commodo erat! Ipsum dolor volutpat fringilla erat.,,,,43,29,Odio. Venenatis egestas quis? Phasellus vestibulum pharetra proin! Dictumst. Ligula id neque.,,,,,,,,,,,,,,,,,,,,,1,,2,,,2,2,17,18,15,16,15,19,19,16,1,55
+2019-04-25 19:37:57,2019-04-25 19:37:57,2,,100,0,1,2019-04-25 19:37:57,R_2sDhIktfYqaDJL7,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:37:57,2019-04-25 19:37:58,2,,100,1,1,2019-04-25 19:37:58,R_9ZEAm3hg8RpYX3f,,,,,51.571197509765625,5.0543975830078125,test,,1,,3,,,,,2,,,2,,3,,,,,32,43,Accumsan rutrum laoreet arcu aliquam felis tortor. Egestas sem at vulputate sollicitudin ultricies.,,,,,,,,,,,,,,,,40,2,Ullamcorper urna suscipit aliquet duis pretium metus? Placerat cursus magna! Integer eget.,,,,,,,21,22,Fusce eu? Pellentesque? Tempus. Porta lorem. Nonummy! Tortor pretium felis.,,,,,,,,,,,,,60,4,Consectetuer per eget urna. Magna pretium scelerisque lorem? Mi fringilla.,,,,,,,,,,,,,2,,,,1,,,2,,,,,,,,,,2,18,16,17,16,19,19,15,19,3,55
+2019-04-25 19:37:58,2019-04-25 19:37:59,2,,100,1,1,2019-04-25 19:37:59,R_4Z5n0ez9kKldKyF,,,,,51.571197509765625,5.0543975830078125,test,,1,,1,1,,4,,4,,,,,,,,,,43,71,"Porta auctor. Nibh ultricies molestie rhoncus accusamus, velit. Lorem pharetra viverra magnis per. Ullamcorper.",,,,,,,,,,51,97,Laoreet suscipit consectetuer. Nullam in gravida neque fermentum. Pharetra consequat.,,,,,,,,,,,,,,,,,,,,,,4,26,Rhoncus nulla vehicula luctus ut porttitor? Leo dolor odio viverra nunc est.,,,,62,75,"Duis dui tellus augue cras sed? A bibendum tempor commodo, lectus platea.",,,,,,2,,,,,,,,,2,,,,,,,2,,,,,,,,1,18,18,19,17,19,17,16,18,3,9
+2019-04-25 19:37:59,2019-04-25 19:37:59,2,,100,0,1,2019-04-25 19:37:59,R_01kaw3IO8Fn0b1b,,,,,51.571197509765625,5.0543975830078125,test,,1,,3,,,,,8,,1,,7,,,,,,55,77,Lacus euismod scelerisque vivamus laoreet mattis aliquam culpa! Malesuada vulputate. Odio nibh pellentesque accumsan justo.,,,,,,,,,,,,,,,,,,,,,,,,,,,,44,56,"Bibendum risus mi luctus dignissim malesuada. Eu bibendum luctus. Faucibus, consequat? Potenti proin.",,,,,,,,,,59,69,"Nullam venenatis euismod ipsum pede tempor ligula elementum per? Egestas nunc blandit, pretium.",80,82,Laoreet. Dapibus ultrices suspendisse ab malesuada suscipit magna lacus quis.,1,,,,1,,,1,,,,,,,,,,,,,,,,,,,2,18,17,15,19,19,17,15,18,1,67
+2019-04-25 19:38:00,2019-04-25 19:38:00,2,,100,0,1,2019-04-25 19:38:00,R_byCy2A92ak0JmjX,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:00,2019-04-25 19:38:00,2,,100,0,1,2019-04-25 19:38:00,R_7393PHBTMqTDTLf,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,,,,,,1,,,6,1,,8,,,,,,,,,,,,,,,,,85,62,Primis platea sit aliquam proin fusce? Posuere suspendisse atque mauris quam.,95,85,Tempor mattis ligula eros bibendum dolorem metus platea tortor cursus.,,,,80,87,"Massa ut pellentesque pellentesque. Dignissim eget! Faucibus lectus, eget! Phasellus faucibus! Gravida.",,,,90,66,"Fringilla culpa, nunc nibh porta blandit ultrices dignissim augue tellus! Massa volutpat felis aenean.",,,,,,,,,,,,,,,,,2,,,,,,,,,,,,,,2,,,,,,2,,,,,2,18,15,18,18,15,18,19,19,1,12
+2019-04-25 19:38:01,2019-04-25 19:38:01,2,,100,0,1,2019-04-25 19:38:01,R_8qflapj2790YUSh,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:01,2019-04-25 19:38:01,2,,100,0,1,2019-04-25 19:38:01,R_9Gn6LW4E8QohyrX,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:01,2019-04-25 19:38:01,2,,100,0,1,2019-04-25 19:38:02,R_diOsAZNNtHquLgp,,,,,51.571197509765625,5.0543975830078125,test,,1,,2,,,,,3,,,2,,6,,,,,27,71,Ac consequat sodales sem pede euismod tempus integer quam auctor! Ultricies leo suscipit odio.,,,,,,,,,,,,,,,,94,86,Consectetuer eros sem imperdiet. Placerat enim velit suscipit convallis. Dui fusce purus purus etiam.,,,,,,,57,30,"Ultricies volutpat. Primis luctus turpis, quis viverra dui at. Magnis.",,,,,,,,,,,,,99,16,"Ut vehicula facilisis velit accumsan, ridiculus per augue? Ullamcorper natoque suscipit aliquet rhoncus fusce.",,,,,,,,,2,,,,,,,,,1,,,,,,,,,,1,,1,18,15,18,17,18,19,16,18,1,19
+2019-04-25 19:38:02,2019-04-25 19:38:02,2,,100,0,1,2019-04-25 19:38:02,R_5dV5tvmvAPbT1Yx,,,,,51.571197509765625,5.0543975830078125,test,,1,2,,3,,8,,,2,,,,,,,,,,,,49,92,"Per nullam phasellus sodales laoreet neque aenean? Fusce aliquam nulla. Ac mattis, suscipit posuere? Amet.",,,,37,74,"Neque porta vulputate enim. Risus? Mi! Ut porttitor venenatis, curabitur tempor molestie.",35,31,Wisi vivamus et. Viverra proin. Sapien pretium atque lectus at interdum dui etiam nec.,,,,,,,,,,,,,,,,,,,,,,86,55,Dolor tempora sollicitudin felis a sem neque? Cras fusce rhoncus dictumst auctor porta iaculis malesuada.,,,,,,,,,,1,,,,,,,,,,,,3,,1,,,,,,,,,,,,1,16,17,17,16,19,18,18,17,3,98
+2019-04-25 19:38:02,2019-04-25 19:38:03,2,,100,1,1,2019-04-25 19:38:03,R_bC6xSkWnLHEAI7z,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,,,,,,1,,,7,,2,,5,,,,,,,,,,,,,,,,,,,11,71,"Mattis. Volutpat metus elit vestibulum euismod natoque? Pellentesque, laoreet accusamus nunc eleifend potenti dignissim auctor.",70,57,"Ullamcorper sed in ligula sapien vulputate! Sapien, ultrices egestas est blandit lectus posuere. Porta.",,,,,,,4,78,Diam elit consectetuer fringilla vivamus turpis platea. Nec enim lorem fringilla purus.,,,,,,,46,62,"Posuere aliquam? Posuere posuere magna dolorem temporibus, sapien porta euismod eget dui.",,,,,,,,,,,,,,,,,1,,,,,,2,1,,,,,,,,,2,17,19,17,16,16,18,15,18,1,99
+2019-04-25 19:38:04,2019-04-25 19:38:04,2,,100,0,1,2019-04-25 19:38:04,R_1Yb4htkegvC0QHb,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:04,2019-04-25 19:38:04,2,,100,0,1,2019-04-25 19:38:04,R_3kIBqvTHwwUBinj,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,,,,,,1,,,4,,3,,1,,,,,,,,,,,,,,,,,,,40,35,Dictumst ipsum euismod platea mauris vitae maecenas aenean cras viverra maecenas.,44,74,Id accumsan vulputate auctor sapien luctus arcu sollicitudin fermentum vel enim. Eu risus id iaculis.,,,,,,,15,98,"Consectetuer per, dolor. Donec sodales faucibus nibh! In ultrices malesuada? Neque rhoncus.",,,,,,,77,97,"Facilisis vivamus dapibus dolor scelerisque venenatis quis tincidunt nonummy. Elit, morbi pede lorem felis neque.",,,,,,,,2,,,,,,,2,,,,,,,,,,,,,,,,,2,2,18,16,19,19,17,18,17,17,3,38
+2019-04-25 19:38:05,2019-04-25 19:38:05,2,,100,0,1,2019-04-25 19:38:05,R_8cbqMqg8846uo61,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:05,2019-04-25 19:38:06,2,,100,1,1,2019-04-25 19:38:06,R_5dxL6svlJp8OZKt,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,,,,,,,2,8,,,1,6,,,,,,,,,,,,,,,,,17,51,Purus. Ab. Ridiculus. Nullam lectus molestie ultricies vitae laoreet. Velit ipsum.,,,,35,88,Euismod mi elementum pretium aliquam? Facilisis culpa potenti suscipit! Montes imperdiet vehicula? Urna mi.,,,,38,99,Volutpat auctor ante ante lorem quam turpis tempus proin facilisis velit. Lorem eleifend.,,,,,,,,,,,,,,,,91,32,"Fermentum, et bibendum, pellentesque justo. Accusamus malesuada dapibus eget. Interdum vestibulum montes pellentesque! Commodo non.",,,,,,2,2,,,,,,,,,,,,,,,,2,,,,2,19,19,18,18,15,18,16,16,3,6
+2019-04-25 19:38:06,2019-04-25 19:38:07,2,,100,1,1,2019-04-25 19:38:07,R_6LH6acVivuVbZ2t,,,,,51.571197509765625,5.0543975830078125,test,,1,1,,,,,2,,,,,3,,,1,,,,,,,,,91,92,Sollicitudin enim? Facilisis tincidunt faucibus ullamcorper laoreet dignissim consectetuer vestibulum auctor turpis.,70,5,"Viverra leo sollicitudin primis leo id? Orci, luctus, vivamus? Interdum justo eget.",,,,,,,,,,14,90,"Et ullamcorper! Cras egestas tempus, laoreet aliquam! Enim sapien, tellus.",,,,,,,,,,,,,,,,,,,,,,80,16,"Neque nibh gravida natoque, mattis tortor donec phasellus quam orci ullamcorper.",,,,,,,,,,,,,,,,1,,,,,,2,,,1,,1,16,15,17,15,18,17,19,16,3,44
+2019-04-25 19:38:07,2019-04-25 19:38:07,2,,100,0,1,2019-04-25 19:38:07,R_2bmnGIM32L0Ci2h,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:07,2019-04-25 19:38:07,2,,100,0,1,2019-04-25 19:38:07,R_9SRugVYpQuGALZ3,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:08,2019-04-25 19:38:08,2,,100,0,1,2019-04-25 19:38:08,R_0pj9i80OK5n5YDX,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:08,2019-04-25 19:38:08,2,,100,0,1,2019-04-25 19:38:08,R_1HuoWWUmwd3P7zT,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:08,2019-04-25 19:38:08,2,,100,0,1,2019-04-25 19:38:08,R_3Km10e9GyrMqT6B,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:09,2019-04-25 19:38:09,2,,100,0,1,2019-04-25 19:38:09,R_bsHnrSxQ2ebDwFv,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:09,2019-04-25 19:38:09,2,,100,0,1,2019-04-25 19:38:09,R_1YOusgBbmu7A8xn,,,,,51.571197509765625,5.0543975830078125,test,,1,3,,3,,,8,,2,,,,,,,,,,,,77,91,Eleifend? Molestie temporibus mi. Vitae aliquet risus. Rhoncus lectus magnis.,5,97,"Cursus, rutrum eros temporibus interdum porta atque iaculis eu vel.",44,38,Curabitur. Turpis massa lacus suspendisse? Diam dolorem pede? Nec vestibulum! Elit! Ridiculus. Nunc dolorem auctor.,,,,,,,,,,,,,,,,,,,,,,,,,46,0,Molestie venenatis venenatis integer eu fringilla maecenas proin? Dictumst dolor euismod.,,,,,,,,,,,,,1,3,,,,,,,,,,,,,,,1,,,,,,,1,16,16,19,16,19,16,18,17,2,34
+2019-04-25 19:38:10,2019-04-25 19:38:10,2,,100,0,1,2019-04-25 19:38:10,R_1B5NKGGce24nEi1,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:10,2019-04-25 19:38:10,2,,100,0,1,2019-04-25 19:38:10,R_aVtOIWZlS7FjqOF,,,,,51.571197509765625,5.0543975830078125,test,,1,,1,3,,,7,,6,,,,,,,,,,,,49,94,"Cursus tempor nonummy rutrum, fusce quis ultrices ultricies rhoncus nunc dolorem ante. Integer pretium diam.",99,35,"Faucibus consectetuer metus, maecenas porttitor est, accumsan? Interdum nulla viverra lacus.",,,,,,,,,,,,,,,,,,,,,,,,,,,,99,13,"Porttitor etiam tempora sodales dapibus sit, eros ipsum a lectus rhoncus, porta! Lorem porta posuere.",,,,16,53,Interdum euismod felis aliquam etiam proin aliquam et in interdum maecenas non lectus auctor.,,,,,,,,,,,,,,,,,,1,,,,,,,,1,,,1,1,18,18,18,18,19,16,15,19,3,31
+2019-04-25 19:38:10,2019-04-25 19:38:11,2,,100,1,1,2019-04-25 19:38:11,R_9LmbNLXzIciwqlD,,,,,51.571197509765625,5.0543975830078125,test,,1,,2,,,3,,,,,,,1,,1,,,,,,,,,,,,,,,56,23,Turpis? Odio mauris ullamcorper! Ac dictumst suspendisse. Sodales euismod ut? Convallis consequat ultrices.,,,,26,85,Auctor vel. Maecenas etiam vulputate augue ullamcorper! Mauris. Et rutrum dolor nunc. Praesent lacus.,26,32,Venenatis. Convallis etiam imperdiet mi potenti vel diam elementum at. Dolorem ipsum bibendum curabitur ut.,,,,,,,,,,,,,,,,,,,58,44,"Lacus aliquet magna. Amet. Laoreet posuere! Vivamus? Ullamcorper, morbi egestas ipsum.",,,,,,,,3,1,,,,,,,,,,,,,,,,,,2,,,1,18,16,15,17,16,18,18,15,2,94
+2019-04-25 19:38:11,2019-04-25 19:38:11,2,,100,0,1,2019-04-25 19:38:11,R_dp1RJFINjVe7YcB,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:11,2019-04-25 19:38:11,2,,100,0,1,2019-04-25 19:38:11,R_5jwHRLuyQIa9UoZ,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:12,2019-04-25 19:38:12,2,,100,0,1,2019-04-25 19:38:12,R_cwor7OkO7Txvkz3,,,,,51.571197509765625,5.0543975830078125,test,,1,2,,,,,4,,,,,2,,2,,,,,,,,,,43,72,"Natoque! Tortor fusce nonummy rutrum, volutpat maecenas posuere vulputate justo.",83,41,"Nibh. Wisi proin risus! Dui iaculis ac, sapien dui culpa maecenas aliquam.",,,,,,,,,,,,,61,74,Rhoncus imperdiet ullamcorper. Natoque. Ante. Purus arcu vestibulum. Nullam massa odio bibendum! Malesuada nibh culpa.,,,,,,,,,,,,,,,,,,,48,24,Platea faucibus atque elementum? Magna? Culpa at ultricies proin porttitor ligula.,,,,,,,1,,,,,,,,,1,,,2,,,,,,,,2,19,15,19,19,19,19,16,18,1,78
+2019-04-25 19:38:12,2019-04-25 19:38:12,2,,100,0,1,2019-04-25 19:38:13,R_2mGe3dFEjwMJ55z,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:13,2019-04-25 19:38:13,2,,100,0,1,2019-04-25 19:38:13,R_ag6MXFBxMNA4iwZ,,,,,51.571197509765625,5.0543975830078125,test,,1,3,,,2,2,,,7,,,,,,,,,,,,33,16,Sem a ante sit? Tempora neque duis fusce? Vestibulum. Ipsum pharetra. Mi wisi turpis.,,,,58,58,Velit? Etiam auctor ut orci egestas elit vestibulum maecenas! Sit porttitor a ut.,63,31,Purus accumsan fermentum dictumst. Interdum porttitor nec et posuere culpa consequat per pellentesque. Tortor.,,,,,,,,,,,,,,,,,,,33,82,"Nec sapien nunc, sodales sit ac ut id? Nullam pretium auctor? Commodo.",,,,,,,,,,,,,1,2,,,,,,,,,,,,,,,2,,,,,,,,,,1,16,18,16,15,18,15,18,16,2,53
+2019-04-25 19:38:13,2019-04-25 19:38:13,2,,100,0,1,2019-04-25 19:38:14,R_0xjkF7XGqHhUt3D,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:14,2019-04-25 19:38:14,2,,100,0,1,2019-04-25 19:38:14,R_1IfdWvh0R0ZhdJz,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:14,2019-04-25 19:38:15,2,,100,1,1,2019-04-25 19:38:15,R_1AgfhM32LhdWGmF,,,,,51.571197509765625,5.0543975830078125,test,,1,,,1,,4,,,,,,,,1,,1,,,,,,,,,,,,,,20,84,Justo lectus posuere. Nibh natoque laoreet! Urna accumsan praesent proin nulla.,52,90,Euismod temporibus blandit. Aliquam suspendisse massa? Lorem magnis luctus enim fringilla eleifend.,,,,,,,36,92,"Sollicitudin diam praesent ridiculus cursus auctor fusce, elit velit blandit eu. Ut.",,,,,,,,,,88,91,"Cursus. Per nonummy viverra dolor, arcu ab accumsan! Felis. In natoque eleifend ac? Ridiculus.",,,,,,,,,,,,,,,,,,,,,1,,1,,,,,,,2,,,,,,2,15,16,19,19,16,19,18,19,2,59
+2019-04-25 19:38:15,2019-04-25 19:38:15,2,,100,0,1,2019-04-25 19:38:15,R_0CjWMvzjpHp5T8N,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:15,2019-04-25 19:38:15,2,,100,0,1,2019-04-25 19:38:16,R_9yOHuKZyrxgBQHj,,,,,51.571197509765625,5.0543975830078125,test,,1,2,,,,,8,,,,,,4,,2,,,,,,,,,55,17,Eu! Primis viverra. Vehicula mattis aliquet pellentesque! Vel vivamus tellus eget integer sit blandit.,42,38,"Amet praesent, molestie maecenas. Ultrices! Montes? Fringilla lectus tempor et fusce vestibulum.",,,,,,,8,39,Massa vel porttitor. Facilisis euismod cursus consectetuer! Pharetra maecenas. Tempor accumsan viverra.,82,91,Laoreet. Sagittis laoreet nec tortor. Dapibus sit wisi quis suspendisse laoreet fusce aliquam.,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,,,,2,,,,,,,,,,,,2,,,,,2,18,15,18,19,17,15,15,18,2,45
+2019-04-25 19:38:16,2019-04-25 19:38:16,2,,100,0,1,2019-04-25 19:38:16,R_cwpJRgUgiYNNa4t,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:16,2019-04-25 19:38:16,2,,100,0,1,2019-04-25 19:38:16,R_eaiffoBnBbAIAF7,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:17,2019-04-25 19:38:17,2,,100,0,1,2019-04-25 19:38:17,R_1zFZNF0Y5TLJtqt,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:17,2019-04-25 19:38:17,2,,100,0,1,2019-04-25 19:38:17,R_cBHoAYvPz9Ffohf,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:17,2019-04-25 19:38:18,2,,100,1,1,2019-04-25 19:38:18,R_00SxFJnYGwf20Pb,,,,,51.571197509765625,5.0543975830078125,test,,1,1,,,,3,,,,,,8,,,3,,,,,,,,,,,,58,15,Rhoncus felis interdum potenti gravida gravida! Ullamcorper consequat! Ipsum ab aenean. Scelerisque dolor tempora.,37,2,Quis ullamcorper magna rhoncus! Ab phasellus. Wisi pharetra egestas ultrices neque volutpat molestie praesent.,,,,,,,8,61,"Orci interdum vitae ullamcorper, blandit in eros lorem pellentesque dignissim pharetra per? Luctus. Viverra.",,,,,,,,,,,,,,,,,,,,,,46,30,"Duis gravida metus. Eleifend sed. Diam, accusamus convallis enim est et, sodales? Ligula wisi.",,,,,,,,,,1,,,,,,,1,,,,,,1,,,,1,17,17,18,19,16,19,16,16,1,67
+2019-04-25 19:38:18,2019-04-25 19:38:19,2,,100,1,1,2019-04-25 19:38:19,R_bm6It7KhgDxXmaF,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,3,,,,7,2,,,,,,,4,,,,15,4,At accusamus atque ridiculus convallis. Felis elit laoreet at eget aenean. Morbi.,,,,,,,,,,,,,,,,,,,,,,,,,41,41,Platea elit nullam neque erat natoque bibendum dignissim turpis pellentesque tincidunt. Magna suscipit.,23,38,Ligula proin? At massa enim? Luctus odio vitae ut pede accusamus.,,,,63,84,"Purus volutpat felis massa mi consectetuer neque eleifend? Primis, justo leo purus! Accumsan donec.",,,,,,,,,,,,,,2,,,,,,,,,,,,,,,,2,,1,2,18,19,15,18,18,18,18,16,2,22
+2019-04-25 19:38:19,2019-04-25 19:38:19,2,,100,0,1,2019-04-25 19:38:19,R_eP7Ldd8q7lq28Rv,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:19,2019-04-25 19:38:19,2,,100,0,1,2019-04-25 19:38:19,R_88tgeYN73e0VgZ7,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:19,2019-04-25 19:38:20,2,,100,1,1,2019-04-25 19:38:20,R_blmNsugotkjJSXr,,,,,51.571197509765625,5.0543975830078125,test,,1,1,,,,,4,,,,,5,,,2,,,,,,,,,5,19,Potenti primis laoreet maecenas lectus ullamcorper rhoncus ab. Elementum ultricies posuere fermentum temporibus.,94,29,Rutrum ab? Consectetuer suscipit phasellus auctor vestibulum rutrum justo. Eros ante ab tellus.,,,,,,,,,,8,59,"Culpa blandit! Facilisi purus vestibulum montes proin a, suscipit justo justo molestie.",,,,,,,,,,,,,,,,,,,,,,73,19,Atque dolorem molestie diam metus laoreet potenti quam aliquet dolor enim.,,,,2,,2,,,,,,,,1,,,,,,,,,,,,,1,19,17,16,16,17,15,19,19,3,91
+2019-04-25 19:38:20,2019-04-25 19:38:20,2,,100,0,1,2019-04-25 19:38:20,R_bsDHrXmxGpcykN7,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:20,2019-04-25 19:38:20,2,,100,0,1,2019-04-25 19:38:20,R_4IRE1PDi8IrqQ2p,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:20,2019-04-25 19:38:21,2,,100,1,1,2019-04-25 19:38:21,R_4THZPuceTv2nlFX,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,1,,,,3,,1,,,,,5,,,,,75,93,Consectetuer ac posuere. Sit convallis integer pellentesque malesuada. Sapien aenean ut gravida? Amet laoreet dolorem.,,,,,,,,,,15,3,Ligula platea convallis mattis placerat. Ipsum euismod non viverra consectetuer.,,,,,,,,,,76,64,Dignissim a velit ante magna. Platea lorem? Etiam odio lorem facilisis.,,,,19,86,Dapibus? Ab temporibus. Sit porta culpa risus velit cras dui cursus ac augue natoque mi.,,,,,,,,,,,,,1,1,,,,,,,,,,,,,,,,,,1,,,,,,,2,16,19,18,17,16,15,18,18,1,46
+2019-04-25 19:38:21,2019-04-25 19:38:21,2,,100,0,1,2019-04-25 19:38:22,R_bjAZJW2Qg0Q3buJ,,,,,51.571197509765625,5.0543975830078125,test,,1,,,1,,,8,,,,,,,3,,,3,,,,,,,56,72,Auctor euismod accumsan eros tincidunt sagittis. Natoque. Velit vestibulum eget wisi.,,,,,,,,,,,,,,,,74,92,Porttitor sagittis sollicitudin? Nec ultricies suscipit! Viverra sit dictumst mi ullamcorper consequat.,,,,,,,,,,44,19,Elementum. Interdum ipsum sodales bibendum curabitur sagittis sodales pede nulla suspendisse elit primis purus ac.,73,97,"Nec ligula praesent sodales laoreet ipsum sodales imperdiet tempor porttitor, praesent.",,,,,,,,,,,3,,,,,,,,,,,1,,,1,,,,,,,,2,17,16,15,17,19,19,18,17,2,35
+2019-04-25 19:38:22,2019-04-25 19:38:22,2,,100,0,1,2019-04-25 19:38:22,R_3W7GHpdPAMLpH5X,,,,,51.571197509765625,5.0543975830078125,test,,1,3,,,1,3,,7,,,,,,,,,,64,92,"Tempora eu accusamus lacus aliquet sem malesuada nulla! Rutrum integer massa venenatis felis, ab neque.",,,,,,,13,50,Tempor? Tempor aliquam enim. Duis cras vivamus id rutrum velit integer porta ante.,86,98,Scelerisque? Turpis dolor temporibus interdum wisi vestibulum. Mi tempora tincidunt sodales.,,,,,,,,,,,,,,,,,,,35,91,"Praesent gravida tortor facilisis, donec luctus atque diam mattis. Porttitor mattis.",,,,,,,,,,,,,,,,,,,,,,,,1,,,1,,,,,,,1,,,,,1,17,15,19,17,19,15,16,19,2,74
+2019-04-25 19:38:23,2019-04-25 19:38:23,2,,100,0,1,2019-04-25 19:38:23,R_3lwOhmEJ8WjL673,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,,,,,,1,,8,,1,,3,,,,,,,,,,,,,,,,,66,38,Dui porttitor rutrum luctus? Dolor pede massa ante. Vivamus. Tempus phasellus fermentum ac leo.,,,,,,,49,3,"Pede convallis, quam diam tortor dignissim scelerisque auctor accumsan? Convallis vitae laoreet.",,,,16,78,Integer! Bibendum phasellus eleifend platea vehicula augue tincidunt ante facilisi nonummy. Magnis? Morbi vestibulum. Imperdiet.,,,,,,,,,,,,,77,47,Suscipit suspendisse culpa nonummy lacus mi egestas dui non magna.,,,2,,,,,,,,,,,,,,2,,,,,,,,,2,1,15,17,15,16,15,18,16,18,2,18
+2019-04-25 19:38:23,2019-04-25 19:38:23,2,,100,0,1,2019-04-25 19:38:23,R_d3Wjyt38sbJXMLb,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:23,2019-04-25 19:38:23,2,,100,0,1,2019-04-25 19:38:24,R_37TT7I0WjNzPE3P,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:24,2019-04-25 19:38:24,2,,100,0,1,2019-04-25 19:38:24,R_bEBMoKNxr8VfInH,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,2,,4,,,,,,,,3,7,,,,,,,,74,96,"Aenean augue facilisis rhoncus! Bibendum wisi egestas metus mauris proin scelerisque nulla eu, pharetra.",,,,,,,67,34,"Cursus elementum, ab purus eu convallis. Mi donec. Sodales sodales.",,,,34,65,Natoque. Integer facilisis blandit nonummy massa suspendisse id per mattis nulla vulputate.,,,,,,,,,,37,95,Amet ligula atque est ut tortor elit ipsum lorem venenatis donec.,,,,,,,,,,,,,,1,,,,,1,,,,,,,,,,,,2,,,,,,,,1,18,15,15,17,18,15,16,15,3,84
+2019-04-25 19:38:25,2019-04-25 19:38:25,2,,100,0,1,2019-04-25 19:38:25,R_0J8QDUNhsWyGAlf,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,2,,1,,,,,,,2,,6,,,,,,,,41,17,Risus turpis. Orci lectus ut nibh? Mi phasellus! Culpa? Sagittis ante. Magna pretium.,,,,,,,88,42,Eros? Facilisi ut auctor! Iaculis eget purus. Purus sem praesent.,,,,,,,72,91,"Sodales! A gravida? Neque convallis consectetuer ligula justo vitae. Viverra! Suspendisse consequat, cras.",,,,,,,27,85,"Est sed sit. Aliquet! Praesent? Vitae ac dignissim lectus orci! Per, natoque.",,,,,,,,,,,,,,,,,1,,,,,,,,,1,,,,,,,,1,,,,,1,18,16,15,16,16,18,17,16,2,43
+2019-04-25 19:38:25,2019-04-25 19:38:25,2,,100,0,1,2019-04-25 19:38:25,R_aeKyyX45FlNK4VD,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:25,2019-04-25 19:38:25,2,,100,0,1,2019-04-25 19:38:25,R_9XLXfapvzVAxiK1,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:26,2019-04-25 19:38:26,2,,100,0,1,2019-04-25 19:38:26,R_dbzsrtSglAeZ0oZ,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:26,2019-04-25 19:38:26,2,,100,0,1,2019-04-25 19:38:26,R_bQpzErc7bDxDvBr,,,,,51.571197509765625,5.0543975830078125,test,,1,1,,,,,,,5,3,,1,,,,,,,,,6,76,Luctus morbi cras volutpat culpa sit sem in purus integer proin viverra etiam auctor.,,,,13,30,Facilisi venenatis? At posuere porta quam rhoncus viverra vulputate. Porttitor. Fusce nunc? Elit. Nonummy neque.,,,,,,,,,,,,,,,,,,,39,32,Iaculis platea quam platea pellentesque ridiculus consequat magnis porta laoreet.,,,,,,,,,,,,,77,12,Molestie curabitur phasellus nunc neque per tempora tellus duis elementum temporibus egestas.,,,,,,,,,,,1,,,,,2,,,,2,,,,,,,2,17,19,17,19,15,17,15,18,1,0
+2019-04-25 19:38:26,2019-04-25 19:38:27,2,,100,1,1,2019-04-25 19:38:27,R_4Nj4gTC5cVfnFat,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,1,,,4,,,3,,,,,4,,86,90,Mattis primis? Imperdiet nullam velit. Turpis curabitur mi venenatis in posuere cursus enim pharetra.,,,,,,,,,,,,,24,3,Cras odio tempora bibendum ipsum dolorem auctor odio potenti. Enim sapien ante.,,,,,,,,,,45,77,A magnis volutpat rutrum orci morbi atque? Per dignissim ac venenatis! Purus. Ante.,,,,61,71,Gravida nulla? Nulla sapien vel. Justo accumsan tempor pellentesque posuere integer commodo praesent tempora.,,,,,,,,,,,,,1,,,,,,,,,,,,,,,,,,,,,,1,1,,,1,18,18,19,15,15,17,19,15,1,89
+2019-04-25 19:38:27,2019-04-25 19:38:27,2,,100,0,1,2019-04-25 19:38:27,R_0ohx0WHHAoeHPZH,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:27,2019-04-25 19:38:27,2,,100,0,1,2019-04-25 19:38:27,R_9GdQjvplFSRDb25,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:27,2019-04-25 19:38:27,2,,100,0,1,2019-04-25 19:38:28,R_6RNJZaqEf4UpxWZ,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:28,2019-04-25 19:38:28,2,,100,0,1,2019-04-25 19:38:28,R_6PWM8wWPPUaThdP,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:28,2019-04-25 19:38:28,2,,100,0,1,2019-04-25 19:38:28,R_cPedno2Dw4DghDv,,,,,51.571197509765625,5.0543975830078125,test,,1,,,2,,,,,1,3,,,,,,7,,,,,57,62,Praesent tincidunt? Accumsan ac erat ac accumsan sagittis donec leo id mattis.,,,,,,,,,,48,54,Ipsum dui tincidunt dolorem? Proin commodo dignissim tempor arcu turpis viverra orci faucibus.,,,,,,,,,,,,,98,27,Fusce ipsum sed et cras interdum ante tincidunt phasellus sodales ut.,,,,7,47,Nullam faucibus neque. Dignissim sed et rutrum? Vel convallis ullamcorper a.,,,,,,,,,,,,,,,1,,,,2,,,,,1,,,,,,,,,,,,1,19,16,19,17,19,17,16,15,1,14
+2019-04-25 19:38:28,2019-04-25 19:38:29,2,,100,1,1,2019-04-25 19:38:29,R_80WuBtZX9oTXE3j,,,,,51.571197509765625,5.0543975830078125,test,,1,,,3,,8,,,,,,,,2,,4,,,,,,,,,,,,,,39,26,Fermentum malesuada. Volutpat fermentum platea facilisis risus consequat dolorem maecenas facilisis maecenas? Lacus malesuada purus.,90,72,Enim bibendum neque vulputate vel felis ultrices orci montes wisi integer pharetra tortor platea ut.,,,,,,,37,17,Arcu odio mi dolorem? Praesent vestibulum blandit facilisis mauris bibendum nibh mi.,,,,,,,,,,36,87,"Venenatis bibendum, accumsan sit massa? Nec luctus. Volutpat leo? In. Egestas commodo. Quam commodo.",,,,,,,,,,,,,,,1,,,,,,,,,,,,,,2,,,2,,,,2,16,16,16,16,15,17,15,15,2,60
+2019-04-25 19:38:29,2019-04-25 19:38:30,2,,100,1,1,2019-04-25 19:38:30,R_bKOXkhI4FvxjRNX,,,,,51.571197509765625,5.0543975830078125,test,,1,,,3,,,,,4,,3,,,,,,1,,,,93,5,"Enim malesuada dolor maecenas blandit vel ultrices, risus dui nec. Dapibus. Placerat.",,,,,,,,,,,,,,,,,,,,,,59,51,Blandit nulla mattis metus natoque! Laoreet pharetra vitae vestibulum atque primis primis? Mi orci ligula.,,,,,,,4,95,Scelerisque atque rhoncus posuere blandit. Dignissim tellus id interdum consequat amet.,23,36,Mi nullam tempus magna odio vulputate aenean augue ut fringilla ultrices facilisis.,,,,,,,,,,1,,,,,,,2,,3,,,,,,,,,,,,,,2,16,16,16,16,18,19,16,17,2,76
+2019-04-25 19:38:30,2019-04-25 19:38:30,2,,100,0,1,2019-04-25 19:38:30,R_2mGZywzPfcCL2kZ,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:30,2019-04-25 19:38:31,2,,100,1,1,2019-04-25 19:38:31,R_5jLIztOBr1xpncp,,,,,51.571197509765625,5.0543975830078125,test,,1,,3,,2,,5,,2,,,,,,,,,,,,3,42,Ut erat tempor! Placerat pharetra aliquam id! Pellentesque vestibulum eget.,31,31,Dictumst! Quam a? Ac nunc iaculis luctus suspendisse phasellus montes ut pede metus commodo.,,,,,,,,,,,,,,,,,,,,,,,,,32,71,Tincidunt morbi id laoreet metus atque temporibus sodales dapibus tortor.,,,,,,,50,34,"Gravida tincidunt viverra. Fringilla? Ridiculus diam ut leo velit, tortor. Dolor eu interdum ligula.",,,,,,,,,,,2,,,,,,,1,1,,,,,,,,,,,1,18,16,15,18,17,16,18,16,3,96
+2019-04-25 19:38:31,2019-04-25 19:38:31,2,,100,0,1,2019-04-25 19:38:31,R_0AjLo7UOMpghXTL,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,1,1,,,,,,,,,2,,1,,,,,,,,,,,,,37,71,Fusce? Ullamcorper pellentesque a in. Luctus purus consequat suspendisse amet magna tincidunt purus purus! Porta.,,,,,,,55,32,"Arcu nullam, vitae ligula ac tincidunt euismod wisi aenean nonummy.",,,,,,,,,,82,21,Facilisis fermentum pede. Imperdiet. Nibh potenti tellus! Quam praesent velit venenatis leo eget molestie.,,,,52,17,Sagittis lectus donec felis! Facilisis augue sed massa dolorem. Sit lorem orci.,,,,,,,,2,,,3,,,,2,,,,,,,,,,,,,,,,,,1,19,19,18,17,17,15,17,17,3,54
+2019-04-25 19:38:31,2019-04-25 19:38:31,2,,100,0,1,2019-04-25 19:38:32,R_5h9fM1qj2zwPt5j,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:32,2019-04-25 19:38:32,2,,100,0,1,2019-04-25 19:38:32,R_2i9bO8GFfcp6SZ7,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:32,2019-04-25 19:38:32,2,,100,0,1,2019-04-25 19:38:33,R_bvhwt2AHyyHfn5X,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,,,,,,1,,,8,,1,,2,,,,,,,,,,,,,,,,,,,71,58,Dignissim vehicula interdum? Pretium dictumst ipsum urna cras malesuada primis.,36,100,Primis at egestas est risus vestibulum id vehicula eu scelerisque! Dolorem dolorem aenean accusamus urna.,,,,,,,12,79,Enim volutpat auctor accusamus? Phasellus neque amet! Velit porttitor ultricies egestas. Metus! Volutpat augue.,,,,,,,93,52,"Vulputate leo eleifend, luctus felis quis? Dignissim quis vitae eros nonummy, eu sem cras commodo.",,,,,,,,,,,,,,,,,,,,,,,2,2,,,,,,2,,,2,17,17,15,17,17,18,19,19,1,4
+2019-04-25 19:38:33,2019-04-25 19:38:33,2,,100,0,1,2019-04-25 19:38:33,R_9B6HMn00ESjLYVf,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,3,3,,,,,,,,,1,,4,,,,,,,,,,,,,13,74,Nec primis neque lectus venenatis est neque. Aliquet nec turpis.,,,,,,,84,0,"Integer purus. Phasellus. Natoque neque nonummy euismod nonummy, orci pellentesque viverra.",,,,,,,,,,63,34,Fringilla placerat integer mattis magnis molestie rutrum duis justo. Tempora? Cursus purus. Posuere.,,,,37,42,"Mauris, viverra faucibus eget sem ut neque magnis egestas? Nunc.",,,,,,,2,,,,,,,,,,,,,,,,,,,,,1,,,,1,2,16,19,18,19,15,15,17,17,3,69
+2019-04-25 19:38:33,2019-04-25 19:38:34,2,,100,1,1,2019-04-25 19:38:34,R_5ceHKrxVG7rlw0t,,,,,51.571197509765625,5.0543975830078125,test,,1,,2,,,,,6,,,3,2,,,,,,89,51,Posuere euismod et bibendum. Orci montes lectus eleifend porttitor dolor primis placerat lorem.,,,,,,,,,,,,,,,,,,,,,,,,,34,51,"Atque a tortor vitae! Egestas, sem ac arcu viverra facilisi porttitor urna.",,,,,,,,,,,,,31,79,Tempus natoque ultrices nec maecenas nulla! Dui nec diam mi.,54,59,Nec faucibus turpis tempor sagittis pede. Urna maecenas fringilla bibendum a aliquet malesuada luctus.,,,,2,,,2,,,,,,,,,,2,,,,,,,,,,1,18,16,15,16,19,15,18,15,1,10
+2019-04-25 19:38:34,2019-04-25 19:38:34,2,,100,0,1,2019-04-25 19:38:34,R_2bDetH6TTPiarQh,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:34,2019-04-25 19:38:35,2,,100,1,1,2019-04-25 19:38:35,R_8dlSD4NJydZFVoF,,,,,51.571197509765625,5.0543975830078125,test,,1,,1,,1,3,,,3,,,,,,,,,,,,7,35,Accusamus erat erat! Maecenas pellentesque enim ante auctor? Sed sit dui nulla bibendum imperdiet.,,,,,,,62,28,Sem platea! Lacus eget risus vel porta fusce lectus euismod porttitor vivamus praesent eget arcu.,,,,,,,,,,,,,,,,,,,54,20,"Consectetuer urna donec dignissim. Pretium ante accumsan sapien accumsan, facilisi tellus? Metus mattis viverra.",,,,,,,54,36,Pellentesque vel tincidunt euismod gravida convallis ac! Ab morbi ut fusce felis.,,,,,,,,,,,,,2,,,,,1,2,,,,,,,,,,,2,15,19,19,18,15,18,15,19,2,86
+2019-04-25 19:38:35,2019-04-25 19:38:35,2,,100,0,1,2019-04-25 19:38:35,R_5hF4pI37fwaSsO9,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:35,2019-04-25 19:38:36,2,,100,1,1,2019-04-25 19:38:36,R_6ya3YRUYDWGqtsV,,,,,51.571197509765625,5.0543975830078125,test,,1,,3,,,,,,8,,2,,4,,,,,,,,93,60,Sagittis luctus cursus justo tempus ullamcorper consequat. Vestibulum est aliquam cras.,,,,,,,,,,,,,68,49,"Ultrices. Montes, tempus cras blandit! Sem pretium, cursus elit potenti vel elementum. Leo. Aliquam. Proin.",,,,,,,16,22,Bibendum leo aliquet scelerisque suscipit ultricies leo fringilla nec malesuada? Tempora bibendum nonummy tincidunt erat.,,,,,,,,,,,,,41,26,"Lacus porta et, posuere nonummy mauris magnis per consequat malesuada pede! Ab.",,,,,,,,2,,,,,,1,,,1,,,,,,,,,,,,,1,17,18,15,15,16,19,17,19,1,83
+2019-04-25 19:38:36,2019-04-25 19:38:36,2,,100,0,1,2019-04-25 19:38:36,R_bIRlvEFvmCpILzv,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:36,2019-04-25 19:38:36,2,,100,0,1,2019-04-25 19:38:36,R_0xiC6wGMRWAVacZ,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:36,2019-04-25 19:38:37,2,,100,1,1,2019-04-25 19:38:37,R_enwS9E97SLtU7qJ,,,,,51.571197509765625,5.0543975830078125,test,,1,1,,,,,,,7,1,,,2,,,,,,,,16,0,Viverra eros erat fusce. Magna scelerisque morbi ultricies cursus dignissim.,,,,75,9,Pretium natoque ultricies auctor luctus. Wisi culpa. Eget venenatis per viverra.,,,,,,,10,22,"Nulla, tincidunt elementum leo gravida ridiculus tempora, velit, faucibus tortor in pharetra, accusamus.",,,,,,,,,,52,46,"Sollicitudin ante etiam commodo duis ab iaculis, pellentesque odio molestie erat! Est nec rhoncus platea.",,,,,,,,,,,,,,,,,2,,,,1,,,,,,,,,,,,,2,,,,,,,,2,15,16,18,15,19,18,17,19,2,46
+2019-04-25 19:38:37,2019-04-25 19:38:37,2,,100,0,1,2019-04-25 19:38:37,R_0wyzG3lGAiGaYYZ,,,,,51.571197509765625,5.0543975830078125,test,,1,1,,,,,6,,,,,,5,2,,,,,,,,,,13,88,Eleifend egestas? Temporibus blandit placerat vestibulum in. Pharetra posuere magna tincidunt ligula laoreet.,56,74,"Est. Cursus primis dolor molestie? Proin pretium rhoncus magnis elit eros, urna.",,,,,,,20,59,Nullam. Sed porta. Est laoreet praesent integer pharetra non. Commodo pede.,,,,84,98,"Ac culpa morbi turpis facilisi. Ligula, molestie, egestas eu. Commodo duis.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2,,,2,2,2,15,18,17,18,19,18,15,16,3,24
+2019-04-25 19:38:38,2019-04-25 19:38:38,2,,100,0,1,2019-04-25 19:38:39,R_8zSFjVzSLEDxy4t,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,,,,,,,3,1,,2,,6,,,,,,,,,,,,,,,,,52,64,"Sodales? Elit temporibus leo fermentum auctor. Blandit culpa. Mi, vitae tortor! Vestibulum.",,,,,,,71,3,"Dui tellus per justo, non vel, eu pede temporibus dictumst posuere erat, vitae diam.",20,67,"Iaculis atque. Nunc mattis auctor bibendum suspendisse et, sagittis! Et vestibulum. Molestie rhoncus dolor.",,,,,,,,,,,,,,,,20,81,Auctor mauris facilisi purus accusamus aliquam sit posuere neque suscipit temporibus.,1,,,,,,,,,,,,,,,,,,,,1,,2,,,,2,16,15,16,17,15,19,16,16,3,1
+2019-04-25 19:38:39,2019-04-25 19:38:39,2,,100,0,1,2019-04-25 19:38:39,R_3a7VZ8XEMJsN9kN,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:39,2019-04-25 19:38:39,2,,100,0,1,2019-04-25 19:38:40,R_a5V6eHjippo5Zm5,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:40,2019-04-25 19:38:40,2,,100,0,1,2019-04-25 19:38:41,R_eagR2dXj8ztOk4t,,,,,51.571197509765625,5.0543975830078125,test,,1,,2,,,8,,,,,,6,,,2,,,,,,,,,,,,,,,99,65,Mi vehicula posuere nullam gravida ab viverra volutpat dolor iaculis. Fermentum mi aliquam.,,,,,,,82,84,Ut enim metus iaculis odio velit vivamus maecenas. Gravida quis metus. Est ac consequat suscipit.,,,,,,,,,,,,,,,,,,,8,4,Nunc magna magna magna tempor cras egestas facilisis ultrices? Curabitur aliquet malesuada integer primis ante.,82,76,Arcu tincidunt amet vehicula! Etiam? Morbi. Viverra eleifend suscipit tempus velit gravida donec ligula.,,,,,,,,,,,,,1,,,,,,1,1,,,,,,,2,15,17,17,17,16,19,16,17,2,96
+2019-04-25 19:38:41,2019-04-25 19:38:41,2,,100,0,1,2019-04-25 19:38:41,R_d3V0gxPbB7LhwZT,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,3,2,,,,,,,,,2,,4,,,,,,,,,,,,,63,83,"Mi lacus ultricies sed quis rhoncus fermentum, donec, proin rutrum.",,,,,,,25,60,Imperdiet culpa ut urna eget tempor sem erat blandit tellus ac rutrum placerat.,,,,,,,,,,31,35,"Ridiculus. Vulputate. Porta. Metus pharetra! Fringilla, rhoncus. Vehicula. Non fringilla primis.",,,,73,87,"Molestie fringilla euismod? Dui. Vitae? Sagittis. Dui rhoncus, egestas. Ante ab ante ut nulla.",,,,,,,,,,,,,,,,1,2,,,,,,,,,,,,,,,2,1,18,15,16,17,17,17,18,18,3,40
+2019-04-25 19:38:42,2019-04-25 19:38:42,2,,100,0,1,2019-04-25 19:38:42,R_cG6c3V8gfFiJPM1,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,,,,,,,1,7,,1,,7,,,,,,,,,,,,,,,,,37,44,Enim. Urna. Euismod dictumst amet primis lacus vel tempora orci magna nibh.,,,,,,,95,100,Tempora massa rhoncus curabitur sapien risus rhoncus nulla! Accumsan! Amet.,41,68,Facilisi ullamcorper accumsan nunc? A dolorem nunc dolor consectetuer ridiculus.,,,,,,,,,,,,,,,,61,56,Mi ut leo magnis morbi egestas elit iaculis ut natoque lorem tortor.,,1,,,,,,,,,,,,,1,,2,,,,,,,,,,2,16,18,15,18,19,16,15,17,3,6
+2019-04-25 19:38:42,2019-04-25 19:38:43,2,,100,1,1,2019-04-25 19:38:43,R_78JUtZIxcP8TyOV,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:43,2019-04-25 19:38:43,2,,100,0,1,2019-04-25 19:38:43,R_0HvVLAppNwVILNX,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:43,2019-04-25 19:38:43,2,,100,0,1,2019-04-25 19:38:43,R_d6DH5l0fkt1zqqV,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:43,2019-04-25 19:38:43,2,,100,0,1,2019-04-25 19:38:43,R_5mpIfK6PCPtxUPz,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:43,2019-04-25 19:38:44,2,,100,1,1,2019-04-25 19:38:44,R_do1RjVg1fCg8zVH,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,,,,,,,1,4,,1,,,3,,,,,,,,,,,,,,,,,,,,,,,,,35,25,Commodo. Pede pede ligula mattis. Proin curabitur! Ullamcorper. Iaculis tincidunt tempus sapien facilisi risus.,72,41,"Tincidunt volutpat purus id potenti vitae, lacus eleifend tempus consectetuer facilisi per. Rutrum donec ultricies.",,,,,,,,,,55,20,Sapien integer vitae iaculis leo ridiculus vehicula nulla vel egestas.,,,,29,28,"Egestas morbi, platea! Commodo odio velit. Posuere atque non ac pellentesque sem ut vitae. Scelerisque.",1,,2,,,,,1,,,,,,,,,,,,,,,,,,,2,15,15,18,17,16,17,18,15,2,66
+2019-04-25 19:38:44,2019-04-25 19:38:44,2,,100,0,1,2019-04-25 19:38:44,R_0TxxKFxdrUv0Jsp,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:44,2019-04-25 19:38:45,2,,100,1,1,2019-04-25 19:38:45,R_0vcgZyKSsKCbbyl,,,,,51.571197509765625,5.0543975830078125,test,,1,,1,2,,6,,,2,,,,,,,,,,,,56,57,Pede turpis aliquet cras blandit dignissim rhoncus felis amet iaculis viverra id volutpat venenatis.,,,,,,,42,13,"Odio a ullamcorper nec dictumst dolorem, vel! Phasellus pretium tellus.",,,,,,,,,,,,,,,,,,,,,,91,92,Quam eget bibendum lacus. Elementum laoreet consequat. Fusce ridiculus molestie.,,,,31,10,Mattis suscipit? Odio fermentum mattis? Nonummy praesent lectus phasellus porta.,,,,,,,,3,1,,,,,,,,,,,,,,,,2,,,,,1,17,17,15,17,18,16,18,18,2,97
+2019-04-25 19:38:45,2019-04-25 19:38:45,2,,100,0,1,2019-04-25 19:38:45,R_3n6eDWSoicgVaux,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:45,2019-04-25 19:38:45,2,,100,0,1,2019-04-25 19:38:45,R_8wRci9Ck8NcnCKx,,,,,51.571197509765625,5.0543975830078125,test,,1,2,,,,,,,1,1,,,3,,,,,,,,59,8,"Montes. Pharetra rutrum est sit, volutpat accumsan consequat leo molestie accusamus mi! Vulputate. Fringilla.",,,,33,11,Risus turpis curabitur odio potenti elementum! Magnis atque scelerisque? Vitae risus mi.,,,,,,,38,46,Purus lorem sodales lectus phasellus! Nonummy wisi. Culpa proin molestie pretium dignissim tortor imperdiet aliquet.,,,,,,,,,,24,53,Fringilla. Imperdiet augue praesent. Nibh. Sapien faucibus auctor commodo? Vestibulum dolorem.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,,,,,1,1,,,2,18,16,18,18,15,18,19,18,1,29
+2019-04-25 19:38:46,2019-04-25 19:38:46,2,,100,0,1,2019-04-25 19:38:46,R_0PrH05mFj5nFTxz,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:46,2019-04-25 19:38:46,2,,100,0,1,2019-04-25 19:38:46,R_esbuFVNlmIWzupT,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,2,,4,,,,,,,,3,,6,,,,,,,69,100,Vestibulum molestie massa? Sit commodo duis placerat! Eu risus tempora sit pellentesque vulputate enim sollicitudin.,,,,,,,,,,,,,76,5,Volutpat. Commodo cursus tempus fusce mattis dolorem? Sollicitudin leo tellus. Eget lorem et.,,,,,,,,,,94,90,Atque fermentum vel risus rhoncus aenean. Pede? Ligula ipsum? Natoque vel fusce facilisi dictumst.,,,,85,83,"Molestie per, posuere montes dui atque, faucibus ultrices eget? Potenti amet nec? Vestibulum in.",,,,,,,,1,,,,,,1,,,,2,,,,,,,,,,,,,,,1,17,16,19,15,19,15,17,19,3,94
+2019-04-25 19:38:46,2019-04-25 19:38:47,2,,100,1,1,2019-04-25 19:38:47,R_aaFkjRBtiVXXKm1,,,,,51.571197509765625,5.0543975830078125,test,,1,,3,,,,,,2,,3,,7,,,,,,,,94,50,Vehicula scelerisque dolorem magnis? Bibendum eleifend tortor lorem vel ante ligula fusce.,,,,,,,,,,,,,3,84,"Pede commodo ultrices justo tellus, ultricies molestie pede vitae phasellus.",,,,,,,29,32,"Urna aenean venenatis maecenas quam et! Lectus donec donec placerat? Fusce quam rhoncus, praesent.",,,,,,,,,,,,,62,19,"Dapibus morbi! Porttitor id velit maecenas accusamus mattis cursus, metus. Pellentesque tempus. Scelerisque porttitor.",,,,,,1,,,,,,,,,,,,,,,,,,,,1,1,,,1,15,16,15,16,17,17,17,19,3,92
+2019-04-25 19:38:47,2019-04-25 19:38:47,2,,100,0,1,2019-04-25 19:38:48,R_4TnIJ8toKzHRbuJ,,,,,51.571197509765625,5.0543975830078125,test,,1,2,,3,,,2,8,,,,,,,,,,93,95,"Nunc accusamus fusce ultrices pede tempor duis, eros lectus morbi.",,,,63,22,Ante primis quis primis sollicitudin! Ullamcorper suspendisse! Accusamus magnis maecenas tortor faucibus lorem convallis.,16,12,Porta ut nullam felis convallis porta at viverra euismod interdum luctus sem proin.,,,,,,,,,,,,,,,,,,,,,,,,,40,34,"Ridiculus eros luctus odio etiam amet. Euismod commodo gravida. Morbi sem, suspendisse tempora.",,,,,,,,,,1,,,,,,,,,,,,,,,,2,,,1,,,,,,,1,15,17,16,15,17,16,18,18,3,12
+2019-04-25 19:38:48,2019-04-25 19:38:48,2,,100,0,1,2019-04-25 19:38:48,R_egHNV7ROW9c6HBP,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:48,2019-04-25 19:38:48,2,,100,0,1,2019-04-25 19:38:48,R_1Ty76vSF78Cxhkh,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,,,,,,2,,,8,,1,,2,,,,,,,,,,,,,,,,,,,66,96,"Urna luctus! Sit! Suscipit laoreet blandit elit, magnis! Vitae. Potenti cras, suspendisse porta pretium tempus.",46,98,Placerat scelerisque id ac montes morbi amet tempus lacus ligula vulputate! Quis.,,,,,,,1,71,Ultrices dignissim wisi orci odio proin rhoncus nec? Duis culpa.,,,,,,,2,17,Orci. Et. Dictumst posuere tellus? Phasellus turpis. Accusamus arcu phasellus culpa.,,,,,,,,,,,,,,,,,,,,,,2,,,,,,1,,,,1,2,16,15,17,16,15,17,17,16,2,14
+2019-04-25 19:38:49,2019-04-25 19:38:49,2,,100,0,1,2019-04-25 19:38:49,R_0PwHs6WDdMB0zlj,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:49,2019-04-25 19:38:49,2,,100,0,1,2019-04-25 19:38:49,R_eVFv2Nf3bUgv5Tn,,,,,51.571197509765625,5.0543975830078125,test,,1,,1,1,,,7,4,,,,,,,,,,97,25,Fermentum commodo? Integer. Luctus lacus nullam nonummy sodales. Auctor sagittis? Mattis vel molestie tempus lacus.,,,,55,55,Euismod eros sem ipsum massa accumsan eros at consequat molestie. Purus.,,,,,,,,,,,,,,,,,,,,,,,,,,,,93,65,"Volutpat? Non, scelerisque mattis porttitor. Per vitae dui. Elit sagittis, culpa commodo.",,,,42,1,"Consectetuer dictumst, ante accusamus justo molestie non, aliquet pharetra auctor vehicula.",,,,,,,,,1,,,,1,,,3,,,,,,,,,,,,,,2,18,16,17,17,15,15,18,16,2,82
+2019-04-25 19:38:49,2019-04-25 19:38:50,2,,100,1,1,2019-04-25 19:38:50,R_0vO85bkRSYan4X3,,,,,51.571197509765625,5.0543975830078125,test,,1,,,1,,,1,,,,,,,,1,,8,,,,,,,62,41,Metus vehicula euismod etiam lorem. Cursus phasellus mauris duis cras euismod eu praesent.,,,,,,,,,,,,,46,43,Tellus tempor tempora arcu atque ullamcorper morbi gravida pede diam.,,,,,,,,,,,,,38,63,Est! Fusce maecenas. Velit aliquam ullamcorper blandit bibendum primis! Euismod.,89,58,Dignissim sollicitudin lacus venenatis gravida quam iaculis porttitor vulputate lorem integer platea.,,,,,,,,,,,1,,,,,,,,,,1,,,,1,,,,,,,,1,16,16,15,18,18,17,15,19,3,30
+2019-04-25 19:38:50,2019-04-25 19:38:51,2,,100,1,1,2019-04-25 19:38:51,R_4YDvjHweAKT24S1,,,,,51.571197509765625,5.0543975830078125,test,,1,,1,,,,,1,,2,,3,,,,,,58,86,"Tempor! Vehicula sollicitudin diam montes nulla arcu molestie. Nulla integer. Faucibus, quis.",,,,,,,,,,,,,,,,,,,,,,,,,,,,10,59,Dapibus! Interdum. Porttitor auctor eget ridiculus culpa dolorem aenean vivamus magnis vel dolor.,,,,,,,,,,73,84,"Auctor dolorem suscipit facilisi! Placerat velit! Metus ut ultricies quam, curabitur? Tempus eget.",22,1,Lacus amet faucibus tincidunt sodales ultricies tincidunt! Fermentum arcu? Vestibulum nullam.,,1,2,,,,2,,,,,,,,,,,,,,,,,,,,1,17,17,15,18,16,16,19,16,1,32
+2019-04-25 19:38:51,2019-04-25 19:38:51,2,,100,0,1,2019-04-25 19:38:51,R_9GYHAcs16tx0zw9,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:51,2019-04-25 19:38:51,2,,100,0,1,2019-04-25 19:38:52,R_8dc2bMEGPqrCWIR,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,,,,,,2,,,6,,2,,7,,,,,,,,,,,,,,,,,,,4,84,Vel fringilla tellus mauris tempus rhoncus! Leo tellus ante sodales porttitor dui fusce potenti.,92,44,"Nec interdum malesuada bibendum mattis. Eu sed aliquet aenean fringilla, ullamcorper ab nulla.",,,,,,,78,37,Velit. At posuere. Temporibus pharetra laoreet temporibus ac platea! Non et atque.,,,,,,,31,68,"Neque per tempor! Tincidunt est felis enim enim tempora, posuere phasellus eros luctus nullam.",,,,,,,,,,,,,,,,1,,,,,,,2,,,,,,,,,1,2,18,17,15,19,15,18,15,16,1,37
+2019-04-25 19:38:52,2019-04-25 19:38:52,2,,100,0,1,2019-04-25 19:38:52,R_73AhyGB9zcpTR1r,,,,,51.571197509765625,5.0543975830078125,test,,1,3,,,,,,,5,,3,,4,,,,,,,,72,54,Vel neque dapibus sollicitudin interdum natoque fringilla. Ante ante morbi venenatis.,,,,89,88,Suscipit faucibus non. Natoque vestibulum. Elementum. Mi! Magna aliquam at consectetuer. Convallis.,,,,,,,57,61,Magna eleifend augue convallis egestas platea dapibus proin morbi sodales sem.,,,,,,,0,9,Eu dictumst nonummy dolorem! Placerat velit odio. Viverra diam eros convallis aliquet est.,,,,,,,,,,,,,,,,,,,1,,,,,2,,,,,,,,,1,,,,,,,,,,,,2,15,17,17,16,15,18,19,18,2,75
+2019-04-25 19:38:52,2019-04-25 19:38:52,2,,100,0,1,2019-04-25 19:38:52,R_3wKbkR9AlWulObr,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:53,2019-04-25 19:38:53,2,,100,0,1,2019-04-25 19:38:53,R_1YBuQk9Qzcg0cCx,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:53,2019-04-25 19:38:54,2,,100,1,1,2019-04-25 19:38:54,R_cC6RxDkoE7jDvdb,,,,,51.571197509765625,5.0543975830078125,test,,1,2,,,2,3,,,7,,,,,,,,,,,,8,38,Culpa. Aliquet! Vitae nonummy pellentesque scelerisque elit sagittis leo mauris auctor viverra.,,,,88,54,Suspendisse elit per ridiculus! Magna ipsum pretium dignissim placerat. A leo.,36,53,Accumsan faucibus pede ridiculus nonummy. Potenti gravida enim erat facilisi tellus augue ullamcorper venenatis.,,,,,,,,,,,,,,,,,,,62,39,Accusamus etiam fringilla elementum diam suscipit elit rhoncus. Iaculis blandit.,,,,,,,,,,,,,,,,,3,,,,,,,,,,,1,,,,,,,2,,,,2,16,17,18,19,19,19,16,15,1,65
+2019-04-25 19:38:54,2019-04-25 19:38:54,2,,100,0,1,2019-04-25 19:38:54,R_2tzLqyPUMotrI8J,,,,,51.571197509765625,5.0543975830078125,test,,1,,,2,,7,,,,,,,,2,,6,,,,,,,,,,,,,,34,91,"Porta suscipit facilisi? Nullam integer, at faucibus faucibus facilisi viverra pede! Nulla.",83,72,"Tempora. Magna! Bibendum egestas sapien felis sit, fusce. Interdum culpa.",,,,,,,17,26,"Tortor. Dictumst nonummy per, ante convallis? Rhoncus suscipit mi malesuada et.",,,,,,,,,,19,14,In non. Elit montes nulla donec sapien convallis! Aliquam atque integer. Egestas.,,,,,,,,,,,,,,,,,,,,,,2,,,,,,,,2,2,,,,,1,19,19,17,15,17,19,19,17,1,27
+2019-04-25 19:38:54,2019-04-25 19:38:54,2,,100,0,1,2019-04-25 19:38:54,R_1FjVgjDAgbs77uZ,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:55,2019-04-25 19:38:55,2,,100,0,1,2019-04-25 19:38:55,R_ah3soVrjGLAc8Yt,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:55,2019-04-25 19:38:55,2,,100,0,1,2019-04-25 19:38:55,R_3gY80Nu4cNbKRjT,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:55,2019-04-25 19:38:56,2,,100,1,1,2019-04-25 19:38:56,R_cUSMOg7BozR7f5r,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,,,,,,1,,,4,2,,6,,,,,,,,,,,,,,,,,66,79,"Lacus odio, aenean rhoncus tempora vestibulum commodo posuere tempus curabitur tincidunt erat erat.",59,44,Blandit. Tempora potenti commodo venenatis at nec! Ac leo fermentum amet ultricies. Aenean.,,,,19,80,"Integer pretium, sit aliquet imperdiet mattis eu malesuada a? Consectetuer vel ullamcorper.",,,,89,25,Fringilla! Vivamus sapien aenean magna. Cursus curabitur tempus facilisi dui nulla.,,,,,,,,,,,,,,,,,,,,,,,,,,,2,,,,,,1,,,,,,1,,,2,15,18,17,16,16,19,17,19,1,69
+2019-04-25 19:38:56,2019-04-25 19:38:56,2,,100,0,1,2019-04-25 19:38:56,R_aXDThsKbcBnqTTn,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:56,2019-04-25 19:38:56,2,,100,0,1,2019-04-25 19:38:56,R_dhcVvrDHmB0Buxn,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:56,2019-04-25 19:38:57,2,,100,1,1,2019-04-25 19:38:57,R_0SVbYdaxzEQQzqd,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,,,,,,,3,,7,,3,,3,,,,,,,,,,,,,,,,,,,8,77,Ipsum praesent sagittis sed potenti magna! Auctor. Risus! Porta ac sit integer.,77,74,Est felis dui cursus posuere euismod sapien wisi nonummy vulputate velit. Nec laoreet.,,,,81,64,"Nonummy in aliquet, scelerisque, eleifend maecenas pellentesque sapien in iaculis temporibus.",,,,,,,,,,5,27,Magnis fusce massa? Sagittis quis facilisis? Culpa velit porttitor ullamcorper. Aliquet! Dignissim sem vel id.,,,,,,,,1,,,,,1,,,,,,,,,,,,,,,,,,2,,2,17,15,17,15,15,17,18,19,3,77
+2019-04-25 19:38:57,2019-04-25 19:38:57,2,,100,0,1,2019-04-25 19:38:57,R_4Z7n5WwCbSHFuRf,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:57,2019-04-25 19:38:57,2,,100,0,1,2019-04-25 19:38:57,R_8CSfo3VQJX2VHRb,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:57,2019-04-25 19:38:58,2,,100,1,1,2019-04-25 19:38:58,R_egGC8oknCrheCkl,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,2,,,2,,3,,,,,,5,,24,82,Tortor tempora temporibus curabitur atque est integer! Nulla nibh sem interdum nibh odio.,,,,,,,,,,,,,8,21,"Nullam purus dapibus. Dolorem ut sagittis, eros phasellus vel culpa sagittis tempus donec id temporibus.",,,,,,,,,,,,,55,32,Erat molestie. Sodales etiam purus fusce ab in cursus risus? Mi. Laoreet ultricies. Integer amet.,16,4,Imperdiet placerat. Duis natoque duis sapien proin purus eu fermentum. Leo.,,,,,,,,,,,,,,,,,,,,,,,1,,,,2,,1,,,,,,,,,,1,17,15,15,16,18,18,18,15,1,98
+2019-04-25 19:38:58,2019-04-25 19:38:58,2,,100,0,1,2019-04-25 19:38:58,R_5aNnePrTGLf8Bql,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:58,2019-04-25 19:38:58,2,,100,0,1,2019-04-25 19:38:59,R_eJKj7QRnn3bW04d,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:59,2019-04-25 19:38:59,2,,100,0,1,2019-04-25 19:38:59,R_eWq7MNx8CiQrDTL,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:59,2019-04-25 19:38:59,2,,100,0,1,2019-04-25 19:38:59,R_77pWf2Wdyb5m0iF,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:59,2019-04-25 19:38:59,2,,100,0,1,2019-04-25 19:38:59,R_cZwlcrWgSxBSlmt,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:38:59,2019-04-25 19:38:59,2,,100,0,1,2019-04-25 19:39:00,R_7ZLei00Ojirph0p,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:39:00,2019-04-25 19:39:00,2,,100,0,1,2019-04-25 19:39:00,R_3CR6Q1BQZL5yw2F,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:39:00,2019-04-25 19:39:00,2,,100,0,1,2019-04-25 19:39:00,R_eVRnmfIwsnEXB5P,,,,,51.571197509765625,5.0543975830078125,test,,1,,,,1,,,7,,2,,,,,,,2,99,62,Etiam augue dignissim aliquet. Orci nulla fermentum odio! Pretium rutrum ante tortor.,,,,,,,,,,,,,,,,,,,,,,,,,,,,54,100,Facilisi lorem? Laoreet curabitur vestibulum? Purus facilisis venenatis aenean cras gravida. Mauris. Scelerisque viverra malesuada.,75,72,"Tempora porttitor at dolorem sit erat eleifend a erat justo, elit.",,,,19,33,Aliquet placerat? Vehicula dignissim pretium natoque! Primis etiam fringilla quam commodo.,,,,,,,,,,,2,,,,,,,,,,,,,,,2,,,,,,1,2,17,18,19,18,15,16,18,16,2,55
+2019-04-25 19:39:01,2019-04-25 19:39:01,2,,100,0,1,2019-04-25 19:39:01,R_2h5LZYopdHmrydL,,,,,51.571197509765625,5.0543975830078125,test,,1,,3,1,,,5,,4,,,,,,,,,,,,9,30,Aenean luctus nunc felis cras leo. Interdum magna arcu sit. Primis suspendisse diam dolorem dapibus.,86,92,Ut wisi scelerisque vitae vel neque eros consectetuer vivamus. Nibh.,,,,,,,,,,,,,,,,,,,,,,,,,,,,8,13,Eleifend commodo. Ligula felis proin pretium ullamcorper ligula eros euismod? Aliquam.,,,,96,66,"Lectus amet. Posuere! Duis! Sagittis rhoncus non eu, magnis potenti primis atque.",,,,,,,2,,,,,,,,,,,,1,,,1,,,,,,,,2,15,17,17,17,16,15,19,18,2,59
+2019-04-25 19:39:02,2019-04-25 19:39:02,2,,100,0,1,2019-04-25 19:39:02,R_77fk8Xvf7nYVxg9,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:39:02,2019-04-25 19:39:02,2,,100,0,1,2019-04-25 19:39:02,R_e8W5zVWdbG7x6SN,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:39:02,2019-04-25 19:39:03,2,,100,1,1,2019-04-25 19:39:03,R_0jhY594NTOTpV9b,,,,,51.571197509765625,5.0543975830078125,test,,1,,,1,,,,,8,,3,,,,,1,,,,,59,89,"Mattis potenti pede. Massa suscipit turpis ultrices montes dolor ac, integer accusamus. Elit.",,,,,,,,,,74,0,"Rhoncus, bibendum dapibus! Facilisis. Blandit. Venenatis ligula. Tortor! Ligula! Pharetra facilisi eros.",,,,,,,,,,94,80,Dui erat proin. Tempus id. Nibh per ridiculus. Malesuada euismod culpa ullamcorper felis malesuada luctus.,,,,,,,46,52,Magnis per per. Volutpat est sagittis donec dolorem ipsum euismod auctor cursus? Pellentesque accusamus.,,,,,,,,,,1,,,,,1,,,2,,,,,,,,,,,,,,,,,,2,19,18,15,15,18,19,17,17,1,32
+2019-04-25 19:39:03,2019-04-25 19:39:03,2,,100,0,1,2019-04-25 19:39:03,R_41O99eB5jmPunaZ,,,,,51.571197509765625,5.0543975830078125,test,,1,,2,,,8,,,,,,4,,3,,,,,,,,,,,,,,,,28,90,Iaculis est porttitor dolorem consectetuer non rutrum. Donec fringilla leo temporibus risus. Lectus.,,,,,,,,,,91,36,"Mauris luctus neque eros? Sit cras? Atque, morbi sit in suscipit. Ridiculus, ante arcu.",,,,,,,,,,,,,,,,49,49,Morbi orci sollicitudin culpa posuere eleifend maecenas platea cras quam elit tellus venenatis vel.,84,70,"Nec? Nonummy praesent, eu dolorem. Tempora? Et fermentum iaculis bibendum suspendisse. Molestie bibendum ullamcorper.",,,,,,,,,,,,,3,,,,,,,,,1,1,,,,1,18,18,17,17,15,15,19,19,1,63
+2019-04-25 19:39:03,2019-04-25 19:39:03,2,,100,0,1,2019-04-25 19:39:03,R_2rR3sAVL6jcIwOF,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:39:04,2019-04-25 19:39:04,2,,100,0,1,2019-04-25 19:39:04,R_cCvFiM2nmDhbEu9,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:39:04,2019-04-25 19:39:04,2,,100,0,1,2019-04-25 19:39:04,R_56aejlMUemmQOep,,,,,51.571197509765625,5.0543975830078125,test,,1,,,1,,,,2,,,3,,,,,8,,64,14,Vulputate posuere augue? Iaculis ullamcorper enim sagittis dolor phasellus convallis aliquam. Fermentum auctor augue.,,,,,,,,,,,,,26,6,Malesuada felis vitae purus placerat nulla mattis faucibus cras vehicula ridiculus culpa! Natoque.,,,,,,,,,,6,61,At platea volutpat fusce? Erat purus integer tempora faucibus? Fusce urna lacus pretium tincidunt bibendum.,,,,,,,22,17,Id. Potenti. Ut placerat phasellus facilisis wisi pharetra facilisis sem id? Nulla sagittis enim.,,,,,,,,,,,2,,,1,,,,,,,,,,,,,,,2,,,,,,,1,18,17,18,19,15,19,17,19,3,64
+2019-04-25 19:39:05,2019-04-25 19:39:05,2,,100,0,1,2019-04-25 19:39:05,R_beLzvsdTEKpDmKN,,,,,51.571197509765625,5.0543975830078125,test,,1,,,2,,,8,,,,,,,2,,,1,,,,,,,3,50,Imperdiet? Non odio ab urna. Mattis atque tortor morbi laoreet magnis mattis eget? Ac donec.,,,,,,,,,,,,,,,,2,82,Tincidunt ut? Interdum. Velit integer. Convallis integer odio? Enim placerat convallis. Lorem sodales quam.,,,,,,,,,,63,49,"Cursus etiam potenti sed! Nulla arcu, vulputate scelerisque sem ullamcorper arcu. Malesuada diam, sodales justo.",15,59,Tellus molestie luctus posuere! Laoreet iaculis. Montes? At. In interdum facilisis a. Nunc mauris.,,,,,,,,,,,,,,,,,,,,,,,,,,,,2,2,,,1,2,17,17,18,17,17,19,17,15,2,4
+2019-04-25 19:39:05,2019-04-25 19:39:06,2,,100,1,1,2019-04-25 19:39:06,R_1ZZzMbWYAnhjMH3,,,,,51.571197509765625,5.0543975830078125,test,,1,,,2,,,,,4,3,,,,,,7,,,,,99,58,"Justo magna pharetra, suscipit duis cursus? Tellus elit ligula vestibulum.",,,,,,,,,,7,2,Primis pede et ligula nunc imperdiet amet dolor montes interdum non imperdiet sit.,,,,,,,,,,,,,7,96,Laoreet velit lacus? Urna odio? Nonummy. Volutpat eget. Ipsum sed nonummy? Porta interdum fusce.,,,,13,29,Iaculis ridiculus mi egestas sagittis consequat viverra turpis venenatis nullam. Ridiculus integer ac.,,,,,,,,,,2,,,,,,,,,,2,,,,,,2,,,,,,,,,,2,15,15,16,17,16,19,19,18,3,39
+2019-04-25 19:39:06,2019-04-25 19:39:07,2,,100,1,1,2019-04-25 19:39:07,R_71crLcO0JDOcytn,,,,,51.571197509765625,5.0543975830078125,test,,1,,1,,2,,1,6,,,,,,,,,,63,4,Sodales dolorem wisi nullam porta ac consectetuer tincidunt pharetra urna ipsum commodo.,,,,13,66,"Commodo in, urna! Donec pede tortor convallis maecenas dignissim. Lacus dui nibh. Sem neque.",,,,,,,,,,,,,,,,,,,,,,,,,94,95,Donec cras in mattis? Ut primis luctus bibendum tempor pede proin elit aenean! Porta sapien.,,,,,,,38,28,Interdum wisi atque interdum per purus facilisi scelerisque? Pharetra magna nulla dolor. Sagittis dolor.,,,,,,,,,,2,,,,,,,,,2,,,2,,,,,,,,1,17,15,18,18,16,19,19,15,3,70
+2019-04-25 19:39:07,2019-04-25 19:39:07,2,,100,0,1,2019-04-25 19:39:07,R_5i1coKSWyKmSXTn,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:39:07,2019-04-25 19:39:07,2,,100,0,1,2019-04-25 19:39:07,R_85NFfHZJ3FyyCsR,,,,,51.571197509765625,5.0543975830078125,test,,2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2019-04-25 19:39:07,2019-04-25 19:39:08,2,,100,1,1,2019-04-25 19:39:08,R_bjVN5GkifVaEL09,,,,,51.571197509765625,5.0543975830078125,test,,1,2,,,,2,,,,,,,6,,1,,,,,,,,,,,,2,73,"Donec, nec. Luctus pellentesque et vestibulum consectetuer lacus dolorem dolorem sagittis turpis felis leo luctus.",20,54,Sit elit integer ut facilisi sollicitudin non ultrices risus. Massa iaculis.,,,,56,48,Temporibus. Atque. Ante accusamus. Vitae magna pede at et? Sagittis porttitor.,75,40,Rhoncus. Aliquam auctor tempus? Turpis temporibus nonummy sed vulputate cursus arcu justo.,,,,,,,,,,,,,,,,,,,,,,,,,,,2,,,1,,,,,,,,3,,,,,,,,,,,,,1,16,17,17,17,15,19,15,19,3,48
