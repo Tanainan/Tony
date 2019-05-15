@@ -17,24 +17,24 @@ oe <- data.frame(sapply(oe, function(x) as.numeric(as.character(x))))
 # }
 
 ######### Similarity Effect #########
-prop.table(table(oe$lot50s, exclude = "NA"))
-prop.table(table(oe$lot60s, exclude = "NA"))
-prop.table(table(oe$res30s, exclude = "NA"))
-prop.table(table(oe$res10s, exclude = "NA"))
-prop.table(table(oe$can66s, exclude = "NA"))
-prop.table(table(oe$can33s, exclude = "NA"))
-prop.table(table(oe$mov33s, exclude = "NA"))
-prop.table(table(oe$mov66s, exclude = "NA"))
+prop.table(table(na.omit(oe$lot50s)))
+prop.table(table(na.omit(oe$lot60s)))
+prop.table(table(na.omit(oe$res30s)))
+prop.table(table(na.omit(oe$res10s)))
+prop.table(table(na.omit(oe$can66s)))
+prop.table(table(na.omit(oe$can33s)))
+prop.table(table(na.omit(oe$mov33s)))
+prop.table(table(na.omit(oe$mov66s)))
 
 ######### Outlier Effect #########
-prop.table(table(oe$lot50o, exclude = "NA"))
-prop.table(table(oe$lot60o, exclude = "NA"))
-prop.table(table(oe$res30o, exclude = "NA"))
-prop.table(table(oe$res10o, exclude = "NA"))
-prop.table(table(oe$can66o, exclude = "NA"))
-prop.table(table(oe$can33o, exclude = "NA"))
-prop.table(table(oe$mov33o, exclude = "NA"))
-prop.table(table(oe$mov66o, exclude = "NA"))
+prop.table(table(na.omit(oe$lot50o)))
+prop.table(table(na.omit(oe$lot60o)))
+prop.table(table(na.omit(oe$res30o)))
+prop.table(table(na.omit(oe$res10o)))
+prop.table(table(na.omit(oe$can66o)))
+prop.table(table(na.omit(oe$can33o)))
+prop.table(table(na.omit(oe$mov33o)))
+prop.table(table(na.omit(oe$mov66o)))
 
 
 ######### Attributes #########
