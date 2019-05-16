@@ -7,8 +7,16 @@ oe <- read_csv("OE test.csv")
 oe <- oe[-c(1,2),-c(1:18)]
 oe <- oe[,-c(19,22,25,28,31,34,37,40,43,46,49,52,55,58,61,64)]
 oe <- data.frame(sapply(oe, function(x) as.numeric(as.character(x))))
+# change column names
+colnames(oe)[colnames(oe)=="res30o"] <- "res40o"
+colnames(oe)[colnames(oe)=="res30s"] <- "res40s"
+colnames(oe)[colnames(oe)=="pres30o_1"] <- "pres40o_1"
+colnames(oe)[colnames(oe)=="pres30o_2"] <- "pres40o_2"
+colnames(oe)[colnames(oe)=="pres30s_1"] <- "pres40s_1"
+colnames(oe)[colnames(oe)=="pres30s_2"] <- "pres40s_2"
 
-# remove participant 215 because didn't rate the attributes
+
+# remove participant 215 because didn't rate the attributes for all scenarios
 oe <- oe[-c(215),]
 
 #oe[,1:16][is.na(oe[,1:16])] = "NA"
@@ -23,7 +31,7 @@ oe <- oe[-c(215),]
 ######### Similarity Effect #########
 prop.table(table(na.omit(oe$lot50s)))
 prop.table(table(na.omit(oe$lot60s)))
-prop.table(table(na.omit(oe$res30s)))
+prop.table(table(na.omit(oe$res40s)))
 prop.table(table(na.omit(oe$res10s)))
 prop.table(table(na.omit(oe$can66s)))
 prop.table(table(na.omit(oe$can33s)))
@@ -33,7 +41,7 @@ prop.table(table(na.omit(oe$mov66s)))
 ######### Outlier Effect #########
 prop.table(table(na.omit(oe$lot50o)))
 prop.table(table(na.omit(oe$lot60o)))
-prop.table(table(na.omit(oe$res30o)))
+prop.table(table(na.omit(oe$res40o)))
 prop.table(table(na.omit(oe$res10o)))
 prop.table(table(na.omit(oe$can66o)))
 prop.table(table(na.omit(oe$can33o)))
@@ -64,16 +72,16 @@ mean(oe$plot60s_2, na.rm = T)
 mean(oe$plot60o_1, na.rm = T)
 mean(oe$plot60o_2, na.rm = T)
 
-# 1 = food quality
-# 2 = driving time
+# 1 = driving time
+# 2 = food quality
 mean(oe$pres10o_1, na.rm = T)
 mean(oe$pres10o_2, na.rm = T)
-mean(oe$pres30o_1, na.rm = T)
-mean(oe$pres30o_2, na.rm = T)
+mean(oe$pres40o_1, na.rm = T)
+mean(oe$pres40o_2, na.rm = T)
 mean(oe$pres10s_1, na.rm = T)
 mean(oe$pres10s_2, na.rm = T)
-mean(oe$pres30s_1, na.rm = T)
-mean(oe$pres30s_2, na.rm = T)
+mean(oe$pres40s_1, na.rm = T)
+mean(oe$pres40s_2, na.rm = T)
 
 
 # 1 = critic I
@@ -95,7 +103,7 @@ prop.table(table(oe$age))
 # create a new data frame
 # dummy code for scenarios
 # ef <- data.frame(resp = c(oe$lot50s, oe$lot60s, oe$lot50o, oe$lot60o,
-#                           oe$res10s, oe$res30s, oe$res10o, oe$res30o,
+#                           oe$res10s, oe$res40s, oe$res10o, oe$res40o,
 #                           oe$can33s, oe$can66s, oe$can33o, oe$can66o,
 #                           oe$mov33s, oe$mov66s, oe$mov33o, oe$mov66o),
 #                  name = (c(rep(c("lot50s"), length(oe$lot50s)),
@@ -103,9 +111,9 @@ prop.table(table(oe$age))
 #                          rep(c("lot50o"), length(oe$lot50o)),
 #                          rep(c("lot60o"), length(oe$lot60o)),
 #                          rep(c("res10s"), length(oe$res10s)),
-#                          rep(c("res30s"), length(oe$res30s)),
+#                          rep(c("res40s"), length(oe$res40s)),
 #                          rep(c("res10o"), length(oe$res10o)),
-#                          rep(c("res30o"), length(oe$res30o)),
+#                          rep(c("res40o"), length(oe$res40o)),
 #                          rep(c("can33s"), length(oe$can33s)),
 #                          rep(c("can66s"), length(oe$can66s)),
 #                          rep(c("can33o"), length(oe$can33o)),
@@ -124,7 +132,7 @@ prop.table(table(oe$age))
 # 1 = outlier
 # ef$effect <- NA
 # for (i in 1:nrow(ef)){
-#   if (ef$name[i] == "lot50s" | ef$name[i] == "lot60s" | ef$name[i] == "res10s" | ef$name[i] == "res30s" |
+#   if (ef$name[i] == "lot50s" | ef$name[i] == "lot60s" | ef$name[i] == "res10s" | ef$name[i] == "res40s" |
 #       ef$name[i] == "can33s" | ef$name[i] == "can66s" | ef$name[i] == "mov33s" | ef$name[i] == "mov66s")
 #     {ef$effect[i] <- 0} else {ef$effect[i] <- 1}
 # }
@@ -140,7 +148,7 @@ prop.table(table(oe$age))
 
 # ef$pre <- NA
 # for (i in 1:nrow(ef)){
-#   if (ef$name[i] == "lot60s" | ef$name[i] == "lot60o" | ef$name[i] == "res30s" | ef$name[i] == "res30o" |
+#   if (ef$name[i] == "lot60s" | ef$name[i] == "lot60o" | ef$name[i] == "res40s" | ef$name[i] == "res40o" |
 #       ef$name[i] == "can33s" | ef$name[i] == "can33o" | ef$name[i] == "mov66s" | ef$name[i] == "mov66o")
 #   {ef$pre[i] <- 0} else {ef$pre[i] <- 1}
 # }
@@ -163,7 +171,7 @@ prop.table(table(oe$age))
 #   {dt$scenario[i] <- "movie"}
 #   if (dt$name[i] == "can33s" | dt$name[i] == "can33o" | dt$name[i] == "can66s" | dt$name[i] == "can66o")
 #   {dt$scenario[i] <- "candidate"} 
-#   if (dt$name[i] == "res10s" | dt$name[i] == "res10o" | dt$name[i] == "res30s" | dt$name[i] == "res30o")
+#   if (dt$name[i] == "res10s" | dt$name[i] == "res10o" | dt$name[i] == "res40s" | dt$name[i] == "res40o")
 #   {dt$scenario[i] <- "restaurant"}
 # }
 
@@ -227,25 +235,29 @@ logit2prob <- function(logit){
 logit2prob(coef(gambling))
 
 
+# test for correlation between presentation and att1-att2
+gb$attdiff <- gb$att1 - gb$att2
+cor.test(gb$attdiff, gb$pre)
+mean(gb$attdiff)
 
 ################# restaurant ##################
-rt <- data.frame(resp = c(oe$res10s, oe$res30s, oe$res10o, oe$res30o),
+rt <- data.frame(resp = c(oe$res10s, oe$res40s, oe$res10o, oe$res40o),
                  name = (c(rep(c("res10s"), length(oe$res10s)),
-                           rep(c("res30s"), length(oe$res30s)),
+                           rep(c("res40s"), length(oe$res40s)),
                            rep(c("res10o"), length(oe$res10o)),
-                           rep(c("res30o"), length(oe$res30o)))),
-                 att1 = c(oe$pres10s_1, oe$pres30s_1, oe$pres10o_1, oe$pres30o_1),
-                 att2 = c(oe$pres10s_2, oe$pres30s_2, oe$pres10o_2, oe$pres30o_2))
+                           rep(c("res40o"), length(oe$res40o)))),
+                 att1 = c(oe$pres10s_1, oe$pres40s_1, oe$pres10o_1, oe$pres40o_1),
+                 att2 = c(oe$pres10s_2, oe$pres40s_2, oe$pres10o_2, oe$pres40o_2))
 
 rt$pre <- NA # presentation
 for (i in 1:nrow(rt)){
-  if (rt$name[i] == "res30s" | rt$name[i] == "res30o")
+  if (rt$name[i] == "res40s" | rt$name[i] == "res40o")
   {rt$pre[i] <- 0} else {rt$pre[i] <- 1}
 }
 
 rt$effect <- NA
 for (i in 1:nrow(rt)){
-  if (rt$name[i] == "res30s" | rt$name[i] == "res10s")
+  if (rt$name[i] == "res40s" | rt$name[i] == "res10s")
   {rt$effect[i] <- 0} else {rt$effect[i] <- 1}
 }
 
@@ -261,6 +273,10 @@ restaurant <- glm(resp ~ effect + pre, family = binomial(link="logit"), data = r
 summary(restaurant)
 logit2prob(coef(restaurant))
 
+
+rt$attdiff <- rt$att1 - rt$att2
+cor.test(rt$attdiff, rt$pre)
+mean(rt$attdiff)
 
 ############# candidate #####################
 cd <- data.frame(resp = c(oe$can33s, oe$can66s, oe$can33o, oe$can66o),
@@ -295,8 +311,9 @@ candidate <- glm(resp ~ effect + pre, family = binomial(link="logit"), data = cd
 summary(candidate)
 logit2prob(coef(candidate))
 
-
-
+cd$attdiff <- cd$att1 - cd$att2
+cor.test(cd$attdiff, cd$pre)
+mean(cd$attdiff)
 
 ############# movie #####################
 mv <- data.frame(resp = c(oe$mov33s, oe$mov66s, oe$mov33o, oe$mov66o),
@@ -331,6 +348,9 @@ movie <- glm(resp ~ effect + pre + effect*pre + att1 + att2, family = binomial(l
 summary(movie)
 logit2prob(coef(movie))
 
+mv$attdiff <- mv$att1 - mv$att2
+cor.test(mv$attdiff, mv$pre)
+mean(mv$attdiff)
 
 #######
 # for the can33o, I have to remove first 17 participants due to survey errors 
@@ -370,4 +390,6 @@ candidate1 <- glm(resp ~ effect + pre, family = binomial(link="logit"), data = c
 summary(candidate1)
 logit2prob(coef(candidate1))
 
-
+cd1$attdiff <- cd1$att1 - cd1$att2
+cor.test(cd1$attdiff, cd1$pre)
+mean(cd1$attdiff)
