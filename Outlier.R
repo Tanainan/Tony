@@ -7,6 +7,10 @@ oe <- read_csv("OE test.csv")
 oe <- oe[-c(1,2),-c(1:18)]
 oe <- oe[,-c(19,22,25,28,31,34,37,40,43,46,49,52,55,58,61,64)]
 oe <- data.frame(sapply(oe, function(x) as.numeric(as.character(x))))
+
+# remove participant 215 because didn't rate the attributes
+oe <- oe[-c(215),]
+
 #oe[,1:16][is.na(oe[,1:16])] = "NA"
 
 # # recode to 0 (similar options) and 1 (dissimilar option)
@@ -90,40 +94,40 @@ prop.table(table(oe$age))
 
 # create a new data frame
 # dummy code for scenarios
-ef <- data.frame(resp = c(oe$lot50s, oe$lot60s, oe$lot50o, oe$lot60o,
-                          oe$res10s, oe$res30s, oe$res10o, oe$res30o,
-                          oe$can33s, oe$can66s, oe$can33o, oe$can66o,
-                          oe$mov33s, oe$mov66s, oe$mov33o, oe$mov66o),
-                 name = (c(rep(c("lot50s"), length(oe$lot50s)),
-                         rep(c("lot60s"), length(oe$lot60s)),
-                         rep(c("lot50o"), length(oe$lot50o)),
-                         rep(c("lot60o"), length(oe$lot60o)),
-                         rep(c("res10s"), length(oe$res10s)),
-                         rep(c("res30s"), length(oe$res30s)),
-                         rep(c("res10o"), length(oe$res10o)),
-                         rep(c("res30o"), length(oe$res30o)),
-                         rep(c("can33s"), length(oe$can33s)),
-                         rep(c("can66s"), length(oe$can66s)),
-                         rep(c("can33o"), length(oe$can33o)),
-                         rep(c("can66o"), length(oe$can66o)),
-                         rep(c("mov33s"), length(oe$mov33s)),
-                         rep(c("mov66s"), length(oe$mov66s)),
-                         rep(c("mov33o"), length(oe$mov33o)),
-                         rep(c("mov66o"), length(oe$mov66o)))))
-
-ef$lot.mov <- factor(c(rep(1, nrow(oe)), rep(0, nrow(oe)), rep(0, nrow(oe)), rep(0, nrow(oe))))   
-ef$res.mov <- factor(c(rep(0, nrow(oe)), rep(1, nrow(oe)), rep(0, nrow(oe)), rep(0, nrow(oe)))) 
-ef$can.mov <- factor(c(rep(0, nrow(oe)), rep(0, nrow(oe)), rep(1, nrow(oe)), rep(0, nrow(oe)))) 
+# ef <- data.frame(resp = c(oe$lot50s, oe$lot60s, oe$lot50o, oe$lot60o,
+#                           oe$res10s, oe$res30s, oe$res10o, oe$res30o,
+#                           oe$can33s, oe$can66s, oe$can33o, oe$can66o,
+#                           oe$mov33s, oe$mov66s, oe$mov33o, oe$mov66o),
+#                  name = (c(rep(c("lot50s"), length(oe$lot50s)),
+#                          rep(c("lot60s"), length(oe$lot60s)),
+#                          rep(c("lot50o"), length(oe$lot50o)),
+#                          rep(c("lot60o"), length(oe$lot60o)),
+#                          rep(c("res10s"), length(oe$res10s)),
+#                          rep(c("res30s"), length(oe$res30s)),
+#                          rep(c("res10o"), length(oe$res10o)),
+#                          rep(c("res30o"), length(oe$res30o)),
+#                          rep(c("can33s"), length(oe$can33s)),
+#                          rep(c("can66s"), length(oe$can66s)),
+#                          rep(c("can33o"), length(oe$can33o)),
+#                          rep(c("can66o"), length(oe$can66o)),
+#                          rep(c("mov33s"), length(oe$mov33s)),
+#                          rep(c("mov66s"), length(oe$mov66s)),
+#                          rep(c("mov33o"), length(oe$mov33o)),
+#                          rep(c("mov66o"), length(oe$mov66o)))))
+# 
+# ef$lot.mov <- factor(c(rep(1, nrow(oe)), rep(0, nrow(oe)), rep(0, nrow(oe)), rep(0, nrow(oe))))   
+# ef$res.mov <- factor(c(rep(0, nrow(oe)), rep(1, nrow(oe)), rep(0, nrow(oe)), rep(0, nrow(oe)))) 
+# ef$can.mov <- factor(c(rep(0, nrow(oe)), rep(0, nrow(oe)), rep(1, nrow(oe)), rep(0, nrow(oe)))) 
 
 # dummy code for effects
 # 0 = similarity 
 # 1 = outlier
-ef$effect <- NA
-for (i in 1:nrow(ef)){
-  if (ef$name[i] == "lot50s" | ef$name[i] == "lot60s" | ef$name[i] == "res10s" | ef$name[i] == "res30s" |
-      ef$name[i] == "can33s" | ef$name[i] == "can66s" | ef$name[i] == "mov33s" | ef$name[i] == "mov66s")
-    {ef$effect[i] <- 0} else {ef$effect[i] <- 1}
-}
+# ef$effect <- NA
+# for (i in 1:nrow(ef)){
+#   if (ef$name[i] == "lot50s" | ef$name[i] == "lot60s" | ef$name[i] == "res10s" | ef$name[i] == "res30s" |
+#       ef$name[i] == "can33s" | ef$name[i] == "can66s" | ef$name[i] == "mov33s" | ef$name[i] == "mov66s")
+#     {ef$effect[i] <- 0} else {ef$effect[i] <- 1}
+# }
 
 
 # dummy code for presentation: base on attribute weighting -- whether the option that has the highest value on that prominent attribute is a dissimilar option or a similar option
@@ -134,25 +138,38 @@ for (i in 1:nrow(ef)){
 # code = 0 if the "more attractive" option is a dissimilar option
 # code = 1 if it is a similar option
 
-ef$pre <- NA
-for (i in 1:nrow(ef)){
-  if (ef$name[i] == "lot60s" | ef$name[i] == "lot60o" | ef$name[i] == "res30s" | ef$name[i] == "res30o" |
-      ef$name[i] == "can33s" | ef$name[i] == "can33o" | ef$name[i] == "mov66s" | ef$name[i] == "mov66o")
-  {ef$pre[i] <- 0} else {ef$pre[i] <- 1}
-}
+# ef$pre <- NA
+# for (i in 1:nrow(ef)){
+#   if (ef$name[i] == "lot60s" | ef$name[i] == "lot60o" | ef$name[i] == "res30s" | ef$name[i] == "res30o" |
+#       ef$name[i] == "can33s" | ef$name[i] == "can33o" | ef$name[i] == "mov66s" | ef$name[i] == "mov66o")
+#   {ef$pre[i] <- 0} else {ef$pre[i] <- 1}
+# }
 
 # listwise deletion for NA responses
-dt <- na.omit(ef)
+# dt <- na.omit(ef)
 
 # recode to 0 (dissimilar options) and 1 (similar option)
-for (i in 1:nrow(dt)){
-    if(dt$resp[i] > 1) {dt$resp[i] <- 0}
-}
-dt$resp <- 1-dt$resp
+# for (i in 1:nrow(dt)){
+#     if(dt$resp[i] > 1) {dt$resp[i] <- 0}
+# }
+# dt$resp <- 1-dt$resp
+
+# adding scenario names
+# dt$scenario <- NA
+# for (i in 1:nrow(dt)){
+#   if (dt$name[i] == "lot50s" | dt$name[i] == "lot60s" | dt$name[i] == "lot50o" | dt$name[i] == "lot60o")
+#   {dt$scenario[i] <- "gamble"}
+#   if (dt$name[i] == "mov33s" | dt$name[i] == "mov33o" | dt$name[i] == "mov66s" | dt$name[i] == "mov66o")
+#   {dt$scenario[i] <- "movie"}
+#   if (dt$name[i] == "can33s" | dt$name[i] == "can33o" | dt$name[i] == "can66s" | dt$name[i] == "can66o")
+#   {dt$scenario[i] <- "candidate"} 
+#   if (dt$name[i] == "res10s" | dt$name[i] == "res10o" | dt$name[i] == "res30s" | dt$name[i] == "res30o")
+#   {dt$scenario[i] <- "restaurant"}
+# }
 
 # logistic regression
-mod1 <- glm(resp ~ lot.mov + res.mov + can.mov + effect + lot.mov*effect + res.mov*effect + can.mov*effect, family = binomial(link="logit"), data = dt)
-summary(mod1) # doesn't work
+# mod1 <- glm(resp ~ lot.mov + res.mov + can.mov + effect + lot.mov*effect + res.mov*effect + can.mov*effect, family = binomial(link="logit"), data = dt)
+# summary(mod1) # doesn't work
 
 
 ############## create a data frame for each scenario ###############
@@ -165,12 +182,22 @@ gb <- data.frame(resp = c(oe$lot50s, oe$lot60s, oe$lot50o, oe$lot60o),
                  att1 = c(oe$plot50s_1, oe$plot60s_1, oe$plot50o_1, oe$plot60o_1),
                  att2 = c(oe$plot50s_2, oe$plot60s_2, oe$plot50o_2, oe$plot60o_2))
 
-gb$pre <- NA # presentation
+# dummy code for presentation: base on attribute weighting -- whether the option that has the highest value on that prominent attribute is a dissimilar option or a similar option
+# For lot: probability of winning > amount of winning
+# For res: food quality > driving time
+# For can: EQ > IQ
+# For mov: critic I > critic II 
+# code = 0 if the "more attractive" option is a dissimilar option
+# code = 1 if it is a similar option
+gb$pre <- NA
 for (i in 1:nrow(gb)){
   if (gb$name[i] == "lot60s" | gb$name[i] == "lot60o")
   {gb$pre[i] <- 0} else {gb$pre[i] <- 1}
 }
 
+# dummy code for effects
+# 0 = similarity 
+# 1 = outlier
 gb$effect <- NA
 for (i in 1:nrow(gb)){
   if (gb$name[i] == "lot50s" | gb$name[i] == "lot60s")
@@ -189,6 +216,15 @@ gb$resp <- 1-gb$resp
 
 gambling <- glm(resp ~ effect + pre, family = binomial(link="logit"), data = gb)
 summary(gambling)
+coef(gambling)
+
+# convert logit to prob
+logit2prob <- function(logit){
+  odds <- exp(logit)
+  prob <- odds / (1 + odds)
+  return(prob)
+}
+logit2prob(coef(gambling))
 
 
 
@@ -223,6 +259,7 @@ rt$resp <- 1-rt$resp
 
 restaurant <- glm(resp ~ effect + pre, family = binomial(link="logit"), data = rt)
 summary(restaurant)
+logit2prob(coef(restaurant))
 
 
 ############# candidate #####################
@@ -256,6 +293,8 @@ cd$resp <- 1-cd$resp
 
 candidate <- glm(resp ~ effect + pre, family = binomial(link="logit"), data = cd)
 summary(candidate)
+logit2prob(coef(candidate))
+
 
 
 
@@ -290,3 +329,45 @@ mv$resp <- 1-mv$resp
 
 movie <- glm(resp ~ effect + pre + effect*pre + att1 + att2, family = binomial(link="logit"), data = mv)
 summary(movie)
+logit2prob(coef(movie))
+
+
+#######
+# for the can33o, I have to remove first 17 participants due to survey errors 
+can2 <- data.frame(can33o = na.omit(oe$can33o), pcan33o_1 = na.omit(oe$pcan33o_1), pcan33o_2 = na.omit(oe$pcan33o_2))
+can2 <- can2[-c(1:17),]
+
+# replace in the new data frame
+cd1 <- data.frame(resp = c(oe$can33s, oe$can66s, can2$can33o, oe$can66o),
+                 name = (c(rep(c("can33s"), length(oe$can33s)),
+                           rep(c("can66s"), length(oe$can66s)),
+                           rep(c("can33o"), length(can2$can33o)),
+                           rep(c("can66o"), length(oe$can66o)))),
+                 att1 = c(oe$pcan33s_1, oe$pcan66s_1, can2$pcan33o_1, oe$pcan66o_1),
+                 att2 = c(oe$pcan33s_2, oe$pcan66s_2, can2$pcan33o_2, oe$pcan66o_2))
+
+cd1$pre <- NA # presentation
+for (i in 1:nrow(cd1)){
+  if (cd1$name[i] == "can33s" | cd1$name[i] == "can33o")
+  {cd1$pre[i] <- 0} else {cd1$pre[i] <- 1}
+}
+
+cd1$effect <- NA
+for (i in 1:nrow(cd1)){
+  if (cd1$name[i] == "can66s" | cd1$name[i] == "can33s")
+  {cd1$effect[i] <- 0} else {cd1$effect[i] <- 1}
+}
+
+cd1 <- na.omit(cd1)
+
+# recode to 0 (dissimilar options) and 1 (similar option)
+for (i in 1:nrow(cd1)){
+  if(cd1$resp[i] > 1) {cd1$resp[i] <- 0}
+}
+cd1$resp <- 1-cd1$resp
+
+candidate1 <- glm(resp ~ effect + pre, family = binomial(link="logit"), data = cd1)
+summary(candidate1)
+logit2prob(coef(candidate1))
+
+
