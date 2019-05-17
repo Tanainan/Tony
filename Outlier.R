@@ -15,7 +15,6 @@ colnames(oe)[colnames(oe)=="pres30o_2"] <- "pres40o_2"
 colnames(oe)[colnames(oe)=="pres30s_1"] <- "pres40s_1"
 colnames(oe)[colnames(oe)=="pres30s_2"] <- "pres40s_2"
 
-
 # remove participant 215 because didn't rate the attributes for all scenarios
 oe <- oe[-c(215),]
 
@@ -29,24 +28,24 @@ oe <- oe[-c(215),]
 # }
 
 ######### Similarity Effect #########
-prop.table(table(na.omit(oe$lot50s)))
-prop.table(table(na.omit(oe$lot60s)))
-prop.table(table(na.omit(oe$res40s)))
-prop.table(table(na.omit(oe$res10s)))
-prop.table(table(na.omit(oe$can66s)))
-prop.table(table(na.omit(oe$can33s)))
-prop.table(table(na.omit(oe$mov33s)))
-prop.table(table(na.omit(oe$mov66s)))
+# prop.table(table(na.omit(oe$lot50s)))
+# prop.table(table(na.omit(oe$lot60s)))
+# prop.table(table(na.omit(oe$res40s)))
+# prop.table(table(na.omit(oe$res10s)))
+# prop.table(table(na.omit(oe$can66s)))
+# prop.table(table(na.omit(oe$can33s)))
+# prop.table(table(na.omit(oe$mov33s)))
+# prop.table(table(na.omit(oe$mov66s)))
 
 ######### Outlier Effect #########
-prop.table(table(na.omit(oe$lot50o)))
-prop.table(table(na.omit(oe$lot60o)))
-prop.table(table(na.omit(oe$res40o)))
-prop.table(table(na.omit(oe$res10o)))
-prop.table(table(na.omit(oe$can66o)))
-prop.table(table(na.omit(oe$can33o)))
-prop.table(table(na.omit(oe$mov33o)))
-prop.table(table(na.omit(oe$mov66o)))
+# prop.table(table(na.omit(oe$lot50o)))
+# prop.table(table(na.omit(oe$lot60o)))
+# prop.table(table(na.omit(oe$res40o)))
+# prop.table(table(na.omit(oe$res10o)))
+# prop.table(table(na.omit(oe$can66o)))
+# prop.table(table(na.omit(oe$can33o)))
+# prop.table(table(na.omit(oe$mov33o)))
+# prop.table(table(na.omit(oe$mov66o)))
 
 
 ######### Attributes #########
@@ -190,6 +189,7 @@ gb <- data.frame(resp = c(oe$lot50s, oe$lot60s, oe$lot50o, oe$lot60o),
                  att1 = c(oe$plot50s_1, oe$plot60s_1, oe$plot50o_1, oe$plot60o_1),
                  att2 = c(oe$plot50s_2, oe$plot60s_2, oe$plot50o_2, oe$plot60o_2))
 
+gb <- na.omit(gb)
 # dummy code for presentation: base on attribute weighting -- whether the option that has the highest value on that prominent attribute is a dissimilar option or a similar option
 # For lot: probability of winning > amount of winning
 # For res: food quality > driving time
@@ -214,17 +214,20 @@ for (i in 1:nrow(gb)){
 
 
 
-gb <- na.omit(gb)
-
 # recode to 0 (dissimilar options) and 1 (similar option)
 for (i in 1:nrow(gb)){
   if(gb$resp[i] > 1) {gb$resp[i] <- 0}
 }
 gb$resp <- 1-gb$resp
 
+nrow(gb[which(gb$effect == 0),])
+nrow(gb[which(gb$effect == 1),])
+
 gambling <- glm(resp ~ effect + pre, family = binomial(link="logit"), data = gb)
 summary(gambling)
 coef(gambling)
+gg <- coef(gambling)[2]
+z.test()
 
 # convert logit to prob
 logit2prob <- function(logit){
@@ -249,6 +252,8 @@ rt <- data.frame(resp = c(oe$res10s, oe$res40s, oe$res10o, oe$res40o),
                  att1 = c(oe$pres10s_1, oe$pres40s_1, oe$pres10o_1, oe$pres40o_1),
                  att2 = c(oe$pres10s_2, oe$pres40s_2, oe$pres10o_2, oe$pres40o_2))
 
+rt <- na.omit(rt)
+
 rt$pre <- NA # presentation
 for (i in 1:nrow(rt)){
   if (rt$name[i] == "res40s" | rt$name[i] == "res40o")
@@ -261,13 +266,14 @@ for (i in 1:nrow(rt)){
   {rt$effect[i] <- 0} else {rt$effect[i] <- 1}
 }
 
-rt <- na.omit(rt)
-
 # recode to 0 (dissimilar options) and 1 (similar option)
 for (i in 1:nrow(rt)){
   if(rt$resp[i] > 1) {rt$resp[i] <- 0}
 }
 rt$resp <- 1-rt$resp
+
+nrow(rt[which(rt$effect == 0),])
+nrow(rt[which(rt$effect == 1),])
 
 restaurant <- glm(resp ~ effect + pre, family = binomial(link="logit"), data = rt)
 summary(restaurant)
@@ -287,6 +293,8 @@ cd <- data.frame(resp = c(oe$can33s, oe$can66s, oe$can33o, oe$can66o),
                  att1 = c(oe$pcan33s_1, oe$pcan66s_1, oe$pcan33o_1, oe$pcan66o_1),
                  att2 = c(oe$pcan33s_2, oe$pcan66s_2, oe$pcan33o_2, oe$pcan66o_2))
 
+cd <- na.omit(cd)
+
 cd$pre <- NA # presentation
 for (i in 1:nrow(cd)){
   if (cd$name[i] == "can33s" | cd$name[i] == "can33o")
@@ -299,13 +307,15 @@ for (i in 1:nrow(cd)){
   {cd$effect[i] <- 0} else {cd$effect[i] <- 1}
 }
 
-cd <- na.omit(cd)
 
 # recode to 0 (dissimilar options) and 1 (similar option)
 for (i in 1:nrow(cd)){
   if(cd$resp[i] > 1) {cd$resp[i] <- 0}
 }
 cd$resp <- 1-cd$resp
+
+nrow(cd[which(cd$effect == 0),])
+nrow(cd[which(cd$effect == 1),])
 
 candidate <- glm(resp ~ effect + pre, family = binomial(link="logit"), data = cd)
 summary(candidate)
@@ -323,6 +333,7 @@ mv <- data.frame(resp = c(oe$mov33s, oe$mov66s, oe$mov33o, oe$mov66o),
                            rep(c("mov66o"), length(oe$mov66o)))),
                  att1 = c(oe$pmov33s_1, oe$pmov66s_1, oe$pmov33o_1, oe$pmov66o_1),
                  att2 = c(oe$pmov33s_2, oe$pmov66s_2, oe$pmov33o_2, oe$pmov66o_2))
+mv <- na.omit(mv)
 
 mv$pre <- NA # presentation
 for (i in 1:nrow(mv)){
@@ -338,11 +349,15 @@ for (i in 1:nrow(mv)){
 
 mv <- na.omit(mv)
 
+
 # recode to 0 (dissimilar options) and 1 (similar option)
 for (i in 1:nrow(mv)){
   if(mv$resp[i] > 1) {mv$resp[i] <- 0}
 }
 mv$resp <- 1-mv$resp
+
+nrow(mv[which(mv$effect == 0),])
+nrow(mv[which(mv$effect == 1),])
 
 movie <- glm(resp ~ effect + pre + effect*pre + att1 + att2, family = binomial(link="logit"), data = mv)
 summary(movie)
@@ -386,6 +401,9 @@ for (i in 1:nrow(cd1)){
 }
 cd1$resp <- 1-cd1$resp
 
+nrow(cd1[which(cd1$effect == 0),])
+nrow(cd1[which(cd1$effect == 1),])
+
 candidate1 <- glm(resp ~ effect + pre, family = binomial(link="logit"), data = cd1)
 summary(candidate1)
 logit2prob(coef(candidate1))
@@ -393,3 +411,21 @@ logit2prob(coef(candidate1))
 cd1$attdiff <- cd1$att1 - cd1$att2
 cor.test(cd1$attdiff, cd1$pre)
 mean(cd1$attdiff)
+
+
+####### find the raw probability of each scenario ########
+# gambling
+prop.table(table(gb[which(gb$effect == 0), c("resp")])) # similarity
+prop.table(table(gb[which(gb$effect == 1), c("resp")])) # outlier
+
+# restaurant
+prop.table(table(rt[which(rt$effect == 0), c("resp")])) # similarity
+prop.table(table(rt[which(rt$effect == 1), c("resp")])) # outlier
+
+# candidate
+prop.table(table(cd[which(cd$effect == 0), c("resp")])) # similarity
+prop.table(table(cd[which(cd$effect == 1), c("resp")])) # outlier
+
+# movie
+prop.table(table(mv[which(mv$effect == 0), c("resp")])) # similarity
+prop.table(table(mv[which(mv$effect == 1), c("resp")])) # outlier
