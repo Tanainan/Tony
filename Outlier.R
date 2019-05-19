@@ -21,15 +21,6 @@ colnames(oe)[colnames(oe)=="pres30s_2"] <- "pres40s_2"
 # remove participant 215 because didn't rate the attributes for all scenarios
 oe <- oe[-c(215),]
 
-#oe[,1:16][is.na(oe[,1:16])] = "NA"
-
-# # recode to 0 (similar options) and 1 (dissimilar option)
-# for (i in 1:nrow(oe)){
-#   for (j in 1:16){
-#     if(oe[i,j] > 1 & oe[i,j] != "NA") {oe[i,j] <- 0}
-#   }
-# }
-
 ######### Similarity Effect #########
 # prop.table(table(na.omit(oe$lot50s)))
 # prop.table(table(na.omit(oe$lot60s)))
@@ -52,6 +43,7 @@ oe <- oe[-c(215),]
 
 
 ######### Attributes #########
+# candidate
 # 1 = IQ
 # 2 = EQ
 mean(oe$pcan33o_1, na.rm = T)
@@ -63,6 +55,19 @@ mean(oe$pcan66o_2, na.rm = T)
 mean(oe$pcan66s_1, na.rm = T)
 mean(oe$pcan66s_2, na.rm = T)
 
+sd(oe$pcan33o_1, na.rm = T)
+sd(oe$pcan33o_2, na.rm = T)
+sd(oe$pcan33s_1, na.rm = T)
+sd(oe$pcan33s_2, na.rm = T)
+sd(oe$pcan66o_1, na.rm = T)
+sd(oe$pcan66o_2, na.rm = T)
+sd(oe$pcan66s_1, na.rm = T)
+sd(oe$pcan66s_2, na.rm = T)
+
+# (need to exclude 17)
+
+
+# gambling
 # 1 = prob of winning
 # 2 = amount of winning
 mean(oe$plot50s_1, na.rm = T)
@@ -74,6 +79,16 @@ mean(oe$plot60s_2, na.rm = T)
 mean(oe$plot60o_1, na.rm = T)
 mean(oe$plot60o_2, na.rm = T)
 
+sd(oe$plot50s_1, na.rm = T)
+sd(oe$plot50s_2, na.rm = T)
+sd(oe$plot50o_1, na.rm = T)
+sd(oe$plot50o_2, na.rm = T)
+sd(oe$plot60s_1, na.rm = T)
+sd(oe$plot60s_2, na.rm = T)
+sd(oe$plot60o_1, na.rm = T)
+sd(oe$plot60o_2, na.rm = T)
+
+# restaurant
 # 1 = driving time
 # 2 = food quality
 mean(oe$pres10o_1, na.rm = T)
@@ -85,17 +100,27 @@ mean(oe$pres10s_2, na.rm = T)
 mean(oe$pres40s_1, na.rm = T)
 mean(oe$pres40s_2, na.rm = T)
 
+sd(oe$pres10o_1, na.rm = T)
+sd(oe$pres10o_2, na.rm = T)
+sd(oe$pres40o_1, na.rm = T)
+sd(oe$pres40o_2, na.rm = T)
+sd(oe$pres10s_1, na.rm = T)
+sd(oe$pres10s_2, na.rm = T)
+sd(oe$pres40s_1, na.rm = T)
+sd(oe$pres40s_2, na.rm = T)
 
+
+# movie
 # 1 = critic I
 # 2 = critic II
-mean(oe$pmov66o_1, na.rm = T)
-mean(oe$pmov66o_2, na.rm = T)
-mean(oe$pmov33o_1, na.rm = T)
-mean(oe$pmov33o_2, na.rm = T)
-mean(oe$pmov66s_1, na.rm = T)
-mean(oe$pmov66s_2, na.rm = T)
-mean(oe$pmov33s_1, na.rm = T)
-mean(oe$pmov33s_2, na.rm = T)
+sd(oe$pmov66o_1, na.rm = T)
+sd(oe$pmov66o_2, na.rm = T)
+sd(oe$pmov33o_1, na.rm = T)
+sd(oe$pmov33o_2, na.rm = T)
+sd(oe$pmov66s_1, na.rm = T)
+sd(oe$pmov66s_2, na.rm = T)
+sd(oe$pmov33s_1, na.rm = T)
+sd(oe$pmov33s_2, na.rm = T)
 
 # demographic
 prop.table(table(oe$gender))
@@ -104,7 +129,8 @@ prop.table(table(oe$age))
 
 
 
-############## create a data frame for each scenario ###############
+############## test each scenario separetely but with both similarity and outlier conditions ###############
+# create a data frame for each scenario
 ################## gambling ##################
 gb <- data.frame(resp = c(oe$lot50s, oe$lot60s, oe$lot50o, oe$lot60o),
                  name = (c(rep(c("lot50s"), length(oe$lot50s)),
@@ -161,7 +187,7 @@ logit2prob <- function(logit){
 logit2prob(coef(gambling))
 
 
-# test for correlation between presentation and att1-att2
+# test for correlation between presentation and att1-att2 (prevent IVs correlating each other)
 gb$attdiff <- gb$att1 - gb$att2
 cor.test(gb$attdiff, gb$pre)
 mean(gb$attdiff)
@@ -351,7 +377,7 @@ mean(cd1$attdiff)
 # histogram(mv[which(mv$effect == 0), c("resp")])
 # histogram(mv[which(mv$effect == 1), c("resp")])
 
-#### 0 as % dissimilar option being chosen ####
+######## frequency: 0 as % dissimilar option being chosen ####
 # gambling
 prop.table(table(gb[which(gb$effect == 0), c("resp")]))[1] # similarity
 prop.table(table(gb[which(gb$effect == 1), c("resp")]))[1] # outlier
@@ -368,6 +394,9 @@ prop.table(table(cd[which(cd$effect == 1), c("resp")]))[1] # outlier
 prop.table(table(mv[which(mv$effect == 0), c("resp")]))[1] # similarity
 prop.table(table(mv[which(mv$effect == 1), c("resp")]))[1] # outlier
 
+
+
+
 ##### test if raw proportion of dissimilar option is different from 0.33 and 0.125
 # gambling
 binom.test(nrow(gb[which(gb$effect == 0 & gb$resp == 0),]), nrow(gb[which(gb$effect == 0),]), p = 0.33, alternative = "greater")
@@ -380,148 +409,207 @@ binom.test(nrow(rt[which(rt$effect == 1 & rt$resp == 0),]), nrow(rt[which(rt$eff
 # candidate
 binom.test(nrow(cd[which(cd$effect == 0 & cd$resp == 0),]), nrow(cd[which(cd$effect == 0),]), p = 0.33, alternative = "greater")
 binom.test(nrow(cd[which(cd$effect == 1 & cd$resp == 0),]), nrow(cd[which(cd$effect == 1),]), p = 0.125, alternative = "less")
+binom.test(nrow(cd1[which(cd1$effect == 1 & cd1$resp == 0),]), nrow(cd1[which(cd1$effect == 1),]), p = 0.125, alternative = "less")
 
 # movie
 binom.test(nrow(mv[which(mv$effect == 0 & mv$resp == 0),]), nrow(mv[which(mv$effect == 0),]), p = 0.33, alternative = "greater")
 binom.test(nrow(mv[which(mv$effect == 1 & mv$resp == 0),]), nrow(mv[which(mv$effect == 1),]), p = 0.125, alternative = "less")
 
 
-####### only test for either similarity effect or outlier effect, controlling for presentation ######
-# gambling similarity
+
+
+
+
+################## only test for either similarity effect or outlier effect, controlling for presentation #################
+############# gambling similarity #################
 gbs <- gb[which(gb$effect == 0),]
 gbs1 <- glm(resp ~ pre, data = gbs, family = binomial(link="logit"))
 summary(gbs1)
-logit2prob(coef(gbs1)[1]) # dissimilar = 0 and similar = 1
-linearHypothesis(gbs1, "(Intercept) = 0.70818505792") # the coefficients for intercept and when presentation is 0 and 1 (average), comparing with a logit of 0.67
 gbsc <- (exp(coef(gbs1)[1])/(1+exp(coef(gbs1)[1])))
 zgbs <- (gbsc - 0.67)/sqrt(gbsc*(1-gbsc)/nrow(gbs)) # the formula is from http://www.sthda.com/english/wiki/one-proport0ion-z-test-in-r
 2*pnorm(-abs(zgbs))
 
+# logit to prob for intercept, controlling for other IVs 
+logit2prob(coef(gbs1)[1]) # dissimilar = 0 and similar = 1
+
+# test if logit of intercept is significantly equal to 0.33 or not
+linearHypothesis(gbs1, "(Intercept) = 0.70818505792") # the coefficients for intercept and when presentation is 0 and 1 (average), comparing with a logit of 0.67
+
+# adding interaction between presentation and attributes difference
 gbs2 <- glm(resp ~ attdiff*pre, data = gbs, family = binomial(link="logit"))
 summary(gbs2)
-gbsc2 <- (exp(coef(gbs2)[1] + coef(gbs2)[2]/2)/(1+exp(coef(gbs2)[1] + coef(gbs2)[2]/2)))
+gbsc2 <- (exp(coef(gbs2)[1])/(1+exp(coef(gbs2)[1])))
 zgbs2 <- (gbsc2 - 0.67)/sqrt(gbsc2*(1-gbsc2)/nrow(gbs)) # the formula is from http://www.sthda.com/english/wiki/one-proportion-z-test-in-r
 2*pnorm(-abs(zgbs2))
 
-# gambling outlier
+logit2prob(coef(gbs2)[1]) # dissimilar = 0 and similar = 1
+linearHypothesis(gbs2, "(Intercept) = 0.70818505792")
+
+
+############# gambling outlier #################
 gbo <- gb[which(gb$effect == 1),]
 gbo1 <- glm(resp ~ pre, data = gbo, family = binomial(link="logit"))
 summary(gbo1)
-logit2prob(coef(gbo1)[1]) # dissimilar = 0 and similar = 1
-linearHypothesis(gbo1, "(Intercept) = 1.94591014906") # comparing with a logit of 0.875
 gboc <- (exp(coef(gbo1)[1])/(1+exp(coef(gbo1)[1])))
 zgbo <- (gboc - 0.875)/sqrt(gboc*(1-gboc)/nrow(gbo))
 2*pnorm(-abs(zgbo))
 
+logit2prob(coef(gbo1)[1]) # dissimilar = 0 and similar = 1
+linearHypothesis(gbo1, "(Intercept) = 1.94591014906") # comparing with a logit of 0.875
+
 gbo2 <- glm(resp ~ pre*attdiff, data = gbo, family = binomial(link="logit"))
 summary(gbo2)
-gboc2 <- (exp(coef(gbo2)[1] + coef(gbo2)[2]/2)/(1+exp(coef(gbo2)[1] + coef(gbo2)[2]/2)))
+gboc2 <- (exp(coef(gbo2)[1])/(1+exp(coef(gbo2)[1])))
 zgbo2 <- (gboc2 - 0.875)/sqrt(gboc2*(1-gboc2)/nrow(gbo))
 2*pnorm(-abs(zgbo2))
 
-# restaurant similarity
+logit2prob(coef(gbo2)[1]) # dissimilar = 0 and similar = 1
+linearHypothesis(gbo2, "(Intercept) = 1.94591014906") # comparing with a logit of 0.875
+
+############# restaurant similarity #################
 rts <- rt[which(rt$effect == 0),]
 rts1 <- glm(resp ~ pre, data = rts, family = binomial(link="logit"))
 summary(rts1)
-logit2prob(coef(rts1)[1]) # dissimilar = 0 and similar = 1
-linearHypothesis(rts1, "(Intercept) = 0.70818505792")
 rtsc <- (exp(coef(rts1)[1])/(1+exp(coef(rts1)[1])))
 zrts <- (rtsc - 0.67)/sqrt(rtsc*(1-rtsc)/nrow(rts))
 2*pnorm(-abs(zrts))
 
+logit2prob(coef(rts1)[1]) # dissimilar = 0 and similar = 1
+linearHypothesis(rts1, "(Intercept) = 0.70818505792")
+
 rts2 <- glm(resp ~ pre*attdiff, data = rts, family = binomial(link="logit"))
 summary(rts2)
-rtsc2 <- (exp(coef(rts2)[1] + coef(rts2)[2]/2)/(1+exp(coef(rts2)[1] + coef(rts2)[2]/2)))
+rtsc2 <- (exp(coef(rts2)[1])/(1+exp(coef(rts2)[1])))
 zrts2 <- (rtsc2 - 0.67)/sqrt(rtsc2*(1-rtsc2)/nrow(rts))
 2*pnorm(-abs(zrts2))
 
-# restaurant outlier
+logit2prob(coef(rts2)[1]) # dissimilar = 0 and similar = 1
+linearHypothesis(rts2, "(Intercept) = 0.70818505792")
+
+############# restaurant outlier #################
 rto <- rt[which(rt$effect == 1),]
 rto1 <- glm(resp ~ pre, data = rto, family = binomial(link="logit"))
 summary(rto1)
-logit2prob(coef(rto1)[1]) # dissimilar = 0 and similar = 1
-linearHypothesis(rto1, "(Intercept) = 1.94591014906")
 rtoc <- (exp(coef(rto1)[1])/(1+exp(coef(rto1)[1])))
 zrto <- (rtoc - 0.875)/sqrt(rtoc*(1-rtoc)/nrow(rto))
 2*pnorm(-abs(zrto))
 
+logit2prob(coef(rto1)[1]) # dissimilar = 0 and similar = 1
+linearHypothesis(rto1, "(Intercept) = 1.94591014906")
+
 rto2 <- glm(resp ~ pre*attdiff, data = rto, family = binomial(link="logit"))
 summary(rto2)
-rtoc2 <- (exp(coef(rto2)[1] + coef(rto2)[2]/2)/(1+exp(coef(rto2)[1] + coef(rto2)[2]/2)))
+rtoc2 <- (exp(coef(rto2)[1])/(1+exp(coef(rto2)[1])))
 zrto2 <- (rtoc2 - 0.875)/sqrt(rtoc2*(1-rtoc2)/nrow(rto))
 2*pnorm(-abs(zrto2))
 
-# candidate similarity
+logit2prob(coef(rto2)[1]) # dissimilar = 0 and similar = 1
+linearHypothesis(rto2, "(Intercept) = 1.94591014906")
+
+############# candidate similarity #################
 cds <- cd[which(cd$effect == 0),]
 cds1 <- glm(resp ~ pre, data = cds, family = binomial(link="logit"))
 summary(cds1)
-logit2prob(coef(cds1)[1]) # dissimilar = 0 and similar = 1
-linearHypothesis(cds1, "(Intercept) = 0.70818505792")
 cdsc <- (exp(coef(cds1)[1])/(1+exp(coef(cds1)[1])))
 zcds <- (cdsc - 0.67)/sqrt(cdsc*(1-cdsc)/nrow(cds))
 2*pnorm(-abs(zcds))
 
+logit2prob(coef(cds1)[1]) # dissimilar = 0 and similar = 1
+linearHypothesis(cds1, "(Intercept) = 0.70818505792")
+
 cds2 <- glm(resp ~ pre*attdiff, data = cds, family = binomial(link="logit"))
 summary(cds2)
-cdsc2 <- (exp(coef(cds2)[1] + coef(cds2)[2]/2)/(1+exp(coef(cds2)[1] + coef(cds2)[2]/2)))
+cdsc2 <- (exp(coef(cds2)[1])/(1+exp(coef(cds2)[1])))
 zcds2 <- (cdsc2 - 0.67)/sqrt(cdsc2*(1-cdsc2)/nrow(cds))
 2*pnorm(-abs(zcds2))
 
-# candidate outlier
+logit2prob(coef(cds2)[1]) # dissimilar = 0 and similar = 1
+linearHypothesis(cds2, "(Intercept) = 0.70818505792")
+
+############# candidate outlier #################
 cdo <- cd[which(cd$effect == 1),]
 cdo1 <- glm(resp ~ pre, data = cdo, family = binomial(link="logit"))
 summary(cdo1)
-logit2prob(coef(cdo1)[1]) # dissimilar = 0 and similar = 1
-linearHypothesis(cdo1, "(Intercept)= 1.94591014906")
 cdoc <- (exp(coef(cdo1)[1])/(1+exp(coef(cdo1)[1])))
 zcdo <- (cdoc - 0.875)/sqrt(cdoc*(1-cdoc)/nrow(cdo))
 2*pnorm(-abs(zcdo))
 
+logit2prob(coef(cdo1)[1]) # dissimilar = 0 and similar = 1
+linearHypothesis(cdo1, "(Intercept)= 1.94591014906")
+
 cdo2 <- glm(resp ~ pre*attdiff, data = cdo, family = binomial(link="logit"))
 summary(cdo2)
-cdoc2 <- (exp(coef(cdo2)[1] + coef(cdo2)[2]/2)/(1+exp(coef(cdo2)[1] + coef(cdo2)[2]/2)))
+cdoc2 <- (exp(coef(cdo2)[1])/(1+exp(coef(cdo2)[1])))
 zcdo2 <- (cdoc2 - 0.875)/sqrt(cdoc2*(1-cdoc2)/nrow(cdo))
 2*pnorm(-abs(zcdo2))
 
-# movie similarity
+logit2prob(coef(cdo2)[1]) # dissimilar = 0 and similar = 1
+linearHypothesis(cdo2, "(Intercept)= 1.94591014906")
+
+############# candidate - 17 outlier #################
+cd1o <- cd1[which(cd1$effect == 1),]
+cd1o1 <- glm(resp ~ pre, data = cd1o, family = binomial(link="logit"))
+summary(cd1o1)
+cd1oc <- (exp(coef(cd1o1)[1])/(1+exp(coef(cd1o1)[1])))
+zcd1o <- (cd1oc - 0.875)/sqrt(cd1oc*(1-cd1oc)/nrow(cd1o))
+2*pnorm(-abs(zcd1o))
+
+logit2prob(coef(cd1o1)[1]) # dissimilar = 0 and similar = 1
+linearHypothesis(cd1o1, "(Intercept)= 1.94591014906")
+
+cd1o2 <- glm(resp ~ pre*attdiff, data = cd1o, family = binomial(link="logit"))
+summary(cd1o2)
+cd1oc2 <- (exp(coef(cd1o2)[1])/(1+exp(coef(cd1o2)[1])))
+zcd1o2 <- (cd1oc2 - 0.875)/sqrt(cd1oc2*(1-cd1oc2)/nrow(cd1o))
+2*pnorm(-abs(zcd1o2))
+
+logit2prob(coef(cd1o2)[1]) # dissimilar = 0 and similar = 1
+linearHypothesis(cd1o2, "(Intercept)= 1.94591014906")
+
+############# movie similarity #################
 mvs <- mv[which(mv$effect == 0),]
 mvs1 <- glm(resp ~ pre, data = mvs, family = binomial(link="logit"))
 mvs2 <- glm(resp ~ pre + att1 + att2, data = mvs, family = binomial(link="logit"))
 summary(mvs1)
-logit2prob(coef(mvs1)[1]) # dissimilar = 0 and similar = 1
-linearHypothesis(mvs1, "(Intercept) = 0.70818505792")
 mvsc <- (exp(coef(mvs1)[1])/(1+exp(coef(mvs1)[1])))
 zmvs <- (mvsc - 0.67)/sqrt(mvsc*(1-mvsc)/nrow(mvs))
 2*pnorm(-abs(zmvs))
 
+logit2prob(coef(mvs1)[1]) # dissimilar = 0 and similar = 1
+linearHypothesis(mvs1, "(Intercept) = 0.70818505792")
+
 mvs2 <- glm(resp ~ pre*attdiff, data = mvs, family = binomial(link="logit"))
 summary(mvs2)
-mvsc2 <- (exp(coef(mvs2)[1] + coef(mvs2)[2]/2)/(1+exp(coef(mvs2)[1] + coef(mvs2)[2]/2)))
+mvsc2 <- (exp(coef(mvs2)[1])/(1+exp(coef(mvs2)[1])))
 zmvs2 <- (mvsc2 - 0.67)/sqrt(mvsc2*(1-mvsc2)/nrow(mvs))
 2*pnorm(-abs(zmvs2))
 
-# movie outlier
+logit2prob(coef(mvs2)[1]) # dissimilar = 0 and similar = 1
+linearHypothesis(mvs2, "(Intercept) = 0.70818505792")
+
+############# movie outlier #################
 mvo <- mv[which(mv$effect == 1),]
 nrow(mvo)
 mvo1 <- glm(resp ~ pre, data = mvo, family = binomial(link="logit"))
 summary(mvo1)
-logit2prob(coef(mvo1)[1]) # dissimilar = 0 and similar = 1
-linearHypothesis(mvo1, "(Intercept) + 0.5*pre = 1.94591014906")
 mvoc <- (exp(coef(mvo1)[1])/(1+exp(coef(mvo1)[1])))
 zmvo <- (mvoc - 0.875)/sqrt(mvoc*(1-mvoc)/nrow(mvo))
 2*pnorm(-abs(zmvo))
 
+logit2prob(coef(mvo1)[1]) # dissimilar = 0 and similar = 1
+linearHypothesis(mvo1, "(Intercept) = 1.94591014906")
 
 mvo2 <- glm(resp ~ pre*attdiff, data = mvo, family = binomial(link="logit"))
 summary(mvo2)
-mvoc2 <- (exp(coef(mvo2)[1] + coef(mvo2)[2]/2)/(1+exp(coef(mvo2)[1] + coef(mvo2)[2]/2)))
+mvoc2 <- (exp(coef(mvo2)[1])/(1+exp(coef(mvo2)[1])))
 zmvo2 <- (mvoc2 - 0.875)/sqrt(mvoc2*(1-mvoc2)/nrow(mvo))
 2*pnorm(-abs(zmvo2))
 
+logit2prob(coef(mvo2)[1]) # dissimilar = 0 and similar = 1
+linearHypothesis(mvo2, "(Intercept) = 1.94591014906")
 
 
-
-##### all scenarios #####
+###################### all scenarios ######################
 # create a new data frame
 # dummy code for scenarios
 ef <- data.frame(resp = c(oe$lot50s, oe$lot60s, oe$lot50o, oe$lot60o,
@@ -610,7 +698,7 @@ for (i in 1:nrow(dt)){
 
 # logistic regression
 # mod1 <- glm(resp ~ lot.mov + res.mov + can.mov + effect + lot.mov*effect + res.mov*effect + can.mov*effect, family = binomial(link="logit"), data = dt)
-# summary(mod1) # doesn't work
+# summary(mod1) # doesn't work due to redundancy of independent variables
 
 # similarity condition for all scenarios
 si <- dt[which(dt$effect == 0),]
@@ -630,7 +718,7 @@ linearHypothesis(ou1, "(Intercept) = 1.94591014906")
 
 
 
-########### multinomial model #############
+############################ multinomial model ##############################
 # do not recode the responses to 0 and 1, but keep 1,2,3,4,...,8
 # use the data frame "ef"
 mul <- na.omit(ef)
@@ -660,8 +748,8 @@ simdis <- probsim[1:2] %>% prod()
 
 
 
-###### Testing each scenario separately #######
-# gambling
+####################### Testing each scenario separately with multinomial ########################
+################## gambling #################
 gbmul <- data.frame(resp = c(oe$lot50s, oe$lot60s, oe$lot50o, oe$lot60o),
                  name = (c(rep(c("lot50s"), length(oe$lot50s)),
                            rep(c("lot60s"), length(oe$lot60s)),
@@ -685,7 +773,7 @@ for (i in 1:nrow(gbmul)){
 
 gbmul$attdiff <- gbmul$att1 - gbmul$att2
 
-# gambling similarity
+################## gambling similarity #################
 gbsmul <- gbmul[which(gbmul$effect == 0),]
 mulsimgb <- multinom(resp ~ pre*attdiff, data = gbsmul)
 summary(mulsimgb)
@@ -699,7 +787,7 @@ probsimgb <- 1-(logit2prob(coef(mulsimgb)[,1]))
 disgb <- probsimgb[1:2] %>% prod()
 disgb  
 
-# gambling outlier
+################## gambling outlier #################
 gbomul <- gbmul[which(gbmul$effect == 1),]
 muloutgb <- multinom(resp ~ pre*attdiff, data = gbomul)
 summary(muloutgb)
@@ -714,7 +802,7 @@ disgbo <- proboutgb[1:7] %>% prod()
 disgbo  
 
 
-# restaurant
+################## restaurant #################
 rtmul <- data.frame(resp = c(oe$res10s, oe$res40s, oe$res10o, oe$res40o),
                  name = (c(rep(c("res10s"), length(oe$res10s)),
                            rep(c("res40s"), length(oe$res40s)),
@@ -739,7 +827,7 @@ for (i in 1:nrow(rtmul)){
 
 rtmul$attdiff <- rtmul$att1 - rtmul$att2
 
-# restaurant similarity
+################## restaurant similarity #################
 rtsmul <- rtmul[which(rtmul$effect == 0),]
 mulsimrt <- multinom(resp ~ pre*attdiff, data = rtsmul)
 summary(mulsimrt)
@@ -753,7 +841,7 @@ probsimrt <- 1-(logit2prob(coef(mulsimrt)[,1]))
 disrt <- probsimrt[1:2] %>% prod()
 disrt  
 
-# restaurant outlier
+################## restaurant outlier #################
 rtomul <- rtmul[which(rtmul$effect == 1),]
 muloutrt <- multinom(resp ~ pre*attdiff, data = rtomul)
 summary(muloutrt)
@@ -767,7 +855,7 @@ proboutrt <- 1-(logit2prob(coef(muloutrt)[,1]))
 disrto <- proboutrt[1:7] %>% prod()
 disrto 
 
-# candidate
+################## candidate #################
 cdmul <- data.frame(resp = c(oe$can33s, oe$can66s, oe$can33o, oe$can66o),
                  name = (c(rep(c("can33s"), length(oe$can33s)),
                            rep(c("can66s"), length(oe$can66s)),
@@ -792,7 +880,7 @@ for (i in 1:nrow(cdmul)){
 
 cdmul$attdiff <- cdmul$att1 - cdmul$att2
 
-# candidate similarity
+################## candidate similarity #################
 cdsmul <- cdmul[which(cdmul$effect == 0),]
 mulsimcd <- multinom(resp ~ pre*attdiff, data = cdsmul)
 summary(mulsimcd)
@@ -806,7 +894,7 @@ probsimcd <- 1-(logit2prob(coef(mulsimcd)[,1]))
 discd <- probsimcd[1:2] %>% prod()
 discd  
 
-# candidate outlier
+################## candidate outlier #################
 cdomul <- cdmul[which(cdmul$effect == 1),]
 muloutcd <- multinom(resp ~ pre*attdiff, data = cdomul)
 summary(muloutcd)
@@ -821,7 +909,7 @@ discdo <- proboutcd[1:7] %>% prod()
 discdo
 
 
-# movie
+################## movie #################
 mvmul <- data.frame(resp = c(oe$mov33s, oe$mov66s, oe$mov33o, oe$mov66o),
                  name = (c(rep(c("mov33s"), length(oe$mov33s)),
                            rep(c("mov66s"), length(oe$mov66s)),
@@ -847,7 +935,7 @@ mvmul <- na.omit(mvmul)
 
 mvmul$attdiff <- mvmul$att1 - mvmul$att2
 
-# movie similarity
+################## movie similarity #################
 mvsmul <- mvmul[which(mvmul$effect == 0),]
 mulsimmv <- multinom(resp ~ pre*attdiff, data = mvsmul)
 summary(mulsimmv)
@@ -861,7 +949,7 @@ probsimmv <- 1-(logit2prob(coef(mulsimmv)[,1]))
 dismv <- probsimmv[1:2] %>% prod()
 dismv  
 
-# movie outlier
+################## movie outlier #################
 mvomul <- mvmul[which(mvmul$effect == 1),]
 muloutmv <- multinom(resp ~ pre*attdiff, data = mvomul)
 summary(muloutmv)
@@ -876,7 +964,7 @@ dismvo <- proboutmv[1:7] %>% prod()
 dismvo
 
 
-# candidate - 17
+################## candidate - 17 #################
 cd1mul <- data.frame(resp = c(oe$can33s, oe$can66s, can2$can33o, oe$can66o),
                   name = (c(rep(c("can33s"), length(oe$can33s)),
                             rep(c("can66s"), length(oe$can66s)),
@@ -901,7 +989,7 @@ cd1mul <- na.omit(cd1mul)
 
 cd1mul$attdiff <- cd1mul$att1 - cd1mul$att2
 
-# candidate similarity
+################## candidate similarity #################
 cd1smul <- cd1mul[which(cd1mul$effect == 0),]
 mulsimcd1 <- multinom(resp ~ pre*attdiff, data = cd1smul)
 summary(mulsimcd1)
@@ -913,9 +1001,9 @@ psimcd1
 probsimcd1 <- 1-(logit2prob(coef(mulsimcd1)[,1]))
 # compute total prob of dissim being chosen 
 discd1 <- probsimcd1[1:2] %>% prod()
-discd1  
+discd1  # same result as discd
 
-# candidate outlier
+################## candidate outlier #################
 cd1omul <- cd1mul[which(cd1mul$effect == 1),]
 muloutcd1 <- multinom(resp ~ pre*attdiff, data = cd1omul)
 summary(muloutcd1)
