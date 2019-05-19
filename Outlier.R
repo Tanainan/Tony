@@ -19,7 +19,7 @@ colnames(oe)[colnames(oe)=="pres30s_1"] <- "pres40s_1"
 colnames(oe)[colnames(oe)=="pres30s_2"] <- "pres40s_2"
 
 # remove participant 215 because didn't rate the attributes for all scenarios
-oe <- oe[-c(215),]
+oe <- oe[-c(215, 318, 334),]
 
 ######### Similarity Effect #########
 # prop.table(table(na.omit(oe$lot50s)))
@@ -742,7 +742,7 @@ psim
 # get coefficients for intercepts and transform them to prob >>> The results show prob of sim relative to dissim. Must reverse it to dissim
 probsim <- 1-(logit2prob(coef(mulsim)[,1]))
 # compute total prob of dissim being chosen 
-simdis <- probsim[1:2] %>% prod()
+simdis <- probsim[1:2] %>% sum()/2
 # test if different from 0.33, using z test ????
 
 
@@ -784,7 +784,7 @@ psimgb
 # get coefficients for intercepts and transform them to prob >>> The results show prob of sim relative to dissim. Must reverse it to dissim
 probsimgb <- 1-(logit2prob(coef(mulsimgb)[,1]))
 # compute total prob of dissim being chosen 
-disgb <- probsimgb[1:2] %>% prod()
+disgb <- probsimgb[1:2] %>% sum()/2
 disgb  
 
 ################## gambling outlier #################
@@ -798,7 +798,7 @@ poutgb
 # get coefficients for intercepts and transform them to prob >>> The results show prob of sim relative to dissim. Must reverse it to dissim
 proboutgb <- 1-(logit2prob(coef(muloutgb)[,1]))
 # compute total prob of dissim being chosen 
-disgbo <- proboutgb[1:7] %>% prod()
+disgbo <- proboutgb[1:7] %>% sum()/7
 disgbo  
 
 
@@ -838,7 +838,7 @@ psimrt
 # get coefficients for intercepts and transform them to prob >>> The results show prob of sim relative to dissim. Must reverse it to dissim
 probsimrt <- 1-(logit2prob(coef(mulsimrt)[,1]))
 # compute total prob of dissim being chosen 
-disrt <- probsimrt[1:2] %>% prod()
+disrt <- probsimrt[1:2] %>% sum()/2
 disrt  
 
 ################## restaurant outlier #################
@@ -852,7 +852,7 @@ poutrt
 # get coefficients for intercepts and transform them to prob >>> The results show prob of sim relative to dissim. Must reverse it to dissim
 proboutrt <- 1-(logit2prob(coef(muloutrt)[,1]))
 # compute total prob of dissim being chosen 
-disrto <- proboutrt[1:7] %>% prod()
+disrto <- proboutrt[1:6] %>% sum()/6 # no one respond 4
 disrto 
 
 ################## candidate #################
@@ -891,7 +891,7 @@ psimcd
 # get coefficients for intercepts and transform them to prob >>> The results show prob of sim relative to dissim. Must reverse it to dissim
 probsimcd <- 1-(logit2prob(coef(mulsimcd)[,1]))
 # compute total prob of dissim being chosen 
-discd <- probsimcd[1:2] %>% prod()
+discd <- probsimcd[1:2] %>% sum()/2
 discd  
 
 ################## candidate outlier #################
@@ -905,7 +905,7 @@ poutcd
 # get coefficients for intercepts and transform them to prob >>> The results show prob of sim relative to dissim. Must reverse it to dissim
 proboutcd <- 1-(logit2prob(coef(muloutcd)[,1]))
 # compute total prob of dissim being chosen 
-discdo <- proboutcd[1:7] %>% prod()
+discdo <- proboutcd[1:7] %>% sum()/7
 discdo
 
 
@@ -946,7 +946,7 @@ psimmv
 # get coefficients for intercepts and transform them to prob >>> The results show prob of sim relative to dissim. Must reverse it to dissim
 probsimmv <- 1-(logit2prob(coef(mulsimmv)[,1]))
 # compute total prob of dissim being chosen 
-dismv <- probsimmv[1:2] %>% prod()
+dismv <- probsimmv[1:2] %>% sum()/2
 dismv  
 
 ################## movie outlier #################
@@ -960,7 +960,7 @@ poutmv
 # get coefficients for intercepts and transform them to prob >>> The results show prob of sim relative to dissim. Must reverse it to dissim
 proboutmv <- 1-(logit2prob(coef(muloutmv)[,1]))
 # compute total prob of dissim being chosen 
-dismvo <- proboutmv[1:7] %>% prod()
+dismvo <- proboutmv[1:7] %>% sum()/7
 dismvo
 
 
@@ -989,19 +989,6 @@ cd1mul <- na.omit(cd1mul)
 
 cd1mul$attdiff <- cd1mul$att1 - cd1mul$att2
 
-################## candidate similarity #################
-cd1smul <- cd1mul[which(cd1mul$effect == 0),]
-mulsimcd1 <- multinom(resp ~ pre*attdiff, data = cd1smul)
-summary(mulsimcd1)
-zsimcd1 <- summary(mulsimcd1)$coefficients/summary(mulsimcd1)$standard.errors; zsimcd1 # z statistic
-# 2-tailed z test
-psimcd1 <- (1 - pnorm(abs(zsimcd1), 0, 1)) * 2
-psimcd1
-# get coefficients for intercepts and transform them to prob >>> The results show prob of sim relative to dissim. Must reverse it to dissim
-probsimcd1 <- 1-(logit2prob(coef(mulsimcd1)[,1]))
-# compute total prob of dissim being chosen 
-discd1 <- probsimcd1[1:2] %>% prod()
-discd1  # same result as discd
 
 ################## candidate outlier #################
 cd1omul <- cd1mul[which(cd1mul$effect == 1),]
@@ -1014,5 +1001,5 @@ poutcd1
 # get coefficients for intercepts and transform them to prob >>> The results show prob of sim relative to dissim. Must reverse it to dissim
 proboutcd1 <- 1-(logit2prob(coef(muloutcd1)[,1]))
 # compute total prob of dissim being chosen 
-discd1o <- proboutcd1[1:7] %>% prod()
+discd1o <- proboutcd1[1:7] %>% sum()/7
 discd1o
