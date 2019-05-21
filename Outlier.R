@@ -1029,3 +1029,36 @@ dismvo
 binom.test(round(dismvo*nrow(mvomul),0), nrow(mvomul), p = 0.125, alternative = "less")
 
 
+####### Multinomial with all scenarios #########
+
+# similarity effect
+muls <- mul[which(mul$effect == 0),]
+mulsim <- multinom(resp ~ pre*attdiff, data = muls)
+summary(mulsim)
+zs <- summary(mulsim)$coefficients/summary(mulsim)$standard.errors; zs # z statistic
+# 2-tailed z test
+ps <- (1 - pnorm(abs(zs), 0, 1)) * 2
+ps
+# get coefficients for intercepts and transform them to prob >>> The results show prob of sim relative to dissim. Must reverse it to dissim
+probs <- 1-(logit2prob(coef(mulsim)[,1]))
+# compute total prob of dissim being chosen 
+dissim <- probs %>% sum()/2
+dissim
+
+binom.test(round(dissim*nrow(muls),0), nrow(muls), p = 0.33, alternative = "greater")
+
+# outlier effect
+mulo <- mul[which(mul$effect == 1),]
+mulout <- multinom(resp ~ pre*attdiff, data = mulo)
+summary(mulout)
+zo <- summary(mulout)$coefficients/summary(mulout)$standard.errors; zo # z statistic
+# 2-tailed z test
+po <- (1 - pnorm(abs(zo), 0, 1)) * 2
+po
+# get coefficients for intercepts and transform them to prob >>> The results show prob of out relative to disout. Must reverse it to disout
+probo <- 1-(logit2prob(coef(mulout)[,1]))
+# compute total prob of disout being chosen 
+disout <- probo %>% sum()/7
+disout
+
+binom.test(round(disout*nrow(mulo),0), nrow(mulo), p = 0.125, alternative = "less")
