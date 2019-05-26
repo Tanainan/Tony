@@ -7,7 +7,7 @@ library(stats)
 library(car)
 library(nnet) # multinom
 oe <- read_csv("OE test.csv")
-oe <- oe[-c(1,2),-c(1:18)]
+oe <- oe[-c(1,2),-c(1:18)] # remove headers and other columns
 oe <- oe[,-c(19,22,25,28,31,34,37,40,43,46,49,52,55,58,61,64)]
 oe <- data.frame(sapply(oe, function(x) as.numeric(as.character(x))))
 # change column names
@@ -19,13 +19,19 @@ colnames(oe)[colnames(oe)=="pres30s_1"] <- "pres40s_1"
 colnames(oe)[colnames(oe)=="pres30s_2"] <- "pres40s_2"
 
 # remove participant 215 because didn't rate the attributes for all scenarios
-oe <- oe[-c(215, 301, 318, 334),]
+oe <- oe[-c(215),]
 
 logit2prob <- function(logit){
   odds <- exp(logit)
   prob <- odds / (1 + odds)
   return(prob)
 }
+
+logit2odds <- function(logit){
+  odds <- exp(logit)
+  return(odds)
+}
+
 
 ######### Similarity Effect #########
 # prop.table(table(na.omit(oe$lot50s)))
@@ -241,11 +247,10 @@ for (i in 1:nrow(gb)){
 
 
 
-# recode to 0 (dissimilar options) and 1 (similar option)
+# recode to 1 (dissimilar options) and 0 (similar option)
 for (i in 1:nrow(gb)){
   if(gb$resp[i] > 1) {gb$resp[i] <- 0}
 }
-gb$resp <- 1-gb$resp
 
 # test for correlation between presentation and att1-att2 (prevent IVs correlating each other)
 gb$attdiff <- gb$att1 - gb$att2
@@ -254,6 +259,8 @@ gb$attdiff <- gb$att1 - gb$att2
 
 #mean centering attdiff
 gb$attdiffc <- gb$attdiff - mean(gb$attdiff)
+
+sd(gb$attdiff)
 
 nrow(gb[which(gb$effect == 0),])
 nrow(gb[which(gb$effect == 1),])
@@ -291,11 +298,10 @@ for (i in 1:nrow(rt)){
   {rt$effect[i] <- 0} else {rt$effect[i] <- 1}
 }
 
-# recode to 0 (dissimilar options) and 1 (similar option)
+# recode to 1 (dissimilar options) and 0 (similar option)
 for (i in 1:nrow(rt)){
   if(rt$resp[i] > 1) {rt$resp[i] <- 0}
 }
-rt$resp <- 1-rt$resp
 
 
 rt$attdiff <- rt$att1 - rt$att2
@@ -303,6 +309,7 @@ rt$attdiff <- rt$att1 - rt$att2
 
 #mean centering attdiff
 rt$attdiffc <- rt$attdiff - mean(rt$attdiff)
+sd(rt$attdiff)
 
 nrow(rt[which(rt$effect == 0),])
 nrow(rt[which(rt$effect == 1),])
@@ -337,16 +344,18 @@ for (i in 1:nrow(cd)){
 }
 
 
-# recode to 0 (dissimilar options) and 1 (similar option)
+# recode to 1 (dissimilar options) and 0 (similar option)
 for (i in 1:nrow(cd)){
   if(cd$resp[i] > 1) {cd$resp[i] <- 0}
 }
-cd$resp <- 1-cd$resp
 
 
 cd$attdiff <- cd$att1 - cd$att2
 #cor.test(cd$attdiff, cd$pre)
 cd$attdiffc <- cd$attdiff - mean(cd$attdiff)
+
+sd(cd$attdiff)
+
 
 nrow(cd[which(cd$effect == 0),])
 nrow(cd[which(cd$effect == 1),])
@@ -382,15 +391,16 @@ for (i in 1:nrow(mv)){
 mv <- na.omit(mv)
 
 
-# recode to 0 (dissimilar options) and 1 (similar option)
+# recode to 1 (dissimilar options) and 0 (similar option)
 for (i in 1:nrow(mv)){
   if(mv$resp[i] > 1) {mv$resp[i] <- 0}
 }
-mv$resp <- 1-mv$resp
 
 mv$attdiff <- mv$att1 - mv$att2
 #cor.test(mv$attdiff, mv$pre)
 mv$attdiffc <- mv$attdiff - mean(mv$attdiff)
+
+sd(mv$attdiff)
 
 nrow(mv[which(mv$effect == 0),])
 nrow(mv[which(mv$effect == 1),])
@@ -429,15 +439,16 @@ for (i in 1:nrow(cd1)){
 
 cd1 <- na.omit(cd1)
 
-# recode to 0 (dissimilar options) and 1 (similar option)
+# recode to 1 (dissimilar options) and 0 (similar option)
 for (i in 1:nrow(cd1)){
   if(cd1$resp[i] > 1) {cd1$resp[i] <- 0}
 }
-cd1$resp <- 1-cd1$resp
 
 cd1$attdiff <- cd1$att1 - cd1$att2
 #cor.test(cd1$attdiff, cd1$pre)
 cd1$attdiffc <- cd1$attdiff - mean(cd1$attdiff)
+
+sd(cd1$attdiff)
 
 nrow(cd1[which(cd1$effect == 0),])
 nrow(cd1[which(cd1$effect == 1),])
@@ -484,21 +495,21 @@ prop.table(table(mv[which(mv$effect == 1), c("resp")]))[1] # outlier
 
 ##### test if raw proportion of dissimilar option is different from 0.33 and 0.125
 # gambling
-binom.test(nrow(gb[which(gb$effect == 0 & gb$resp == 0),]), nrow(gb[which(gb$effect == 0),]), p = 0.33, alternative = "two.sided")
-binom.test(nrow(gb[which(gb$effect == 1 & gb$resp == 0),]), nrow(gb[which(gb$effect == 1),]), p = 0.125, alternative = "two.sided")
+binom.test(nrow(gb[which(gb$effect == 0 & gb$resp == 1),]), nrow(gb[which(gb$effect == 0),]), p = 0.33, alternative = "two.sided")
+binom.test(nrow(gb[which(gb$effect == 1 & gb$resp == 1),]), nrow(gb[which(gb$effect == 1),]), p = 0.125, alternative = "two.sided")
 
 # restaurant
-binom.test(nrow(rt[which(rt$effect == 0 & rt$resp == 0),]), nrow(rt[which(rt$effect == 0),]), p = 0.33, alternative = "two.sided")
-binom.test(nrow(rt[which(rt$effect == 1 & rt$resp == 0),]), nrow(rt[which(rt$effect == 1),]), p = 0.125, alternative = "two.sided")
+binom.test(nrow(rt[which(rt$effect == 0 & rt$resp == 1),]), nrow(rt[which(rt$effect == 0),]), p = 0.33, alternative = "two.sided")
+binom.test(nrow(rt[which(rt$effect == 1 & rt$resp == 1),]), nrow(rt[which(rt$effect == 1),]), p = 0.125, alternative = "two.sided")
 
 # candidate
-binom.test(nrow(cd[which(cd$effect == 0 & cd$resp == 0),]), nrow(cd[which(cd$effect == 0),]), p = 0.33, alternative = "two.sided")
-binom.test(nrow(cd[which(cd$effect == 1 & cd$resp == 0),]), nrow(cd[which(cd$effect == 1),]), p = 0.125, alternative = "two.sided")
-binom.test(nrow(cd1[which(cd1$effect == 1 & cd1$resp == 0),]), nrow(cd1[which(cd1$effect == 1),]), p = 0.125, alternative = "two.sided") # candidate - 17 
+binom.test(nrow(cd[which(cd$effect == 0 & cd$resp == 1),]), nrow(cd[which(cd$effect == 0),]), p = 0.33, alternative = "two.sided")
+binom.test(nrow(cd[which(cd$effect == 1 & cd$resp == 1),]), nrow(cd[which(cd$effect == 1),]), p = 0.125, alternative = "two.sided")
+binom.test(nrow(cd1[which(cd1$effect == 1 & cd1$resp == 1),]), nrow(cd1[which(cd1$effect == 1),]), p = 0.125, alternative = "two.sided") # candidate - 17 
 
 # movie
-binom.test(nrow(mv[which(mv$effect == 0 & mv$resp == 0),]), nrow(mv[which(mv$effect == 0),]), p = 0.33, alternative = "two.sided")
-binom.test(nrow(mv[which(mv$effect == 1 & mv$resp == 0),]), nrow(mv[which(mv$effect == 1),]), p = 0.125, alternative = "two.sided")
+binom.test(nrow(mv[which(mv$effect == 0 & mv$resp == 1),]), nrow(mv[which(mv$effect == 0),]), p = 0.33, alternative = "two.sided")
+binom.test(nrow(mv[which(mv$effect == 1 & mv$resp == 1),]), nrow(mv[which(mv$effect == 1),]), p = 0.125, alternative = "two.sided")
 
 
 
@@ -516,8 +527,8 @@ summary(gbs1)
 # 2*pnorm(-abs(zgbs))
 
 # logit to prob for intercept, controlling for other IVs 
-gbs1a <- logit2prob(coef(gbs1)[1]) # dissimilar = 0 and similar = 1
-binom.test(round(gbs1a*nrow(gbs),0), nrow(gbs), p = 0.67, alternative = "two.sided")
+gbs1a <- logit2prob(coef(gbs1)[1]) # dissimilar = 1 and similar = 0
+binom.test(round(gbs1a*nrow(gbs),0), nrow(gbs), p = 0.33, alternative = "two.sided")
 
 # test if logit of intercept is significantly equal to 0.33 or not
 #linearHypothesis(gbs1, "(Intercept) = 0.70818505792") # the coefficients for intercept and when presentation is 0 and 1 (average), comparing with a logit of 0.67
@@ -527,12 +538,13 @@ binom.test(round(gbs1a*nrow(gbs),0), nrow(gbs), p = 0.67, alternative = "two.sid
 gbo <- gb[which(gb$effect == 1),]
 gbo1 <- glm(resp ~ pre*attdiffc, data = gbo, family = binomial(link="logit"))
 summary(gbo1)
+
 # gboc <- (exp(coef(gbo1)[1])/(1+exp(coef(gbo1)[1])))
 # zgbo <- (gboc - 0.875)/sqrt(gboc*(1-gboc)/nrow(gbo))
 # 2*pnorm(-abs(zgbo))
 
-gbo1a <- logit2prob(coef(gbo1)[1]) # dissimilar = 0 and similar = 1
-binom.test(round(gbo1a*nrow(gbo),0), nrow(gbo), p = 0.875, alternative = "two.sided")
+gbo1a <- logit2prob(coef(gbo1)[1]) # dissimilar = 1 and similar = 0
+binom.test(round(gbo1a*nrow(gbo),0), nrow(gbo), p = 0.125, alternative = "two.sided")
 
 #linearHypothesis(gbo1, "(Intercept) = 1.94591014906") # comparing with a logit of 0.875
 
@@ -544,8 +556,8 @@ summary(rts1)
 # zrts <- (rtsc - 0.67)/sqrt(rtsc*(1-rtsc)/nrow(rts))
 # 2*pnorm(-abs(zrts))
 
-rts1a <- logit2prob(coef(rts1)[1]) # dissimilar = 0 and similar = 1
-binom.test(round(rts1a*nrow(rts),0), nrow(rts), p = 0.67, alternative = "two.sided")
+rts1a <- logit2prob(coef(rts1)[1]) # dissimilar = 1 and similar = 0
+binom.test(round(rts1a*nrow(rts),0), nrow(rts), p = 0.33, alternative = "two.sided")
 
 #linearHypothesis(rts1, "(Intercept) = 0.70818505792")
 
@@ -557,8 +569,8 @@ summary(rto1)
 # zrto <- (rtoc - 0.875)/sqrt(rtoc*(1-rtoc)/nrow(rto))
 # 2*pnorm(-abs(zrto))
 
-rto1a <- logit2prob(coef(rto1)[1]) # dissimilar = 0 and similar = 1
-binom.test(round(rto1a*nrow(rto),0), nrow(rto), p = 0.875, alternative = "two.sided")
+rto1a <- logit2prob(coef(rto1)[1]) # dissimilar = 1 and similar = 0
+binom.test(round(rto1a*nrow(rto),0), nrow(rto), p = 0.125, alternative = "two.sided")
 
 
 #linearHypothesis(rto1, "(Intercept) = 1.94591014906")
@@ -571,8 +583,8 @@ summary(cds1)
 # zcds <- (cdsc - 0.67)/sqrt(cdsc*(1-cdsc)/nrow(cds))
 # 2*pnorm(-abs(zcds))
 
-cds1a <- logit2prob(coef(cds1)[1]) # dissimilar = 0 and similar = 1
-binom.test(round(cds1a*nrow(cds),0), nrow(cds), p = 0.67, alternative = "two.sided")
+cds1a <- logit2prob(coef(cds1)[1]) # dissimilar = 1 and similar = 0
+binom.test(round(cds1a*nrow(cds),0), nrow(cds), p = 0.33, alternative = "two.sided")
 
 #linearHypothesis(cds1, "(Intercept) = 0.70818505792")
 
@@ -584,8 +596,8 @@ summary(cdo1)
 # zcdo <- (cdoc - 0.875)/sqrt(cdoc*(1-cdoc)/nrow(cdo))
 # 2*pnorm(-abs(zcdo))
 
-cdo1a <- logit2prob(coef(cdo1)[1]) # dissimilar = 0 and similar = 1
-binom.test(round(cdo1a*nrow(cdo),0), nrow(cdo), p = 0.875, alternative = "two.sided")
+cdo1a <- logit2prob(coef(cdo1)[1]) # dissimilar = 1 and similar = 0
+binom.test(round(cdo1a*nrow(cdo),0), nrow(cdo), p = 0.125, alternative = "two.sided")
 
 
 #linearHypothesis(cdo1, "(Intercept)= 1.94591014906")
@@ -598,8 +610,8 @@ summary(cd1o1)
 # zcd1o <- (cd1oc - 0.875)/sqrt(cd1oc*(1-cd1oc)/nrow(cd1o))
 # 2*pnorm(-abs(zcd1o))
 
-cd1o1a <- logit2prob(coef(cd1o1)[1]) # dissimilar = 0 and similar = 1
-binom.test(round(cd1o1a*nrow(cd1o),0), nrow(cd1o), p = 0.875, alternative = "two.sided")
+cd1o1a <- logit2prob(coef(cd1o1)[1]) # dissimilar = 1 and similar = 0
+binom.test(round(cd1o1a*nrow(cd1o),0), nrow(cd1o), p = 0.125, alternative = "two.sided")
 
 
 #linearHypothesis(cd1o1, "(Intercept) = 1.94591014906")
@@ -612,8 +624,8 @@ summary(mvs1)
 # zmvs <- (mvsc - 0.67)/sqrt(mvsc*(1-mvsc)/nrow(mvs))
 # 2*pnorm(-abs(zmvs))
 
-mvs1a <- logit2prob(coef(mvs1)[1]) # dissimilar = 0 and similar = 1
-binom.test(round(mvs1a*nrow(mvs),0), nrow(mvs), p = 0.67, alternative = "two.sided")
+mvs1a <- logit2prob(coef(mvs1)[1]) # dissimilar = 1 and similar = 0
+binom.test(round(mvs1a*nrow(mvs),0), nrow(mvs), p = 0.33, alternative = "two.sided")
 
 
 #linearHypothesis(mvs1, "(Intercept) = 0.70818505792")
@@ -626,8 +638,8 @@ summary(mvo1)
 # zmvo <- (mvoc - 0.875)/sqrt(mvoc*(1-mvoc)/nrow(mvo))
 # 2*pnorm(-abs(zmvo))
 
-mvo1a <- logit2prob(coef(mvo1)[1]) # dissimilar = 0 and similar = 1
-binom.test(round(mvo1a*nrow(mvo),0), nrow(mvo), p = 0.875, alternative = "two.sided")
+mvo1a <- logit2prob(coef(mvo1)[1]) # dissimilar = 1 and similar = 0
+binom.test(round(mvo1a*nrow(mvo),0), nrow(mvo), p = 0.125, alternative = "two.sided")
 
 #linearHypothesis(mvo1, "(Intercept) = 1.94591014906")
 
@@ -702,11 +714,10 @@ ef$attdiffc <- ef$attdiff - mean(ef$attdiff, na.rm = T)
 # listwise deletion for NA responses
 dt <- na.omit(ef)
 
-# recode to 0 (dissimilar options) and 1 (similar option)
+# recode to 1 (dissimilar options) and 0 (similar option)
 for (i in 1:nrow(dt)){
     if(dt$resp[i] > 1) {dt$resp[i] <- 0}
 }
-dt$resp <- 1-dt$resp
 
 # adding scenario names
 dt$scenario <- NA
@@ -723,14 +734,30 @@ for (i in 1:nrow(dt)){
 
 
 ######### binomial test for all scenarios and each condition #############
-binom.test(nrow(dt[which(dt$effect == 0 & dt$resp == 0),]),nrow(dt[which(dt$effect == 0),]), p = 0.33, alternative = "two.sided")
-binom.test(nrow(dt[which(dt$effect == 1 & dt$resp == 0),]),nrow(dt[which(dt$effect == 1),]), p = 0.125, alternative = "two.sided")
+binom.test(nrow(dt[which(dt$effect == 0 & dt$resp == 1),]),nrow(dt[which(dt$effect == 0),]), p = 0.33, alternative = "two.sided")
+binom.test(nrow(dt[which(dt$effect == 1 & dt$resp == 1),]),nrow(dt[which(dt$effect == 1),]), p = 0.125, alternative = "two.sided")
 # when removing 17 samples from candidate condition (outlier effect)
 dt2 <- dt
 dt2<-dt2[-c(763:779),]
-binom.test(nrow(dt2[which(dt2$effect == 1 & dt2$resp == 0),]),nrow(dt2[which(dt2$effect == 1),]), p = 0.125, alternative = "two.sided")
+binom.test(nrow(dt2[which(dt2$effect == 1 & dt2$resp == 1),]),nrow(dt2[which(dt2$effect == 1),]), p = 0.125, alternative = "two.sided")
+
+############### similarity logistic #############
+simsim <- dt[which(dt$effect == 0),]
+sims <- glm(resp ~ pre*attdiffc, data = simsim, family = binomial(link="logit"))
+summary(sims)
 
 
+ssiim <- logit2prob(coef(sims)[1]) # dissimilar = 1 and similar = 0
+binom.test(round(ssiim*nrow(simsim),0), nrow(simsim), p = 0.33, alternative = "two.sided")
+
+############### outlier logistic #############
+outout <- dt[which(dt$effect == 1),]
+outo <- glm(resp ~ pre*attdiffc, data = outout, family = binomial(link="logit"))
+summary(outo)
+
+
+oouut <- logit2prob(coef(outo)[1]) # dissimilar = 1 and similar = 0
+binom.test(round(oouut*nrow(outout),0), nrow(outout), p = 0.125, alternative = "two.sided")
 
 
 # logistic regression
@@ -819,11 +846,10 @@ zsimgb <- summary(mulsimgb)$coefficients/summary(mulsimgb)$standard.errors; zsim
 # 2-tailed z test
 psimgb <- (1 - pnorm(abs(zsimgb), 0, 1)) * 2
 psimgb
-# get coefficients for intercepts and transform them to prob >>> The results show prob of sim relative to dissim. Must reverse it to dissim
-probsimgb <- 1-(logit2prob(coef(mulsimgb)[,1]))
-# compute total prob of dissim being chosen 
-disgb <- probsimgb[1:2] %>% sum()/2
-disgb  
+
+# get prob from the intercepts
+disgb <- 1/(1+sum(logit2odds(coef(mulsimgb)[,1])))
+
 binom.test(round(disgb*nrow(gbsmul),0), nrow(gbsmul), p = 0.33, alternative = "two.sided")
 
 ################## gambling outlier #################
@@ -834,11 +860,9 @@ zoutgb <- summary(muloutgb)$coefficients/summary(muloutgb)$standard.errors; zout
 # 2-tailed z test
 poutgb <- (1 - pnorm(abs(zoutgb), 0, 1)) * 2
 poutgb
-# get coefficients for intercepts and transform them to prob >>> The results show prob of sim relative to dissim. Must reverse it to dissim
-proboutgb <- 1-(logit2prob(coef(muloutgb)[,1]))
-# compute total prob of dissim being chosen 
-disgbo <- proboutgb[1:7] %>% sum()/7
-disgbo  
+
+# get prob from the intercepts
+disgbo <- 1/(1+sum(logit2odds(coef(muloutgb)[,1]))) 
 binom.test(round(disgbo*nrow(gbomul),0), nrow(gbomul), p = 0.125, alternative = "two.sided")
 
 
@@ -877,11 +901,9 @@ zsimrt <- summary(mulsimrt)$coefficients/summary(mulsimrt)$standard.errors; zsim
 # 2-tailed z test
 psimrt <- (1 - pnorm(abs(zsimrt), 0, 1)) * 2
 psimrt
-# get coefficients for intercepts and transform them to prob >>> The results show prob of sim relative to dissim. Must reverse it to dissim
-probsimrt <- 1-(logit2prob(coef(mulsimrt)[,1]))
-# compute total prob of dissim being chosen 
-disrt <- probsimrt[1:2] %>% sum()/2
-disrt  
+
+# get prob from the intercepts
+disrt <- 1/(1+sum(logit2odds(coef(mulsimrt)[,1])))
 binom.test(round(disrt*nrow(rtsmul),0), nrow(rtsmul), p = 0.33, alternative = "two.sided")
 
 ################## restaurant outlier #################
@@ -892,11 +914,9 @@ zoutrt <- summary(muloutrt)$coefficients/summary(muloutrt)$standard.errors; zout
 # 2-tailed z test
 poutrt <- (1 - pnorm(abs(zoutrt), 0, 1)) * 2
 poutrt
-# get coefficients for intercepts and transform them to prob >>> The results show prob of sim relative to dissim. Must reverse it to dissim
-proboutrt <- 1-(logit2prob(coef(muloutrt)[,1]))
-# compute total prob of dissim being chosen 
-disrto <- proboutrt[1:6] %>% sum()/6 # no one respond 4
-disrto 
+
+# get prob from the intercepts
+disrto <- 1/(1+sum(logit2odds(coef(muloutrt)[,1])))
 binom.test(round(disrto*nrow(rtomul),0), nrow(rtomul), p = 0.125, alternative = "two.sided")
 
 ################## candidate #################
@@ -934,11 +954,9 @@ zsimcd <- summary(mulsimcd)$coefficients/summary(mulsimcd)$standard.errors; zsim
 # 2-tailed z test
 psimcd <- (1 - pnorm(abs(zsimcd), 0, 1)) * 2
 psimcd
-# get coefficients for intercepts and transform them to prob >>> The results show prob of sim relative to dissim. Must reverse it to dissim
-probsimcd <- 1-(logit2prob(coef(mulsimcd)[,1]))
-# compute total prob of dissim being chosen 
-discd <- probsimcd[1:2] %>% sum()/2
-discd  
+
+# get prob from the intercepts
+discd <- 1/(1+sum(logit2odds(coef(mulsimcd)[,1])))
 binom.test(round(discd*nrow(cdsmul),0), nrow(cdsmul), p = 0.33, alternative = "two.sided")
 
 ################## candidate outlier #################
@@ -949,11 +967,10 @@ zoutcd <- summary(muloutcd)$coefficients/summary(muloutcd)$standard.errors; zout
 # 2-tailed z test
 poutcd <- (1 - pnorm(abs(zoutcd), 0, 1)) * 2
 poutcd
-# get coefficients for intercepts and transform them to prob >>> The results show prob of sim relative to dissim. Must reverse it to dissim
-proboutcd <- 1-(logit2prob(coef(muloutcd)[,1]))
-# compute total prob of dissim being chosen 
-discdo <- proboutcd[1:7] %>% sum()/7
-discdo
+
+
+# get prob from the intercepts
+discdo <- 1/(1+sum(logit2odds(coef(muloutcd)[,1])))
 binom.test(round(discdo*nrow(cdomul),0), nrow(cdomul), p = 0.125, alternative = "two.sided")
 
 ################## candidate - 17 #################
@@ -992,12 +1009,10 @@ zoutcd1 <- summary(muloutcd1)$coefficients/summary(muloutcd1)$standard.errors; z
 # 2-tailed z test
 poutcd1 <- (1 - pnorm(abs(zoutcd1), 0, 1)) * 2
 poutcd1
-# get coefficients for intercepts and transform them to prob >>> The results show prob of sim relative to dissim. Must reverse it to dissim
-proboutcd1 <- 1-(logit2prob(coef(muloutcd1)[,1]))
-# compute total prob of dissim being chosen 
-discd1o <- proboutcd1[1:7] %>% sum()/7
-discd1o
 
+
+# get prob from the intercepts
+discd1o <- 1/(1+sum(logit2odds(coef(muloutcd1)[,1])))
 binom.test(round(discd1o*nrow(cd1omul),0), nrow(cd1omul), p = 0.125, alternative = "two.sided")
 
 
@@ -1037,11 +1052,10 @@ zsimmv <- summary(mulsimmv)$coefficients/summary(mulsimmv)$standard.errors; zsim
 # 2-tailed z test
 psimmv <- (1 - pnorm(abs(zsimmv), 0, 1)) * 2
 psimmv
-# get coefficients for intercepts and transform them to prob >>> The results show prob of sim relative to dissim. Must reverse it to dissim
-probsimmv <- 1-(logit2prob(coef(mulsimmv)[,1]))
-# compute total prob of dissim being chosen 
-dismv <- probsimmv[1:2] %>% sum()/2
-dismv  
+
+
+# get prob from the intercepts
+dismv <- 1/(1+sum(logit2odds(coef(mulsimmv)[,1]))) 
 binom.test(round(dismv*nrow(mvsmul),0), nrow(mvsmul), p = 0.33, alternative = "two.sided")
 
 ################## movie outlier #################
@@ -1052,11 +1066,9 @@ zoutmv <- summary(muloutmv)$coefficients/summary(muloutmv)$standard.errors; zout
 # 2-tailed z test
 poutmv <- (1 - pnorm(abs(zoutmv), 0, 1)) * 2
 poutmv
-# get coefficients for intercepts and transform them to prob >>> The results show prob of sim relative to dissim. Must reverse it to dissim
-proboutmv <- 1-(logit2prob(coef(muloutmv)[,1]))
-# compute total prob of dissim being chosen 
-dismvo <- proboutmv[1:7] %>% sum()/7
-dismvo
+
+# get prob from the intercepts
+dismvo <- 1/(1+sum(logit2odds(coef(muloutmv)[,1]))) 
 binom.test(round(dismvo*nrow(mvomul),0), nrow(mvomul), p = 0.125, alternative = "two.sided")
 
 
@@ -1070,12 +1082,10 @@ zs <- summary(mulsim)$coefficients/summary(mulsim)$standard.errors; zs # z stati
 # 2-tailed z test
 ps <- (1 - pnorm(abs(zs), 0, 1)) * 2
 ps
-# get coefficients for intercepts and transform them to prob >>> The results show prob of sim relative to dissim. Must reverse it to dissim
-probs <- 1-(logit2prob(coef(mulsim)[,1]))
-# compute total prob of dissim being chosen 
-dissim <- probs %>% sum()/2
-dissim
 
+
+# get prob from the intercepts
+dissim <- 1/(1+sum(logit2odds(coef(mulsim)[,1]))) 
 binom.test(round(dissim*nrow(muls),0), nrow(muls), p = 0.33, alternative = "two.sided")
 
 # outlier effect
@@ -1086,10 +1096,7 @@ zo <- summary(mulout)$coefficients/summary(mulout)$standard.errors; zo # z stati
 # 2-tailed z test
 po <- (1 - pnorm(abs(zo), 0, 1)) * 2
 po
-# get coefficients for intercepts and transform them to prob >>> The results show prob of out relative to disout. Must reverse it to disout
-probo <- 1-(logit2prob(coef(mulout)[,1]))
-# compute total prob of disout being chosen 
-disout <- probo %>% sum()/7
-disout
 
+# get prob from the intercepts
+disout <- 1/(1+sum(logit2odds(coef(mulout)[,1]))) 
 binom.test(round(disout*nrow(mulo),0), nrow(mulo), p = 0.125, alternative = "two.sided")
