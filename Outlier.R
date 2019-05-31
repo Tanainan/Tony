@@ -33,6 +33,9 @@ logit2odds <- function(logit){
 }
 
 
+
+
+
 ######### Similarity Effect #########
 # prop.table(table(na.omit(oe$lot50s)))
 # prop.table(table(na.omit(oe$lot60s)))
@@ -852,6 +855,10 @@ disgb <- 1/(1+sum(logit2odds(coef(mulsimgb)[,1])))
 
 binom.test(round(disgb*nrow(gbsmul),0), nrow(gbsmul), p = 0.33, alternative = "two.sided")
 
+round(1/(1+sum(logit2odds(coef(mulsimgb)[,1]))),2)
+round(logit2odds(coef(mulsimgb)[1,1])/(1+sum(logit2odds(coef(mulsimgb)[,1]))),2) 
+round(logit2odds(coef(mulsimgb)[2,1])/(1+sum(logit2odds(coef(mulsimgb)[,1]))),2) 
+
 ################## gambling outlier #################
 gbomul <- gbmul[which(gbmul$effect == 1),]
 muloutgb <- multinom(resp ~ pre*attdiffc, data = gbomul)
@@ -864,6 +871,14 @@ poutgb
 # get prob from the intercepts
 disgbo <- 1/(1+sum(logit2odds(coef(muloutgb)[,1]))) 
 binom.test(round(disgbo*nrow(gbomul),0), nrow(gbomul), p = 0.125, alternative = "two.sided")
+round(1/(1+sum(logit2odds(coef(muloutgb)[,1]))),2)
+round(logit2odds(coef(muloutgb)[1,1])/(1+sum(logit2odds(coef(muloutgb)[,1]))),2) 
+round(logit2odds(coef(muloutgb)[2,1])/(1+sum(logit2odds(coef(muloutgb)[,1]))),2) 
+round(logit2odds(coef(muloutgb)[3,1])/(1+sum(logit2odds(coef(muloutgb)[,1]))),2)
+round(logit2odds(coef(muloutgb)[4,1])/(1+sum(logit2odds(coef(muloutgb)[,1]))),2) 
+round(logit2odds(coef(muloutgb)[5,1])/(1+sum(logit2odds(coef(muloutgb)[,1]))),2) 
+round(logit2odds(coef(muloutgb)[6,1])/(1+sum(logit2odds(coef(muloutgb)[,1]))),2) 
+round(logit2odds(coef(muloutgb)[7,1])/(1+sum(logit2odds(coef(muloutgb)[,1]))),2)
 
 
 ################## restaurant #################
@@ -905,6 +920,10 @@ psimrt
 # get prob from the intercepts
 disrt <- 1/(1+sum(logit2odds(coef(mulsimrt)[,1])))
 binom.test(round(disrt*nrow(rtsmul),0), nrow(rtsmul), p = 0.33, alternative = "two.sided")
+round(1/(1+sum(logit2odds(coef(mulsimrt)[,1]))),2)
+round(logit2odds(coef(mulsimrt)[1,1])/(1+sum(logit2odds(coef(mulsimrt)[,1]))),2) 
+round(logit2odds(coef(mulsimrt)[2,1])/(1+sum(logit2odds(coef(mulsimrt)[,1]))),2) 
+
 
 ################## restaurant outlier #################
 rtomul <- rtmul[which(rtmul$effect == 1),]
@@ -918,6 +937,15 @@ poutrt
 # get prob from the intercepts
 disrto <- 1/(1+sum(logit2odds(coef(muloutrt)[,1])))
 binom.test(round(disrto*nrow(rtomul),0), nrow(rtomul), p = 0.125, alternative = "two.sided")
+round(1/(1+sum(logit2odds(coef(muloutrt)[,1]))),2)
+round(logit2odds(coef(muloutrt)[1,1])/(1+sum(logit2odds(coef(muloutrt)[,1]))),2) 
+round(logit2odds(coef(muloutrt)[2,1])/(1+sum(logit2odds(coef(muloutrt)[,1]))),2) 
+round(logit2odds(coef(muloutrt)[3,1])/(1+sum(logit2odds(coef(muloutrt)[,1]))),2)
+round(logit2odds(coef(muloutrt)[4,1])/(1+sum(logit2odds(coef(muloutrt)[,1]))),2) 
+round(logit2odds(coef(muloutrt)[5,1])/(1+sum(logit2odds(coef(muloutrt)[,1]))),2) 
+round(logit2odds(coef(muloutrt)[6,1])/(1+sum(logit2odds(coef(muloutrt)[,1]))),2) 
+round(logit2odds(coef(muloutrt)[7,1])/(1+sum(logit2odds(coef(muloutrt)[,1]))),2)
+
 
 ################## candidate #################
 cdmul <- data.frame(resp = c(oe$can33s, oe$can66s, oe$can33o, oe$can66o),
@@ -958,6 +986,9 @@ psimcd
 # get prob from the intercepts
 discd <- 1/(1+sum(logit2odds(coef(mulsimcd)[,1])))
 binom.test(round(discd*nrow(cdsmul),0), nrow(cdsmul), p = 0.33, alternative = "two.sided")
+round(1/(1+sum(logit2odds(coef(mulsimcd)[,1]))),2)
+round(logit2odds(coef(mulsimcd)[1,1])/(1+sum(logit2odds(coef(mulsimcd)[,1]))),2) 
+round(logit2odds(coef(mulsimcd)[2,1])/(1+sum(logit2odds(coef(mulsimcd)[,1]))),2) 
 
 ################## candidate outlier #################
 cdomul <- cdmul[which(cdmul$effect == 1),]
@@ -972,6 +1003,16 @@ poutcd
 # get prob from the intercepts
 discdo <- 1/(1+sum(logit2odds(coef(muloutcd)[,1])))
 binom.test(round(discdo*nrow(cdomul),0), nrow(cdomul), p = 0.125, alternative = "two.sided")
+
+round(1/(1+sum(logit2odds(coef(muloutcd)[,1]))),2)
+round(logit2odds(coef(muloutcd)[1,1])/(1+sum(logit2odds(coef(muloutcd)[,1]))),2) 
+round(logit2odds(coef(muloutcd)[2,1])/(1+sum(logit2odds(coef(muloutcd)[,1]))),2) 
+round(logit2odds(coef(muloutcd)[3,1])/(1+sum(logit2odds(coef(muloutcd)[,1]))),2)
+round(logit2odds(coef(muloutcd)[4,1])/(1+sum(logit2odds(coef(muloutcd)[,1]))),2) 
+round(logit2odds(coef(muloutcd)[5,1])/(1+sum(logit2odds(coef(muloutcd)[,1]))),2) 
+round(logit2odds(coef(muloutcd)[6,1])/(1+sum(logit2odds(coef(muloutcd)[,1]))),2) 
+round(logit2odds(coef(muloutcd)[7,1])/(1+sum(logit2odds(coef(muloutcd)[,1]))),2)
+
 
 ################## candidate - 17 #################
 cd1mul <- data.frame(resp = c(oe$can33s, oe$can66s, can2$can33o, oe$can66o),
@@ -1015,6 +1056,14 @@ poutcd1
 discd1o <- 1/(1+sum(logit2odds(coef(muloutcd1)[,1])))
 binom.test(round(discd1o*nrow(cd1omul),0), nrow(cd1omul), p = 0.125, alternative = "two.sided")
 
+round(1/(1+sum(logit2odds(coef(muloutcd1)[,1]))),2)
+round(logit2odds(coef(muloutcd1)[1,1])/(1+sum(logit2odds(coef(muloutcd1)[,1]))),2) 
+round(logit2odds(coef(muloutcd1)[2,1])/(1+sum(logit2odds(coef(muloutcd1)[,1]))),2) 
+round(logit2odds(coef(muloutcd1)[3,1])/(1+sum(logit2odds(coef(muloutcd1)[,1]))),2)
+round(logit2odds(coef(muloutcd1)[4,1])/(1+sum(logit2odds(coef(muloutcd1)[,1]))),2) 
+round(logit2odds(coef(muloutcd1)[5,1])/(1+sum(logit2odds(coef(muloutcd1)[,1]))),2) 
+round(logit2odds(coef(muloutcd1)[6,1])/(1+sum(logit2odds(coef(muloutcd1)[,1]))),2) 
+round(logit2odds(coef(muloutcd1)[7,1])/(1+sum(logit2odds(coef(muloutcd1)[,1]))),2)
 
 ################## movie #################
 mvmul <- data.frame(resp = c(oe$mov33s, oe$mov66s, oe$mov33o, oe$mov66o),
@@ -1057,6 +1106,10 @@ psimmv
 # get prob from the intercepts
 dismv <- 1/(1+sum(logit2odds(coef(mulsimmv)[,1]))) 
 binom.test(round(dismv*nrow(mvsmul),0), nrow(mvsmul), p = 0.33, alternative = "two.sided")
+round(1/(1+sum(logit2odds(coef(mulsimmv)[,1]))),2)
+round(logit2odds(coef(mulsimmv)[1,1])/(1+sum(logit2odds(coef(mulsimmv)[,1]))),2) 
+round(logit2odds(coef(mulsimmv)[2,1])/(1+sum(logit2odds(coef(mulsimmv)[,1]))),2) 
+
 
 ################## movie outlier #################
 mvomul <- mvmul[which(mvmul$effect == 1),]
@@ -1070,7 +1123,14 @@ poutmv
 # get prob from the intercepts
 dismvo <- 1/(1+sum(logit2odds(coef(muloutmv)[,1]))) 
 binom.test(round(dismvo*nrow(mvomul),0), nrow(mvomul), p = 0.125, alternative = "two.sided")
-
+round(1/(1+sum(logit2odds(coef(muloutmv)[,1]))),2)
+round(logit2odds(coef(muloutmv)[1,1])/(1+sum(logit2odds(coef(muloutmv)[,1]))),2) 
+round(logit2odds(coef(muloutmv)[2,1])/(1+sum(logit2odds(coef(muloutmv)[,1]))),2) 
+round(logit2odds(coef(muloutmv)[3,1])/(1+sum(logit2odds(coef(muloutmv)[,1]))),2)
+round(logit2odds(coef(muloutmv)[4,1])/(1+sum(logit2odds(coef(muloutmv)[,1]))),2) 
+round(logit2odds(coef(muloutmv)[5,1])/(1+sum(logit2odds(coef(muloutmv)[,1]))),2) 
+round(logit2odds(coef(muloutmv)[6,1])/(1+sum(logit2odds(coef(muloutmv)[,1]))),2) 
+round(logit2odds(coef(muloutmv)[7,1])/(1+sum(logit2odds(coef(muloutmv)[,1]))),2)
 
 ####### Multinomial with all scenarios #########
 
@@ -1087,6 +1147,11 @@ ps
 # get prob from the intercepts
 dissim <- 1/(1+sum(logit2odds(coef(mulsim)[,1]))) 
 binom.test(round(dissim*nrow(muls),0), nrow(muls), p = 0.33, alternative = "two.sided")
+round(1/(1+sum(logit2odds(coef(mulsim)[,1]))),2)
+round(logit2odds(coef(mulsim)[1,1])/(1+sum(logit2odds(coef(mulsim)[,1]))),2) 
+round(logit2odds(coef(mulsim)[2,1])/(1+sum(logit2odds(coef(mulsim)[,1]))),2) 
+
+
 
 # outlier effect
 mulo <- mul[which(mul$effect == 1),]
@@ -1098,5 +1163,86 @@ po <- (1 - pnorm(abs(zo), 0, 1)) * 2
 po
 
 # get prob from the intercepts
-disout <- 1/(1+sum(logit2odds(coef(mulout)[,1]))) 
+disout <- 1/(1+sum(logit2odds(coef(mulout)[,1])))
+round(1/(1+sum(logit2odds(coef(mulout)[,1]))),2)
+round(logit2odds(coef(mulout)[1,1])/(1+sum(logit2odds(coef(mulout)[,1]))),2) 
+round(logit2odds(coef(mulout)[2,1])/(1+sum(logit2odds(coef(mulout)[,1]))),2) 
+round(logit2odds(coef(mulout)[3,1])/(1+sum(logit2odds(coef(mulout)[,1]))),2)
+round(logit2odds(coef(mulout)[4,1])/(1+sum(logit2odds(coef(mulout)[,1]))),2) 
+round(logit2odds(coef(mulout)[5,1])/(1+sum(logit2odds(coef(mulout)[,1]))),2) 
+round(logit2odds(coef(mulout)[6,1])/(1+sum(logit2odds(coef(mulout)[,1]))),2) 
+round(logit2odds(coef(mulout)[7,1])/(1+sum(logit2odds(coef(mulout)[,1]))),2) 
+
+
 binom.test(round(disout*nrow(mulo),0), nrow(mulo), p = 0.125, alternative = "two.sided")
+
+
+ef <- na.omit(ef)
+ef$scenario <- NA
+for (i in 1:nrow(ef)){
+  if (ef$name[i] == "lot50s" | ef$name[i] == "lot60s" | ef$name[i] == "lot50o" | ef$name[i] == "lot60o")
+  {ef$scenario[i] <- "gb"}
+  if (ef$name[i] == "mov33s" | ef$name[i] == "mov33o" | ef$name[i] == "mov66s" | ef$name[i] == "mov66o")
+  {ef$scenario[i] <- "mv"}
+  if (ef$name[i] == "can33s" | ef$name[i] == "can33o" | ef$name[i] == "can66s" | ef$name[i] == "can66o")
+  {ef$scenario[i] <- "cd"}
+  if (ef$name[i] == "res10s" | ef$name[i] == "res10o" | ef$name[i] == "res40s" | ef$name[i] == "res40o")
+  {ef$scenario[i] <- "rt"}
+}
+
+
+# prop.table(table(ef[which(ef$effect == 0), c("resp")]))
+# prop.table(table(ef[which(ef$effect == 1), c("resp")]))
+# prop.table(table(muls[, c("resp")]))
+# prop.table(table(mulo[, c("resp")]))
+# 
+# prop.table(table(ef[which(ef$effect == 0 & ef$scenario == "gb"), c("resp")]))
+# prop.table(table(ef[which(ef$effect == 1 & ef$scenario == "gb"), c("resp")]))
+# prop.table(table(gbmul[which(gbmul$effect == 0), c("resp")]))
+# prop.table(table(gbmul[which(gbmul$effect == 1), c("resp")]))
+# 
+# 
+# 
+# prop.table(table(ef[which(ef$effect == 0 & ef$scenario == "rt"), c("resp")]))
+# prop.table(table(ef[which(ef$effect == 1 & ef$scenario == "rt"), c("resp")]))
+# prop.table(table(rtmul[which(rtmul$effect == 0), c("resp")]))
+# prop.table(table(rtmul[which(rtmul$effect == 1), c("resp")]))
+# 
+# 
+# prop.table(table(cdmul[which(cdmul$effect == 0), c("resp")]))
+# prop.table(table(cdmul[which(cdmul$effect == 1), c("resp")]))
+# prop.table(table(cd1mul[which(cd1mul$effect == 1), c("resp")]))
+# 
+# 
+# prop.table(table(mvmul[which(mvmul$effect == 0), c("resp")]))
+# prop.table(table(mvmul[which(mvmul$effect == 1), c("resp")]))
+# 
+# 
+# 
+# # weighting each presentation equally
+# prop.table(table(muls[which(muls$pre == -0.5), c("resp")]))
+# prop.table(table(muls[which(muls$pre == 0.5), c("resp")]))
+# prop.table(table(mulo[which(mulo$pre == -0.5), c("resp")]))
+# prop.table(table(mulo[which(mulo$pre == 0.5), c("resp")]))
+# 
+# 
+# prop.table(table(gbmul[which(gbmul$effect == 0 & gbmul$pre == -0.5), c("resp")]))
+# prop.table(table(gbmul[which(gbmul$effect == 0 & gbmul$pre == 0.5), c("resp")]))
+# prop.table(table(gbmul[which(gbmul$effect == 1 & gbmul$pre == -0.5), c("resp")]))
+# prop.table(table(gbmul[which(gbmul$effect == 1 & gbmul$pre == 0.5), c("resp")]))
+# 
+# 
+# 
+# prop.table(table(rtmul[which(rtmul$effect == 0 & rtmul$pre == -0.5), c("resp")]))
+# prop.table(table(rtmul[which(rtmul$effect == 0 & rtmul$pre == 0.5), c("resp")]))
+# prop.table(table(rtmul[which(rtmul$effect == 1 & rtmul$pre == -0.5), c("resp")]))
+# prop.table(table(rtmul[which(rtmul$effect == 1 & rtmul$pre == 0.5), c("resp")]))
+# 
+# 
+# prop.table(table(cdmul[which(cdmul$effect == 0), c("resp")]))
+# prop.table(table(cdmul[which(cdmul$effect == 1), c("resp")]))
+# prop.table(table(cd1mul[which(cd1mul$effect == 1), c("resp")]))
+# 
+# 
+# prop.table(table(mvmul[which(mvmul$effect == 0), c("resp")]))
+# prop.table(table(mvmul[which(mvmul$effect == 1), c("resp")]))
