@@ -856,8 +856,14 @@ disgb <- 1/(1+sum(logit2odds(coef(mulsimgb)[,1])))
 binom.test(round(disgb*nrow(gbsmul),0), nrow(gbsmul), p = 0.33, alternative = "two.sided")
 
 round(1/(1+sum(logit2odds(coef(mulsimgb)[,1]))),2)
-round(logit2odds(coef(mulsimgb)[1,1])/(1+sum(logit2odds(coef(mulsimgb)[,1]))),2) 
-round(logit2odds(coef(mulsimgb)[2,1])/(1+sum(logit2odds(coef(mulsimgb)[,1]))),2) 
+
+
+disgb2 <- round(logit2odds(coef(mulsimgb)[1,1])/(1+sum(logit2odds(coef(mulsimgb)[,1]))),2) 
+binom.test(round(disgb2*nrow(gbsmul),0), nrow(gbsmul), p = 0.33, alternative = "two.sided")
+
+disgb3 <- round(logit2odds(coef(mulsimgb)[2,1])/(1+sum(logit2odds(coef(mulsimgb)[,1]))),2) 
+binom.test(round(disgb3*nrow(gbsmul),0), nrow(gbsmul), p = 0.33, alternative = "two.sided")
+# no one chose the 3th 
 
 ################## gambling outlier #################
 gbomul <- gbmul[which(gbmul$effect == 1),]
@@ -872,13 +878,28 @@ poutgb
 disgbo <- 1/(1+sum(logit2odds(coef(muloutgb)[,1]))) 
 binom.test(round(disgbo*nrow(gbomul),0), nrow(gbomul), p = 0.125, alternative = "two.sided")
 round(1/(1+sum(logit2odds(coef(muloutgb)[,1]))),2)
-round(logit2odds(coef(muloutgb)[1,1])/(1+sum(logit2odds(coef(muloutgb)[,1]))),2) 
-round(logit2odds(coef(muloutgb)[2,1])/(1+sum(logit2odds(coef(muloutgb)[,1]))),2) 
-round(logit2odds(coef(muloutgb)[3,1])/(1+sum(logit2odds(coef(muloutgb)[,1]))),2)
-round(logit2odds(coef(muloutgb)[4,1])/(1+sum(logit2odds(coef(muloutgb)[,1]))),2) 
-round(logit2odds(coef(muloutgb)[5,1])/(1+sum(logit2odds(coef(muloutgb)[,1]))),2) 
-round(logit2odds(coef(muloutgb)[6,1])/(1+sum(logit2odds(coef(muloutgb)[,1]))),2) 
-round(logit2odds(coef(muloutgb)[7,1])/(1+sum(logit2odds(coef(muloutgb)[,1]))),2)
+
+disgbo2 <- round(logit2odds(coef(muloutgb)[1,1])/(1+sum(logit2odds(coef(muloutgb)[,1]))),2) 
+binom.test(round(disgbo2*nrow(gbomul),0), nrow(gbomul), p = 0.125, alternative = "two.sided")
+
+disgbo3 <- round(logit2odds(coef(muloutgb)[2,1])/(1+sum(logit2odds(coef(muloutgb)[,1]))),2) 
+binom.test(round(disgbo3*nrow(gbomul),0), nrow(gbomul), p = 0.125, alternative = "two.sided")
+
+disgbo4 <- round(logit2odds(coef(muloutgb)[3,1])/(1+sum(logit2odds(coef(muloutgb)[,1]))),2)
+binom.test(round(disgbo4*nrow(gbomul),0), nrow(gbomul), p = 0.125, alternative = "two.sided")
+
+disgbo5 <- round(logit2odds(coef(muloutgb)[4,1])/(1+sum(logit2odds(coef(muloutgb)[,1]))),2) 
+binom.test(round(disgbo5*nrow(gbomul),0), nrow(gbomul), p = 0.125, alternative = "two.sided")
+
+disgbo6 <- round(logit2odds(coef(muloutgb)[5,1])/(1+sum(logit2odds(coef(muloutgb)[,1]))),2) 
+binom.test(round(disgbo6*nrow(gbomul),0), nrow(gbomul), p = 0.125, alternative = "two.sided")
+
+disgbo7 <- round(logit2odds(coef(muloutgb)[6,1])/(1+sum(logit2odds(coef(muloutgb)[,1]))),2) 
+binom.test(round(disgbo7*nrow(gbomul),0), nrow(gbomul), p = 0.125, alternative = "two.sided")
+
+disgbo8 <- round(logit2odds(coef(muloutgb)[7,1])/(1+sum(logit2odds(coef(muloutgb)[,1]))),2)
+binom.test(round(disgbo8*nrow(gbomul),0), nrow(gbomul), p = 0.125, alternative = "two.sided")
+
 
 
 ################## restaurant #################
@@ -921,8 +942,13 @@ psimrt
 disrt <- 1/(1+sum(logit2odds(coef(mulsimrt)[,1])))
 binom.test(round(disrt*nrow(rtsmul),0), nrow(rtsmul), p = 0.33, alternative = "two.sided")
 round(1/(1+sum(logit2odds(coef(mulsimrt)[,1]))),2)
-round(logit2odds(coef(mulsimrt)[1,1])/(1+sum(logit2odds(coef(mulsimrt)[,1]))),2) 
-round(logit2odds(coef(mulsimrt)[2,1])/(1+sum(logit2odds(coef(mulsimrt)[,1]))),2) 
+
+disrt2 <- round(logit2odds(coef(mulsimrt)[1,1])/(1+sum(logit2odds(coef(mulsimrt)[,1]))),2) 
+binom.test(round(disrt2*nrow(rtsmul),0), nrow(rtsmul), p = 0.33, alternative = "two.sided")
+
+disrt3 <- round(logit2odds(coef(mulsimrt)[2,1])/(1+sum(logit2odds(coef(mulsimrt)[,1]))),2) 
+binom.test(round(disrt3*nrow(rtsmul),0), nrow(rtsmul), p = 0.33, alternative = "two.sided")
+
 
 
 ################## restaurant outlier #################
@@ -938,13 +964,28 @@ poutrt
 disrto <- 1/(1+sum(logit2odds(coef(muloutrt)[,1])))
 binom.test(round(disrto*nrow(rtomul),0), nrow(rtomul), p = 0.125, alternative = "two.sided")
 round(1/(1+sum(logit2odds(coef(muloutrt)[,1]))),2)
-round(logit2odds(coef(muloutrt)[1,1])/(1+sum(logit2odds(coef(muloutrt)[,1]))),2) 
-round(logit2odds(coef(muloutrt)[2,1])/(1+sum(logit2odds(coef(muloutrt)[,1]))),2) 
-round(logit2odds(coef(muloutrt)[3,1])/(1+sum(logit2odds(coef(muloutrt)[,1]))),2)
-round(logit2odds(coef(muloutrt)[4,1])/(1+sum(logit2odds(coef(muloutrt)[,1]))),2) 
-round(logit2odds(coef(muloutrt)[5,1])/(1+sum(logit2odds(coef(muloutrt)[,1]))),2) 
-round(logit2odds(coef(muloutrt)[6,1])/(1+sum(logit2odds(coef(muloutrt)[,1]))),2) 
-round(logit2odds(coef(muloutrt)[7,1])/(1+sum(logit2odds(coef(muloutrt)[,1]))),2)
+
+disrto2 <- round(logit2odds(coef(muloutrt)[1,1])/(1+sum(logit2odds(coef(muloutrt)[,1]))),2) 
+binom.test(round(disrto2*nrow(rtomul),0), nrow(rtomul), p = 0.125, alternative = "two.sided")
+
+disrto3 <- round(logit2odds(coef(muloutrt)[2,1])/(1+sum(logit2odds(coef(muloutrt)[,1]))),2) 
+binom.test(round(disrto3*nrow(rtomul),0), nrow(rtomul), p = 0.125, alternative = "two.sided")
+
+disrto4 <- round(logit2odds(coef(muloutrt)[3,1])/(1+sum(logit2odds(coef(muloutrt)[,1]))),2)
+binom.test(round(disrto4*nrow(rtomul),0), nrow(rtomul), p = 0.125, alternative = "two.sided")
+
+disrto5 <- round(logit2odds(coef(muloutrt)[4,1])/(1+sum(logit2odds(coef(muloutrt)[,1]))),2) 
+binom.test(round(disrto5*nrow(rtomul),0), nrow(rtomul), p = 0.125, alternative = "two.sided")
+
+disrto6 <- round(logit2odds(coef(muloutrt)[5,1])/(1+sum(logit2odds(coef(muloutrt)[,1]))),2) 
+binom.test(round(disrto6*nrow(rtomul),0), nrow(rtomul), p = 0.125, alternative = "two.sided")
+
+disrto7 <- round(logit2odds(coef(muloutrt)[6,1])/(1+sum(logit2odds(coef(muloutrt)[,1]))),2) 
+binom.test(round(disrto7*nrow(rtomul),0), nrow(rtomul), p = 0.125, alternative = "two.sided")
+
+disrto8 <- round(logit2odds(coef(muloutrt)[7,1])/(1+sum(logit2odds(coef(muloutrt)[,1]))),2)
+binom.test(round(disrto8*nrow(rtomul),0), nrow(rtomul), p = 0.125, alternative = "two.sided")
+# no one chose the 7th
 
 
 ################## candidate #################
@@ -987,8 +1028,13 @@ psimcd
 discd <- 1/(1+sum(logit2odds(coef(mulsimcd)[,1])))
 binom.test(round(discd*nrow(cdsmul),0), nrow(cdsmul), p = 0.33, alternative = "two.sided")
 round(1/(1+sum(logit2odds(coef(mulsimcd)[,1]))),2)
-round(logit2odds(coef(mulsimcd)[1,1])/(1+sum(logit2odds(coef(mulsimcd)[,1]))),2) 
-round(logit2odds(coef(mulsimcd)[2,1])/(1+sum(logit2odds(coef(mulsimcd)[,1]))),2) 
+
+discd2 <- round(logit2odds(coef(mulsimcd)[1,1])/(1+sum(logit2odds(coef(mulsimcd)[,1]))),2) 
+binom.test(round(discd2*nrow(cdsmul),0), nrow(cdsmul), p = 0.33, alternative = "two.sided")
+
+discd3 <- round(logit2odds(coef(mulsimcd)[2,1])/(1+sum(logit2odds(coef(mulsimcd)[,1]))),2) 
+binom.test(round(discd3*nrow(cdsmul),0), nrow(cdsmul), p = 0.33, alternative = "two.sided")
+
 
 ################## candidate outlier #################
 cdomul <- cdmul[which(cdmul$effect == 1),]
@@ -1005,13 +1051,28 @@ discdo <- 1/(1+sum(logit2odds(coef(muloutcd)[,1])))
 binom.test(round(discdo*nrow(cdomul),0), nrow(cdomul), p = 0.125, alternative = "two.sided")
 
 round(1/(1+sum(logit2odds(coef(muloutcd)[,1]))),2)
-round(logit2odds(coef(muloutcd)[1,1])/(1+sum(logit2odds(coef(muloutcd)[,1]))),2) 
-round(logit2odds(coef(muloutcd)[2,1])/(1+sum(logit2odds(coef(muloutcd)[,1]))),2) 
-round(logit2odds(coef(muloutcd)[3,1])/(1+sum(logit2odds(coef(muloutcd)[,1]))),2)
-round(logit2odds(coef(muloutcd)[4,1])/(1+sum(logit2odds(coef(muloutcd)[,1]))),2) 
-round(logit2odds(coef(muloutcd)[5,1])/(1+sum(logit2odds(coef(muloutcd)[,1]))),2) 
-round(logit2odds(coef(muloutcd)[6,1])/(1+sum(logit2odds(coef(muloutcd)[,1]))),2) 
-round(logit2odds(coef(muloutcd)[7,1])/(1+sum(logit2odds(coef(muloutcd)[,1]))),2)
+
+discdo2 <- round(logit2odds(coef(muloutcd)[1,1])/(1+sum(logit2odds(coef(muloutcd)[,1]))),2) 
+binom.test(round(discdo2*nrow(cdomul),0), nrow(cdomul), p = 0.125, alternative = "two.sided")
+
+discdo3 <- round(logit2odds(coef(muloutcd)[2,1])/(1+sum(logit2odds(coef(muloutcd)[,1]))),2) 
+binom.test(round(discdo3*nrow(cdomul),0), nrow(cdomul), p = 0.125, alternative = "two.sided")
+
+discdo4 <- round(logit2odds(coef(muloutcd)[3,1])/(1+sum(logit2odds(coef(muloutcd)[,1]))),2)
+binom.test(round(discdo4*nrow(cdomul),0), nrow(cdomul), p = 0.125, alternative = "two.sided")
+
+discdo5 <- round(logit2odds(coef(muloutcd)[4,1])/(1+sum(logit2odds(coef(muloutcd)[,1]))),2) 
+binom.test(round(discdo5*nrow(cdomul),0), nrow(cdomul), p = 0.125, alternative = "two.sided")
+
+discdo6 <- round(logit2odds(coef(muloutcd)[5,1])/(1+sum(logit2odds(coef(muloutcd)[,1]))),2) 
+binom.test(round(discdo6*nrow(cdomul),0), nrow(cdomul), p = 0.125, alternative = "two.sided")
+
+discdo7 <- round(logit2odds(coef(muloutcd)[6,1])/(1+sum(logit2odds(coef(muloutcd)[,1]))),2) 
+binom.test(round(discdo7*nrow(cdomul),0), nrow(cdomul), p = 0.125, alternative = "two.sided")
+
+discdo8 <- round(logit2odds(coef(muloutcd)[7,1])/(1+sum(logit2odds(coef(muloutcd)[,1]))),2)
+binom.test(round(discdo8*nrow(cdomul),0), nrow(cdomul), p = 0.125, alternative = "two.sided")
+
 
 
 ################## candidate - 17 #################
@@ -1057,13 +1118,28 @@ discd1o <- 1/(1+sum(logit2odds(coef(muloutcd1)[,1])))
 binom.test(round(discd1o*nrow(cd1omul),0), nrow(cd1omul), p = 0.125, alternative = "two.sided")
 
 round(1/(1+sum(logit2odds(coef(muloutcd1)[,1]))),2)
-round(logit2odds(coef(muloutcd1)[1,1])/(1+sum(logit2odds(coef(muloutcd1)[,1]))),2) 
-round(logit2odds(coef(muloutcd1)[2,1])/(1+sum(logit2odds(coef(muloutcd1)[,1]))),2) 
-round(logit2odds(coef(muloutcd1)[3,1])/(1+sum(logit2odds(coef(muloutcd1)[,1]))),2)
-round(logit2odds(coef(muloutcd1)[4,1])/(1+sum(logit2odds(coef(muloutcd1)[,1]))),2) 
-round(logit2odds(coef(muloutcd1)[5,1])/(1+sum(logit2odds(coef(muloutcd1)[,1]))),2) 
-round(logit2odds(coef(muloutcd1)[6,1])/(1+sum(logit2odds(coef(muloutcd1)[,1]))),2) 
-round(logit2odds(coef(muloutcd1)[7,1])/(1+sum(logit2odds(coef(muloutcd1)[,1]))),2)
+
+discd1o2 <- round(logit2odds(coef(muloutcd1)[1,1])/(1+sum(logit2odds(coef(muloutcd1)[,1]))),2) 
+binom.test(round(discd1o2*nrow(cd1omul),0), nrow(cd1omul), p = 0.125, alternative = "two.sided")
+
+discd1o3 <- round(logit2odds(coef(muloutcd1)[2,1])/(1+sum(logit2odds(coef(muloutcd1)[,1]))),2) 
+binom.test(round(discd1o3*nrow(cd1omul),0), nrow(cd1omul), p = 0.125, alternative = "two.sided")
+
+discd1o4 <- round(logit2odds(coef(muloutcd1)[3,1])/(1+sum(logit2odds(coef(muloutcd1)[,1]))),2)
+binom.test(round(discd1o4*nrow(cd1omul),0), nrow(cd1omul), p = 0.125, alternative = "two.sided")
+
+discd1o5 <- round(logit2odds(coef(muloutcd1)[4,1])/(1+sum(logit2odds(coef(muloutcd1)[,1]))),2) 
+binom.test(round(discd1o5*nrow(cd1omul),0), nrow(cd1omul), p = 0.125, alternative = "two.sided")
+
+discd1o6 <- round(logit2odds(coef(muloutcd1)[5,1])/(1+sum(logit2odds(coef(muloutcd1)[,1]))),2) 
+binom.test(round(discd1o6*nrow(cd1omul),0), nrow(cd1omul), p = 0.125, alternative = "two.sided")
+
+discd1o7 <- round(logit2odds(coef(muloutcd1)[6,1])/(1+sum(logit2odds(coef(muloutcd1)[,1]))),2) 
+binom.test(round(discd1o7*nrow(cd1omul),0), nrow(cd1omul), p = 0.125, alternative = "two.sided")
+
+discd1o8 <- round(logit2odds(coef(muloutcd1)[7,1])/(1+sum(logit2odds(coef(muloutcd1)[,1]))),2)
+binom.test(round(discd1o8*nrow(cd1omul),0), nrow(cd1omul), p = 0.125, alternative = "two.sided")
+
 
 ################## movie #################
 mvmul <- data.frame(resp = c(oe$mov33s, oe$mov66s, oe$mov33o, oe$mov66o),
@@ -1107,8 +1183,13 @@ psimmv
 dismv <- 1/(1+sum(logit2odds(coef(mulsimmv)[,1]))) 
 binom.test(round(dismv*nrow(mvsmul),0), nrow(mvsmul), p = 0.33, alternative = "two.sided")
 round(1/(1+sum(logit2odds(coef(mulsimmv)[,1]))),2)
-round(logit2odds(coef(mulsimmv)[1,1])/(1+sum(logit2odds(coef(mulsimmv)[,1]))),2) 
-round(logit2odds(coef(mulsimmv)[2,1])/(1+sum(logit2odds(coef(mulsimmv)[,1]))),2) 
+
+dismv2 <- round(logit2odds(coef(mulsimmv)[1,1])/(1+sum(logit2odds(coef(mulsimmv)[,1]))),2) 
+binom.test(round(dismv2*nrow(mvsmul),0), nrow(mvsmul), p = 0.33, alternative = "two.sided")
+
+dismv3 <- round(logit2odds(coef(mulsimmv)[2,1])/(1+sum(logit2odds(coef(mulsimmv)[,1]))),2) 
+binom.test(round(dismv3*nrow(mvsmul),0), nrow(mvsmul), p = 0.33, alternative = "two.sided")
+
 
 
 ################## movie outlier #################
@@ -1124,13 +1205,28 @@ poutmv
 dismvo <- 1/(1+sum(logit2odds(coef(muloutmv)[,1]))) 
 binom.test(round(dismvo*nrow(mvomul),0), nrow(mvomul), p = 0.125, alternative = "two.sided")
 round(1/(1+sum(logit2odds(coef(muloutmv)[,1]))),2)
-round(logit2odds(coef(muloutmv)[1,1])/(1+sum(logit2odds(coef(muloutmv)[,1]))),2) 
-round(logit2odds(coef(muloutmv)[2,1])/(1+sum(logit2odds(coef(muloutmv)[,1]))),2) 
-round(logit2odds(coef(muloutmv)[3,1])/(1+sum(logit2odds(coef(muloutmv)[,1]))),2)
-round(logit2odds(coef(muloutmv)[4,1])/(1+sum(logit2odds(coef(muloutmv)[,1]))),2) 
-round(logit2odds(coef(muloutmv)[5,1])/(1+sum(logit2odds(coef(muloutmv)[,1]))),2) 
-round(logit2odds(coef(muloutmv)[6,1])/(1+sum(logit2odds(coef(muloutmv)[,1]))),2) 
-round(logit2odds(coef(muloutmv)[7,1])/(1+sum(logit2odds(coef(muloutmv)[,1]))),2)
+
+dismvo2 <- round(logit2odds(coef(muloutmv)[1,1])/(1+sum(logit2odds(coef(muloutmv)[,1]))),2) 
+binom.test(round(dismvo2*nrow(mvomul),0), nrow(mvomul), p = 0.125, alternative = "two.sided")
+
+dismvo3 <- round(logit2odds(coef(muloutmv)[2,1])/(1+sum(logit2odds(coef(muloutmv)[,1]))),2) 
+binom.test(round(dismvo3*nrow(mvomul),0), nrow(mvomul), p = 0.125, alternative = "two.sided")
+
+dismvo4 <- round(logit2odds(coef(muloutmv)[3,1])/(1+sum(logit2odds(coef(muloutmv)[,1]))),2)
+binom.test(round(dismvo4*nrow(mvomul),0), nrow(mvomul), p = 0.125, alternative = "two.sided")
+
+dismvo5 <- round(logit2odds(coef(muloutmv)[4,1])/(1+sum(logit2odds(coef(muloutmv)[,1]))),2) 
+binom.test(round(dismvo5*nrow(mvomul),0), nrow(mvomul), p = 0.125, alternative = "two.sided")
+
+dismvo6 <- round(logit2odds(coef(muloutmv)[5,1])/(1+sum(logit2odds(coef(muloutmv)[,1]))),2) 
+binom.test(round(dismvo6*nrow(mvomul),0), nrow(mvomul), p = 0.125, alternative = "two.sided")
+
+dismvo7 <- round(logit2odds(coef(muloutmv)[6,1])/(1+sum(logit2odds(coef(muloutmv)[,1]))),2) 
+binom.test(round(dismvo7*nrow(mvomul),0), nrow(mvomul), p = 0.125, alternative = "two.sided")
+
+dismvo8 <- round(logit2odds(coef(muloutmv)[7,1])/(1+sum(logit2odds(coef(muloutmv)[,1]))),2)
+binom.test(round(dismvo8*nrow(mvomul),0), nrow(mvomul), p = 0.125, alternative = "two.sided")
+
 
 ####### Multinomial with all scenarios #########
 
@@ -1148,8 +1244,13 @@ ps
 dissim <- 1/(1+sum(logit2odds(coef(mulsim)[,1]))) 
 binom.test(round(dissim*nrow(muls),0), nrow(muls), p = 0.33, alternative = "two.sided")
 round(1/(1+sum(logit2odds(coef(mulsim)[,1]))),2)
-round(logit2odds(coef(mulsim)[1,1])/(1+sum(logit2odds(coef(mulsim)[,1]))),2) 
-round(logit2odds(coef(mulsim)[2,1])/(1+sum(logit2odds(coef(mulsim)[,1]))),2) 
+
+dissim2 <- round(logit2odds(coef(mulsim)[1,1])/(1+sum(logit2odds(coef(mulsim)[,1]))),2) 
+binom.test(round(dissim2*nrow(muls),0), nrow(muls), p = 0.33, alternative = "two.sided")
+
+dissim3 <- round(logit2odds(coef(mulsim)[2,1])/(1+sum(logit2odds(coef(mulsim)[,1]))),2)
+binom.test(round(dissim3*nrow(muls),0), nrow(muls), p = 0.33, alternative = "two.sided")
+
 
 
 
@@ -1161,20 +1262,37 @@ zo <- summary(mulout)$coefficients/summary(mulout)$standard.errors; zo # z stati
 # 2-tailed z test
 po <- (1 - pnorm(abs(zo), 0, 1)) * 2
 po
+#mulout <- multinom(resp ~ pre + attdiffc, data = mulo) # interaction was not signi
+
 
 # get prob from the intercepts
 disout <- 1/(1+sum(logit2odds(coef(mulout)[,1])))
 round(1/(1+sum(logit2odds(coef(mulout)[,1]))),2)
-round(logit2odds(coef(mulout)[1,1])/(1+sum(logit2odds(coef(mulout)[,1]))),2) 
-round(logit2odds(coef(mulout)[2,1])/(1+sum(logit2odds(coef(mulout)[,1]))),2) 
-round(logit2odds(coef(mulout)[3,1])/(1+sum(logit2odds(coef(mulout)[,1]))),2)
-round(logit2odds(coef(mulout)[4,1])/(1+sum(logit2odds(coef(mulout)[,1]))),2) 
-round(logit2odds(coef(mulout)[5,1])/(1+sum(logit2odds(coef(mulout)[,1]))),2) 
-round(logit2odds(coef(mulout)[6,1])/(1+sum(logit2odds(coef(mulout)[,1]))),2) 
-round(logit2odds(coef(mulout)[7,1])/(1+sum(logit2odds(coef(mulout)[,1]))),2) 
+binom.test(round(disout*nrow(mulo),0), nrow(mulo), p = 0.125, alternative = "two.sided") # dissim
+
+disout2 <- round(logit2odds(coef(mulout)[1,1])/(1+sum(logit2odds(coef(mulout)[,1]))),2) 
+binom.test(round(disout2*nrow(mulo),0), nrow(mulo), p = 0.125, alternative = "two.sided")
+
+disout3 <- round(logit2odds(coef(mulout)[2,1])/(1+sum(logit2odds(coef(mulout)[,1]))),2) 
+binom.test(round(disout3*nrow(mulo),0), nrow(mulo), p = 0.125, alternative = "two.sided")
+
+disout4 <- round(logit2odds(coef(mulout)[3,1])/(1+sum(logit2odds(coef(mulout)[,1]))),2)
+binom.test(round(disout4*nrow(mulo),0), nrow(mulo), p = 0.125, alternative = "two.sided")
+
+disout5 <- round(logit2odds(coef(mulout)[4,1])/(1+sum(logit2odds(coef(mulout)[,1]))),2) 
+binom.test(round(disout5*nrow(mulo),0), nrow(mulo), p = 0.125, alternative = "two.sided")
+
+disout6 <- round(logit2odds(coef(mulout)[5,1])/(1+sum(logit2odds(coef(mulout)[,1]))),2) 
+binom.test(round(disout6*nrow(mulo),0), nrow(mulo), p = 0.125, alternative = "two.sided")
+
+disout7 <- round(logit2odds(coef(mulout)[6,1])/(1+sum(logit2odds(coef(mulout)[,1]))),2) 
+binom.test(round(disout7*nrow(mulo),0), nrow(mulo), p = 0.125, alternative = "two.sided")
+
+disout8 <- round(logit2odds(coef(mulout)[7,1])/(1+sum(logit2odds(coef(mulout)[,1]))),2) 
+binom.test(round(disout8*nrow(mulo),0), nrow(mulo), p = 0.125, alternative = "two.sided")
 
 
-binom.test(round(disout*nrow(mulo),0), nrow(mulo), p = 0.125, alternative = "two.sided")
+
 
 
 ef <- na.omit(ef)
@@ -1189,6 +1307,58 @@ for (i in 1:nrow(ef)){
   if (ef$name[i] == "res10s" | ef$name[i] == "res10o" | ef$name[i] == "res40s" | ef$name[i] == "res40o")
   {ef$scenario[i] <- "rt"}
 }
+
+
+
+
+
+
+# binomial test for 17 resp omitted. Outlier only
+cd1all <- rbind(cd1,mv,rt,gb)
+binom.test(nrow(dt[which(cd1all$effect == 1 & cd1all$resp == 1),]),nrow(cd1all[which(cd1all$effect == 1),]), p = 0.125, alternative = "two.sided")
+
+
+
+
+
+# multinomial logistic for 17 resp omitted
+cd1mul <- rbind(mvomul, gbomul, rtomul, cd1omul)
+
+cd1mulout <- multinom(resp ~ pre*attdiffc, data = cd1mul)
+summary(cd1mulout)
+zo1 <- summary(cd1mulout)$coefficients/summary(cd1mulout)$standard.errors; zo # z statistic
+# 2-tailed z test
+po1 <- (1 - pnorm(abs(zo1), 0, 1)) * 2
+po1
+#mulout <- multinom(resp ~ pre + attdiffc, data = mulo) # interaction was not signi
+
+
+# get prob from the intercepts
+cd1disout <- 1/(1+sum(logit2odds(coef(cd1mulout)[,1])))
+round(1/(1+sum(logit2odds(coef(cd1mulout)[,1]))),2)
+binom.test(round(cd1disout*nrow(cd1mul),0), nrow(cd1mul), p = 0.125, alternative = "two.sided") # dissim
+
+cd1disout2 <- round(logit2odds(coef(cd1mulout)[1,1])/(1+sum(logit2odds(coef(cd1mulout)[,1]))),2) 
+binom.test(round(cd1disout2*nrow(cd1mul),0), nrow(cd1mul), p = 0.125, alternative = "two.sided")
+
+cd1disout3 <- round(logit2odds(coef(cd1mulout)[2,1])/(1+sum(logit2odds(coef(cd1mulout)[,1]))),2) 
+binom.test(round(cd1disout3*nrow(cd1mul),0), nrow(cd1mul), p = 0.125, alternative = "two.sided")
+
+cd1disout4 <- round(logit2odds(coef(cd1mulout)[3,1])/(1+sum(logit2odds(coef(cd1mulout)[,1]))),2)
+binom.test(round(cd1disout4*nrow(cd1mul),0), nrow(cd1mul), p = 0.125, alternative = "two.sided")
+
+cd1disout5 <- round(logit2odds(coef(cd1mulout)[4,1])/(1+sum(logit2odds(coef(cd1mulout)[,1]))),2) 
+binom.test(round(cd1disout5*nrow(cd1mul),0), nrow(cd1mul), p = 0.125, alternative = "two.sided")
+
+cd1disout6 <- round(logit2odds(coef(cd1mulout)[5,1])/(1+sum(logit2odds(coef(cd1mulout)[,1]))),2) 
+binom.test(round(cd1disout6*nrow(cd1mul),0), nrow(cd1mul), p = 0.125, alternative = "two.sided")
+
+cd1disout7 <- round(logit2odds(coef(cd1mulout)[6,1])/(1+sum(logit2odds(coef(cd1mulout)[,1]))),2) 
+binom.test(round(cd1disout7*nrow(cd1mul),0), nrow(cd1mul), p = 0.125, alternative = "two.sided")
+
+cd1disout8 <- round(logit2odds(coef(cd1mulout)[7,1])/(1+sum(logit2odds(coef(cd1mulout)[,1]))),2) 
+binom.test(round(cd1disout8*nrow(cd1mul),0), nrow(cd1mul), p = 0.125, alternative = "two.sided")
+
 
 
 # prop.table(table(ef[which(ef$effect == 0), c("resp")]))
