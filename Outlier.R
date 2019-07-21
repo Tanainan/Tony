@@ -1154,7 +1154,7 @@ mvmul <- data.frame(resp = c(oe$mov33s, oe$mov66s, oe$mov33o, oe$mov66o),
 mvmul$pre <- NA # presentation
 for (i in 1:nrow(mvmul)){
   if (mvmul$name[i] == "mov66s" | mvmul$name[i] == "mov66o")
-  {mvmul$pre[i] <- 0} else {mvmul$pre[i] <- 1}
+  {mvmul$pre[i] <- -0.5} else {mvmul$pre[i] <- 0.5}
 }
 
 mvmul$effect <- NA
@@ -1360,59 +1360,167 @@ cd1disout8 <- round(logit2odds(coef(cd1mulout)[7,1])/(1+sum(logit2odds(coef(cd1m
 binom.test(round(cd1disout8*nrow(cd1mul),0), nrow(cd1mul), p = 0.125, alternative = "two.sided")
 
 
+# table 2
 
-# prop.table(table(ef[which(ef$effect == 0), c("resp")]))
-# prop.table(table(ef[which(ef$effect == 1), c("resp")]))
-# prop.table(table(muls[, c("resp")]))
-# prop.table(table(mulo[, c("resp")]))
-# 
-# prop.table(table(ef[which(ef$effect == 0 & ef$scenario == "gb"), c("resp")]))
-# prop.table(table(ef[which(ef$effect == 1 & ef$scenario == "gb"), c("resp")]))
-# prop.table(table(gbmul[which(gbmul$effect == 0), c("resp")]))
-# prop.table(table(gbmul[which(gbmul$effect == 1), c("resp")]))
-# 
-# 
-# 
-# prop.table(table(ef[which(ef$effect == 0 & ef$scenario == "rt"), c("resp")]))
-# prop.table(table(ef[which(ef$effect == 1 & ef$scenario == "rt"), c("resp")]))
-# prop.table(table(rtmul[which(rtmul$effect == 0), c("resp")]))
-# prop.table(table(rtmul[which(rtmul$effect == 1), c("resp")]))
-# 
-# 
-# prop.table(table(cdmul[which(cdmul$effect == 0), c("resp")]))
-# prop.table(table(cdmul[which(cdmul$effect == 1), c("resp")]))
-# prop.table(table(cd1mul[which(cd1mul$effect == 1), c("resp")]))
-# 
-# 
-# prop.table(table(mvmul[which(mvmul$effect == 0), c("resp")]))
-# prop.table(table(mvmul[which(mvmul$effect == 1), c("resp")]))
-# 
-# 
-# 
-# # weighting each presentation equally
-# prop.table(table(muls[which(muls$pre == -0.5), c("resp")]))
-# prop.table(table(muls[which(muls$pre == 0.5), c("resp")]))
-# prop.table(table(mulo[which(mulo$pre == -0.5), c("resp")]))
-# prop.table(table(mulo[which(mulo$pre == 0.5), c("resp")]))
-# 
-# 
-# prop.table(table(gbmul[which(gbmul$effect == 0 & gbmul$pre == -0.5), c("resp")]))
-# prop.table(table(gbmul[which(gbmul$effect == 0 & gbmul$pre == 0.5), c("resp")]))
-# prop.table(table(gbmul[which(gbmul$effect == 1 & gbmul$pre == -0.5), c("resp")]))
-# prop.table(table(gbmul[which(gbmul$effect == 1 & gbmul$pre == 0.5), c("resp")]))
-# 
-# 
-# 
-# prop.table(table(rtmul[which(rtmul$effect == 0 & rtmul$pre == -0.5), c("resp")]))
-# prop.table(table(rtmul[which(rtmul$effect == 0 & rtmul$pre == 0.5), c("resp")]))
-# prop.table(table(rtmul[which(rtmul$effect == 1 & rtmul$pre == -0.5), c("resp")]))
-# prop.table(table(rtmul[which(rtmul$effect == 1 & rtmul$pre == 0.5), c("resp")]))
-# 
-# 
-# prop.table(table(cdmul[which(cdmul$effect == 0), c("resp")]))
-# prop.table(table(cdmul[which(cdmul$effect == 1), c("resp")]))
-# prop.table(table(cd1mul[which(cd1mul$effect == 1), c("resp")]))
-# 
-# 
-# prop.table(table(mvmul[which(mvmul$effect == 0), c("resp")]))
-# prop.table(table(mvmul[which(mvmul$effect == 1), c("resp")]))
+# gambling
+binom.test(nrow(gbsmul[which(gbsmul$resp == 1),]), nrow(gbsmul), p = 0.33, alternative = "two.sided")
+binom.test(nrow(gbsmul[which(gbsmul$resp == 2),]), nrow(gbsmul), p = 0.33, alternative = "two.sided")
+binom.test(nrow(gbsmul[which(gbsmul$resp == 3),]), nrow(gbsmul), p = 0.33, alternative = "two.sided")
+
+
+binom.test(nrow(gbomul[which(gbomul$resp == 1),]), nrow(gbomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(gbomul[which(gbomul$resp == 2),]), nrow(gbomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(gbomul[which(gbomul$resp == 3),]), nrow(gbomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(gbomul[which(gbomul$resp == 4),]), nrow(gbomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(gbomul[which(gbomul$resp == 5),]), nrow(gbomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(gbomul[which(gbomul$resp == 6),]), nrow(gbomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(gbomul[which(gbomul$resp == 7),]), nrow(gbomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(gbomul[which(gbomul$resp == 8),]), nrow(gbomul), p = 0.125, alternative = "two.sided")
+
+# restaurant
+binom.test(nrow(rtsmul[which(rtsmul$resp == 1),]), nrow(rtsmul), p = 0.33, alternative = "two.sided")
+binom.test(nrow(rtsmul[which(rtsmul$resp == 2),]), nrow(rtsmul), p = 0.33, alternative = "two.sided")
+binom.test(nrow(rtsmul[which(rtsmul$resp == 3),]), nrow(rtsmul), p = 0.33, alternative = "two.sided")
+
+
+binom.test(nrow(rtomul[which(rtomul$resp == 1),]), nrow(rtomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(rtomul[which(rtomul$resp == 2),]), nrow(rtomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(rtomul[which(rtomul$resp == 3),]), nrow(rtomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(rtomul[which(rtomul$resp == 4),]), nrow(rtomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(rtomul[which(rtomul$resp == 5),]), nrow(rtomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(rtomul[which(rtomul$resp == 6),]), nrow(rtomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(rtomul[which(rtomul$resp == 7),]), nrow(rtomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(rtomul[which(rtomul$resp == 8),]), nrow(rtomul), p = 0.125, alternative = "two.sided")
+
+# candidate
+binom.test(nrow(cdsmul[which(cdsmul$resp == 1),]), nrow(cdsmul), p = 0.33, alternative = "two.sided")
+binom.test(nrow(cdsmul[which(cdsmul$resp == 2),]), nrow(cdsmul), p = 0.33, alternative = "two.sided")
+binom.test(nrow(cdsmul[which(cdsmul$resp == 3),]), nrow(cdsmul), p = 0.33, alternative = "two.sided")
+
+
+binom.test(nrow(cdomul[which(cdomul$resp == 1),]), nrow(cdomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(cdomul[which(cdomul$resp == 2),]), nrow(cdomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(cdomul[which(cdomul$resp == 3),]), nrow(cdomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(cdomul[which(cdomul$resp == 4),]), nrow(cdomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(cdomul[which(cdomul$resp == 5),]), nrow(cdomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(cdomul[which(cdomul$resp == 6),]), nrow(cdomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(cdomul[which(cdomul$resp == 7),]), nrow(cdomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(cdomul[which(cdomul$resp == 8),]), nrow(cdomul), p = 0.125, alternative = "two.sided")
+
+
+binom.test(nrow(cd1omul[which(cd1omul$resp == 1),]), nrow(cd1omul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(cd1omul[which(cd1omul$resp == 2),]), nrow(cd1omul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(cd1omul[which(cd1omul$resp == 3),]), nrow(cd1omul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(cd1omul[which(cd1omul$resp == 4),]), nrow(cd1omul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(cd1omul[which(cd1omul$resp == 5),]), nrow(cd1omul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(cd1omul[which(cd1omul$resp == 6),]), nrow(cd1omul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(cd1omul[which(cd1omul$resp == 7),]), nrow(cd1omul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(cd1omul[which(cd1omul$resp == 8),]), nrow(cd1omul), p = 0.125, alternative = "two.sided")
+
+# movie
+binom.test(nrow(mvsmul[which(mvsmul$resp == 1),]), nrow(mvsmul), p = 0.33, alternative = "two.sided")
+binom.test(nrow(mvsmul[which(mvsmul$resp == 2),]), nrow(mvsmul), p = 0.33, alternative = "two.sided")
+binom.test(nrow(mvsmul[which(mvsmul$resp == 3),]), nrow(mvsmul), p = 0.33, alternative = "two.sided")
+
+binom.test(nrow(mvomul[which(mvomul$resp == 1),]), nrow(mvomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(mvomul[which(mvomul$resp == 2),]), nrow(mvomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(mvomul[which(mvomul$resp == 3),]), nrow(mvomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(mvomul[which(mvomul$resp == 4),]), nrow(mvomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(mvomul[which(mvomul$resp == 5),]), nrow(mvomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(mvomul[which(mvomul$resp == 6),]), nrow(mvomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(mvomul[which(mvomul$resp == 7),]), nrow(mvomul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(mvomul[which(mvomul$resp == 8),]), nrow(mvomul), p = 0.125, alternative = "two.sided")
+
+
+
+# ALL
+binom.test(nrow(muls[which(muls$resp == 1),]), nrow(muls), p = 0.33, alternative = "two.sided")
+binom.test(nrow(muls[which(muls$resp == 2),]), nrow(muls), p = 0.33, alternative = "two.sided")
+binom.test(nrow(muls[which(muls$resp == 3),]), nrow(muls), p = 0.33, alternative = "two.sided")
+
+binom.test(nrow(mulo[which(mulo$resp == 1),]), nrow(mulo), p = 0.125, alternative = "two.sided")
+binom.test(nrow(mulo[which(mulo$resp == 2),]), nrow(mulo), p = 0.125, alternative = "two.sided")
+binom.test(nrow(mulo[which(mulo$resp == 3),]), nrow(mulo), p = 0.125, alternative = "two.sided")
+binom.test(nrow(mulo[which(mulo$resp == 4),]), nrow(mulo), p = 0.125, alternative = "two.sided")
+binom.test(nrow(mulo[which(mulo$resp == 5),]), nrow(mulo), p = 0.125, alternative = "two.sided")
+binom.test(nrow(mulo[which(mulo$resp == 6),]), nrow(mulo), p = 0.125, alternative = "two.sided")
+binom.test(nrow(mulo[which(mulo$resp == 7),]), nrow(mulo), p = 0.125, alternative = "two.sided")
+binom.test(nrow(mulo[which(mulo$resp == 8),]), nrow(mulo), p = 0.125, alternative = "two.sided")
+
+
+binom.test(nrow(cd1mul[which(cd1mul$resp == 1),]), nrow(cd1mul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(cd1mul[which(cd1mul$resp == 2),]), nrow(cd1mul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(cd1mul[which(cd1mul$resp == 3),]), nrow(cd1mul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(cd1mul[which(cd1mul$resp == 4),]), nrow(cd1mul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(cd1mul[which(cd1mul$resp == 5),]), nrow(cd1mul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(cd1mul[which(cd1mul$resp == 6),]), nrow(cd1mul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(cd1mul[which(cd1mul$resp == 7),]), nrow(cd1mul), p = 0.125, alternative = "two.sided")
+binom.test(nrow(cd1mul[which(cd1mul$resp == 8),]), nrow(cd1mul), p = 0.125, alternative = "two.sided")
+
+
+
+# descriptive
+
+prop.table(table(ef[which(ef$effect == 0), c("resp")]))
+prop.table(table(ef[which(ef$effect == 1), c("resp")]))
+prop.table(table(muls[, c("resp")]))
+prop.table(table(mulo[, c("resp")]))
+
+prop.table(table(ef[which(ef$effect == 0 & ef$scenario == "gb"), c("resp")]))
+prop.table(table(ef[which(ef$effect == 1 & ef$scenario == "gb"), c("resp")]))
+prop.table(table(gbmul[which(gbmul$effect == 0), c("resp")]))
+prop.table(table(gbmul[which(gbmul$effect == 1), c("resp")]))
+
+
+
+prop.table(table(ef[which(ef$effect == 0 & ef$scenario == "rt"), c("resp")]))
+prop.table(table(ef[which(ef$effect == 1 & ef$scenario == "rt"), c("resp")]))
+prop.table(table(rtmul[which(rtmul$effect == 0), c("resp")]))
+prop.table(table(rtmul[which(rtmul$effect == 1), c("resp")]))
+
+
+prop.table(table(cdmul[which(cdmul$effect == 0), c("resp")]))
+prop.table(table(cdmul[which(cdmul$effect == 1), c("resp")]))
+prop.table(table(cd1mul[which(cd1mul$effect == 1), c("resp")]))
+
+
+prop.table(table(mvmul[which(mvmul$effect == 0), c("resp")]))
+prop.table(table(mvmul[which(mvmul$effect == 1), c("resp")]))
+
+
+# responses table 4
+# weighting each presentation equally
+prop.table(table(muls[which(muls$pre == -0.5), c("resp")]))
+prop.table(table(muls[which(muls$pre == 0.5), c("resp")]))
+prop.table(table(mulo[which(mulo$pre == -0.5), c("resp")]))
+prop.table(table(mulo[which(mulo$pre == 0.5), c("resp")]))
+prop.table(table(cd1mul[which(cd1mul$pre == -0.5), c("resp")]))
+prop.table(table(cd1mul[which(cd1mul$pre == 0.5), c("resp")]))
+
+
+prop.table(table(gbmul[which(gbmul$effect == 0 & gbmul$pre == -0.5), c("resp")]))
+prop.table(table(gbmul[which(gbmul$effect == 0 & gbmul$pre == 0.5), c("resp")]))
+prop.table(table(gbmul[which(gbmul$effect == 1 & gbmul$pre == -0.5), c("resp")]))
+prop.table(table(gbmul[which(gbmul$effect == 1 & gbmul$pre == 0.5), c("resp")]))
+
+
+
+prop.table(table(rtmul[which(rtmul$effect == 0 & rtmul$pre == -0.5), c("resp")]))
+prop.table(table(rtmul[which(rtmul$effect == 0 & rtmul$pre == 0.5), c("resp")]))
+prop.table(table(rtmul[which(rtmul$effect == 1 & rtmul$pre == -0.5), c("resp")]))
+prop.table(table(rtmul[which(rtmul$effect == 1 & rtmul$pre == 0.5), c("resp")]))
+
+
+prop.table(table(cdmul[which(cdmul$effect == 0 & cdmul$pre == -0.5), c("resp")]))
+prop.table(table(cdmul[which(cdmul$effect == 0 & cdmul$pre == 0.5), c("resp")]))
+prop.table(table(cdmul[which(cdmul$effect == 1 & cdmul$pre == -0.5), c("resp")]))
+prop.table(table(cdmul[which(cdmul$effect == 1 & cdmul$pre == 0.5), c("resp")]))
+
+prop.table(table(cd1omul[which(cd1omul$pre == -0.5), c("resp")]))
+prop.table(table(cd1omul[which(cd1omul$pre == 0.5), c("resp")]))
+
+
+prop.table(table(mvmul[which(mvmul$effect == 0 & mvmul$pre == -0.5), c("resp")]))
+prop.table(table(mvmul[which(mvmul$effect == 0 & mvmul$pre == 0.5), c("resp")]))
+prop.table(table(mvmul[which(mvmul$effect == 1 & mvmul$pre == -0.5), c("resp")]))
+prop.table(table(mvmul[which(mvmul$effect == 1 & mvmul$pre == 0.5), c("resp")]))
