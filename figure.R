@@ -110,8 +110,23 @@ ggplot(dt3, aes(x,y)) +
   geom_segment(y = 8.2, yend = 8.4, x = 9.3, xend = 9.3, size = 1) +
   geom_segment(y = 8.2, yend = 8.2, x = 9.1, xend = 9.3, size = 1) 
   
-  
-  
+
+# figure 3
+dt4 <- data.frame(x = c(2,6.8,7,7.2,7.4,7.6,7.8,8),
+                  y = c(8,3.2,3,2.8,2.6,2.4,2.2,2),
+                  z = c(1,1,2,2,2,2,2,1),
+                  name = c("A","B'","","","","","","B"))
+ggplot(dt4, aes(x,y, color = as.factor(z))) + 
+  geom_point(size = 1) +
+  theme_bw() + 
+  scale_x_continuous(limits = c(0.5,10), breaks = c(2,4,6,8,10)) +
+  scale_y_continuous(limits = c(0.5,10), breaks = c(2,4,6,8,10)) +
+  geom_text(aes(label = name), hjust = - 0.6, size = 5, vjust = -1) + 
+  labs(x = "Attribute 2", y = "Attribute 1") +
+  geom_abline(intercept = 10, slope = -1, size = 0.1) +
+  theme(plot.title = element_text(size = 12, hjust = 0.5)) +
+  scale_color_manual(values = c("#000000", "#CCCCCC")) +
+  theme(legend.position = "none")
   
   
   
